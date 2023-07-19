@@ -10,7 +10,7 @@
             "onAutoForward": "notify"
         }
     },
-    // "onCreateCommand": "npm install",
+    "onCreateCommand": "npm install",
     "features": {
         "ghcr.io/ddahan/feature-starter/custom_bashrc:latest": {}
     },
