@@ -1,66 +1,68 @@
 <template>
-  <div class="grid grid-cols-2 gap-1">
+  <UButtonGroup class="grid grid-cols-2">
     <UButton
-      class="grow"
+      class="w-full"
       icon="i-tabler-palette"
       label="Styled"
-      variant="outline"
+      variant="ghost"
     />
     <UButton
-      class="grow"
+      class="w-full"
       icon="i-tabler-palette-off"
       label="Unstyled"
-      variant="outline"
+      variant="ghost"
     />
-  </div>
-  <div class="grid grid-cols-2 gap-1">
+  </UButtonGroup>
+
+  <UButtonGroup class="grid grid-cols-2">
     <UButton
-      class="grow"
+      class="w-full"
       icon="i-mdi-import"
       label="Imported"
-      variant="outline"
+      variant="ghost"
     />
     <UButton
-      class="grow"
+      class="w-full"
       icon="i-mdi-content-paste"
       label="Pasted"
-      variant="outline"
+      variant="ghost"
     />
-  </div>
+  </UButtonGroup>
+
   <UButton
     icon="i-simple-icons-tailwindcss"
     label="Tailwind CSS based"
-    variant="outline"
+    variant="ghost"
   />
 
   <UButton
-    icon="i-material-symbols-money-off"
-    label="Free"
-    variant="outline"
-  />
-  <UButton
     icon="i-mdi-vuejs"
     label="Vue Components"
-    variant="outline"
+    variant="ghost"
   />
   <UButton
     icon="i-material-symbols-accessibility-new"
     label="Fully Accessible"
-    variant="outline"
+    variant="ghost"
   />
   <UButton
     icon="i-mdi-weather-night"
     label="Dark Mode support"
-    variant="outline"
+    variant="ghost"
+  />
+  <UButton
+    icon="i-material-symbols-money-off"
+    label="Free"
+    variant="ghost"
   />
   <UButton
     icon="i-solar-medal-ribbon-linear"
-    label="By Official Team"
-    variant="outline"
+    label="Official"
+    variant="ghost"
   />
 
   <!-- Github Stars -->
-  <div class="flex h-12 items-center rounded-md border border-pink-500">
+  <div class="flex h-12 items-center">
     <UIcon
       name="i-mdi-star-outline"
       class="text-pink-500 h-5 w-5 ml-2 shrink-0"
@@ -81,7 +83,7 @@
 
   <!-- NPM Downloads -->
 
-  <div class="flex h-12 items-center rounded-md border border-pink-500">
+  <div class="flex h-12 items-center">
     <UIcon
       name="i-material-symbols-download"
       class="text-pink-500 h-5 w-5 ml-2 shrink-0"

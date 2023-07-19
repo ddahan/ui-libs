@@ -47,7 +47,7 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 flex-grow">
         <Library
           v-for="library in libraries"
-          :name="library.name"
+          :library="library"
         />
       </div>
     </div>
@@ -55,20 +55,137 @@
 </template>
 
 <script setup lang="ts">
+// import { Library } from "@/types/interfaces";
+
+interface Project {
+  name: string;
+  repoUrl: string;
+}
+
+interface Component {
+  name: string;
+}
+
+interface Dependency {
+  name: string;
+}
+
+interface User {
+  name: string;
+}
+
 interface Library {
   name: string;
+  logo?: string;
+  url: string;
+  styling: "STYLED" | "UNSTYLED" | "BOTH";
+  usage: "IMPORT" | "PASTE";
+  tailwindCSSBased: boolean;
+  darkModeSupport: boolean;
+  accessible: boolean;
+  free: boolean;
+  official: boolean;
+  // projects: Project[];
+  // creator: User;
+  // TODO: other potentiel filters to integrate later
+  // components: Component[];
+  // dependencies: Dependency[];
+  // hasFigmaFiles: boolean;
+  // hasTyping: boolean;
+  // releaseDate: Date;
+  // customizability: string;
+  // nbStars: number;
+  // nbDownloads: number;
+  // activityLevel: number;
+  // nuxtOnly: boolean;
 }
 
 const nbSelectedFilters = ref(3); // TODO: change
 
 const libraries: Library[] = [
-  { name: "NuxtLabs UI" },
-  { name: "Tailwind UI" },
-  { name: "Prime Vue" },
-  { name: "Quasar" },
-  { name: "Vuetify" },
-  { name: "Daisy UI" },
-  { name: "NuxtLabs UI" },
-  { name: "FlowBite" },
+  {
+    name: "NuxtLabs UI",
+    logo: "nuxt.svg",
+    url: "https://ui.nuxtlabs.com",
+    styling: "STYLED",
+    usage: "IMPORT",
+    tailwindCSSBased: true,
+    darkModeSupport: true,
+    accessible: true,
+    free: true,
+    official: true,
+  },
+  {
+    name: "Tailwind UI",
+    logo: "tailwind.svg",
+    url: "https://tailwindui.com",
+    styling: "STYLED",
+    usage: "PASTE",
+    tailwindCSSBased: true,
+    darkModeSupport: false,
+    accessible: false,
+    free: false,
+    official: false,
+  },
+  {
+    name: "Prime Vue",
+    logo: "primevue.svg",
+    url: "https://primevue.org",
+    styling: "BOTH",
+    usage: "IMPORT",
+    tailwindCSSBased: true,
+    darkModeSupport: false,
+    accessible: false,
+    free: true,
+    official: false,
+  },
+  {
+    name: "Quasar",
+    logo: "quasar.svg",
+    url: "https://quasar.dev",
+    styling: "STYLED",
+    usage: "IMPORT",
+    tailwindCSSBased: true,
+    darkModeSupport: false,
+    accessible: true,
+    free: true,
+    official: false,
+  },
+  {
+    name: "Vuetify",
+    logo: "vuetify.svg",
+    url: "https://vuetifyjs.com",
+    styling: "STYLED",
+    usage: "IMPORT",
+    tailwindCSSBased: false,
+    darkModeSupport: false,
+    accessible: true,
+    free: true,
+    official: false,
+  },
+  {
+    name: "Daisy UI",
+    logo: "daisyui.svg",
+    url: "https://daisyui.com",
+    styling: "STYLED",
+    usage: "IMPORT",
+    tailwindCSSBased: true,
+    darkModeSupport: false,
+    accessible: false,
+    free: true,
+    official: false,
+  },
+  {
+    name: "FlowBite",
+    logo: "flowbite.svg",
+    url: "https://flowbite.com",
+    styling: "STYLED",
+    usage: "PASTE",
+    tailwindCSSBased: true,
+    darkModeSupport: false,
+    accessible: true,
+    free: true,
+    official: false,
+  },
 ];
 </script>

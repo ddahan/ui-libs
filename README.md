@@ -12,7 +12,8 @@ If you want to show your support, you can sponsor me on Github, or buy me a coff
 # Contributions
 
 Contributions are welcome, especially because UI libraries often update.
-Until there is a built-in mechanism on the website to suggest edits, feel free to open an issue.
+
+There is no database, data lives in Typescript objects, which means any edit suggestion can be done using a PR.
 
 # Setup
 
