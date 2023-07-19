@@ -1,63 +1,23 @@
-# Nuxt 3 Minimal Starter
+# Why this project?
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Choosing the right UI library is hard. This project is a simple tool to help you pick the right one, based on your own criterias.
 
-## Setup
+# About me
 
-Make sure to install the dependencies:
+I'm David, 35, living in Paris, and available for hiring.
+Visit [my website](https://david-dahan.com) to know more.
 
-```bash
-# npm
-npm install
+If you want to show your support, you can sponsor me on Github, or buy me a coffee. This will be very appreciated.
 
-# pnpm
-pnpm install
+# Contributions
 
-# yarn
-yarn install
-```
+Contributions are welcome, especially because UI libraries often update.
+Until there is a built-in mechanism on the website to suggest edits, feel free to open an issue.
 
-## Development Server
+# Setup
 
-Start the development server on `http://localhost:3000`:
+The project itself is a Nuxt 3 project using Nuxt UI and Tailwind CSS.
 
-```bash
-# npm
-npm run dev
+This repository is based on a [Dev Container](https://code.visualstudio.com/docs/devcontainers/containers). If you're using VS Code and have Docker and the VS Code Dev Containers extension installed, you can run this project easily on your own machine using the `Clone Repository` command on your IDE.
 
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Once installed, run `npm run dev` to start the project.
