@@ -59,6 +59,12 @@
                 "css.validate": false,
                 "tailwindCSS.validate": true,
                 "tailwindCSS.emmetCompletions": true,
+                "tailwindCSS.classAttributes": [
+                    "class",
+                    "className",
+                    "ngClass",
+                    "ui"
+                ],
                 "files.associations": {
                     "*.css": "tailwindcss"
                 },

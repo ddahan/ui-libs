@@ -5,4 +5,8 @@ module.exports = {
     "./components/**/*.{js,vue,ts}",
     "./nuxt.config.{js,ts}",
   ],
+  future: {
+    // https://github.com/tailwindlabs/tailwindcss/discussions/1739
+    hoverOnlyWhenSupported: true,
+  },
 };

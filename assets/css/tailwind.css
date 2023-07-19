@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* The base layer is for things like reset rules or default styles applied to plain HTML elements. */
+@layer base {
+  html,
+  body,
+  #__nuxt,
+  #__layout {
+    @apply bg-slate-50 dark:bg-slate-900;
+    @apply min-h-screen w-full;
+  }
+}

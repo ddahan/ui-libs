@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   modules: ["@nuxthq/ui"],
   ui: {
     global: true,
-    icons: [], // TODO: add other libs and install them or use nuxt icon instead
+    icons: "all",
   },
   tailwindcss: {
     cssPath: "~/assets/css/tailwind.css",
