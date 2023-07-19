@@ -7,14 +7,14 @@
         icon="i-mdi-github"
         :square="true"
         variant="ghost"
+        to="https://volta.net"
+        target="_blank"
       />
 
       <UButton
         icon="i-mdi-weather-night"
         :square="true"
         variant="ghost"
-        to="https://volta.net"
-        target="_blank"
       />
 
       <UButton
