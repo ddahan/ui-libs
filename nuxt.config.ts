@@ -9,6 +9,8 @@ export default defineNuxtConfig({
     shim: false,
     tsConfig: {
       compilerOptions: {
+        // https://nuxt.com/blog/v3-5#bundler-module-resolution
+        moduleResolution: "bundler",
         paths: {
           "@": ["."],
           "@/*": ["./*"],
