@@ -18,12 +18,14 @@
 </template>
 
 <script setup lang="ts">
+import { Library } from "@/types/interfaces";
+
 defineProps<{
-  library: any; // TODO: clean type
+  library: Library;
 }>();
 
 const colorMode = useColorMode();
 
-const getLogo = (library: any): string =>
+const getLogo = (library: Library): string =>
   colorMode.value == "dark" && library.logoDark ? library.logoDark : library.logo;
 </script>

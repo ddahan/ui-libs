@@ -55,52 +55,7 @@
 </template>
 
 <script setup lang="ts">
-// import { Library } from "@/types/interfaces";
-
-interface Project {
-  name: string;
-  repoUrl: string;
-}
-
-interface Component {
-  name: string;
-}
-
-interface Dependency {
-  name: string;
-}
-
-interface User {
-  name: string;
-}
-
-interface Library {
-  name: string;
-  logo: string;
-  logoDark?: string; // only if the logo differs in Dark Mode
-  url: string;
-  styling: "STYLED" | "UNSTYLED" | "BOTH";
-  usage: "IMPORT" | "PASTE";
-  tailwindCSSBased: boolean;
-  darkModeSupport: boolean;
-  accessible: boolean;
-  free: boolean;
-  official: boolean;
-  // projects: Project[];
-  // creator: User;
-  // TODO: other potentiel filters to integrate later
-  // components: Component[];
-  // dependencies: Dependency[];
-  // hasFigmaFiles: boolean;
-  // hasTyping: boolean;
-  // releaseDate: Date;
-  // customizability: string;
-  // nbStars: number;
-  // nbDownloads: number;
-  // activityLevel: number;
-  // nuxtOnly: boolean;
-}
-
+import { Library } from "@/types/interfaces";
 const nbSelectedFilters = ref(3); // TODO: change
 
 const libraries: Library[] = [
