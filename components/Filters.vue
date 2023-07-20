@@ -1,5 +1,5 @@
 <template>
-  <UButtonGroup class="grid grid-cols-2">
+  <UButtonGroup class="grid grid-cols-2 shadow-none">
     <UButton
       class="w-full"
       icon="i-tabler-palette"
@@ -14,7 +14,7 @@
     />
   </UButtonGroup>
 
-  <UButtonGroup class="grid grid-cols-2">
+  <UButtonGroup class="grid grid-cols-2 shadow-none">
     <UButton
       class="w-full"
       icon="i-mdi-import"

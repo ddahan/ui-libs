@@ -4,11 +4,11 @@
     target="_blank"
   >
     <div
-      class="rounded-lg p-3 h-40 border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-700 hover:border-pink-500 dark:hover:border-pink-500"
+      class="rounded-lg p-3 h-40 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-700 hover:border-pink-500 dark:hover:border-pink-500"
     >
       <div class="mx-2 mt-2">
         <img
-          :src="`/img/${library.logo}`"
+          :src="`/img/${getLogo(library)}`"
           class="h-10 w-10 drop-shadow-lg"
         />
         <p class="mt-4 font-medium tracking-wide">{{ library.name }}</p>
@@ -19,6 +19,11 @@
 
 <script setup lang="ts">
 defineProps<{
-  library: any;
+  library: any; // TODO: clean type
 }>();
+
+const colorMode = useColorMode();
+
+const getLogo = (library: any): string =>
+  colorMode.value == "dark" && library.logoDark ? library.logoDark : library.logo;
 </script>

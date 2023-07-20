@@ -76,7 +76,8 @@ interface User {
 
 interface Library {
   name: string;
-  logo?: string;
+  logo: string;
+  logoDark?: string; // only if the logo differs in Dark Mode
   url: string;
   styling: "STYLED" | "UNSTYLED" | "BOTH";
   usage: "IMPORT" | "PASTE";
@@ -142,6 +143,7 @@ const libraries: Library[] = [
   {
     name: "Quasar",
     logo: "quasar.svg",
+    logoDark: "quasar_dark.svg",
     url: "https://quasar.dev",
     styling: "STYLED",
     usage: "IMPORT",

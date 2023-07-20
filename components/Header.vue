@@ -1,6 +1,6 @@
 <template>
   <div
-    class="sticky top-0 z-20 border-t border-transparent backdrop-blur-md shadow shadow-gray-200"
+    class="sticky top-0 z-20 border-t border-transparent backdrop-blur-md shadow-sm shadow-gray-200"
   >
     <div class="flex items-center justify-end gap-2 px-6 py-2">
       <UButton
@@ -11,11 +11,7 @@
         target="_blank"
       />
 
-      <UButton
-        icon="i-mdi-weather-night"
-        :square="true"
-        variant="ghost"
-      />
+      <ThemeSelector />
 
       <UButton
         variant="ghost"
