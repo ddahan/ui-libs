@@ -44,7 +44,7 @@
       </div>
 
       <!-- libraries -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 flex-grow">
+      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 flex-grow">
         <Library
           v-for="library in libraries"
           :library="library"
