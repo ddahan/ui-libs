@@ -1,5 +1,5 @@
 <template>
-  <UButtonGroup class="grid grid-cols-2 shadow-none">
+  <div class="grid grid-cols-2">
     <UButton
       class="w-full"
       icon="i-tabler-palette"
@@ -12,9 +12,9 @@
       label="Unstyled"
       variant="ghost"
     />
-  </UButtonGroup>
+  </div>
 
-  <UButtonGroup class="grid grid-cols-2 shadow-none">
+  <div class="grid grid-cols-2">
     <UButton
       class="w-full"
       icon="i-mdi-import"
@@ -27,7 +27,7 @@
       label="Pasted"
       variant="ghost"
     />
-  </UButtonGroup>
+  </div>
 
   <UButton
     icon="i-simple-icons-tailwindcss"
