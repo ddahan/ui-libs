@@ -5,6 +5,17 @@ export default defineNuxtConfig({
     global: true,
     icons: "all",
   },
+  typescript: {
+    shim: false,
+    tsConfig: {
+      compilerOptions: {
+        paths: {
+          "@": ["."],
+          "@/*": ["./*"],
+        },
+      },
+    },
+  },
   tailwindcss: {
     cssPath: "~/assets/css/tailwind.css",
     configPath: "tailwind.config.js",

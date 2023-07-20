@@ -1,20 +1,3 @@
-export interface Project {
-  name: string;
-  repoUrl: string;
-}
-
-export interface Component {
-  name: string;
-}
-
-export interface Dependency {
-  name: string;
-}
-
-export interface User {
-  name: string;
-}
-
 export interface Library {
   name: string;
   logo: string;
@@ -25,6 +8,7 @@ export interface Library {
   tailwindCSSBased: boolean;
   darkModeSupport: boolean;
   accessible: boolean;
+  figma: boolean;
   free: boolean;
   official: boolean;
   // projects: Project[];
@@ -32,7 +16,6 @@ export interface Library {
   // TODO: other potentiel filters to integrate later
   // components: Component[];
   // dependencies: Dependency[];
-  // hasFigmaFiles: boolean;
   // hasTyping: boolean;
   // releaseDate: Date;
   // customizability: string;

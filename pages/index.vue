@@ -45,7 +45,7 @@
 
       <!-- libraries -->
       <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 flex-grow">
-        <Library
+        <LibraryCard
           v-for="library in libraries"
           :library="library"
         />
@@ -55,7 +55,8 @@
 </template>
 
 <script setup lang="ts">
-import { Library } from "@/types/interfaces";
+import { Library } from "@/types/library";
+
 const nbSelectedFilters = ref(3); // TODO: change
 
 const libraries: Library[] = [
@@ -68,6 +69,7 @@ const libraries: Library[] = [
     tailwindCSSBased: true,
     darkModeSupport: true,
     accessible: true,
+    figma: false,
     free: true,
     official: true,
   },
@@ -80,6 +82,7 @@ const libraries: Library[] = [
     tailwindCSSBased: true,
     darkModeSupport: false,
     accessible: false,
+    figma: false,
     free: false,
     official: false,
   },
@@ -92,6 +95,7 @@ const libraries: Library[] = [
     tailwindCSSBased: true,
     darkModeSupport: false,
     accessible: false,
+    figma: false,
     free: true,
     official: false,
   },
@@ -105,6 +109,7 @@ const libraries: Library[] = [
     tailwindCSSBased: true,
     darkModeSupport: false,
     accessible: true,
+    figma: false,
     free: true,
     official: false,
   },
@@ -117,6 +122,7 @@ const libraries: Library[] = [
     tailwindCSSBased: false,
     darkModeSupport: false,
     accessible: true,
+    figma: false,
     free: true,
     official: false,
   },
@@ -129,6 +135,7 @@ const libraries: Library[] = [
     tailwindCSSBased: true,
     darkModeSupport: false,
     accessible: false,
+    figma: false,
     free: true,
     official: false,
   },
@@ -141,6 +148,7 @@ const libraries: Library[] = [
     tailwindCSSBased: true,
     darkModeSupport: false,
     accessible: true,
+    figma: false,
     free: true,
     official: false,
   },

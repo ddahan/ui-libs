@@ -46,6 +46,11 @@
     variant="ghost"
   />
   <UButton
+    icon="i-ph-figma-logo"
+    label="Figma files"
+    variant="ghost"
+  />
+  <UButton
     icon="i-mdi-weather-night"
     label="Dark Mode support"
     variant="ghost"

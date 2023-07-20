@@ -18,7 +18,7 @@
 </template>
 
 <script setup lang="ts">
-import { Library } from "@/types/interfaces";
+import { Library } from "@/types/library";
 
 defineProps<{
   library: Library;
