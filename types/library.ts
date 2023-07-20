@@ -11,9 +11,12 @@ export interface Library {
   figma: boolean;
   free: boolean;
   official: boolean;
+
+  // TODO: other potentiel filters to integrate later
+
+  // publicRoadmap: boolean;
   // projects: Project[];
   // creator: User;
-  // TODO: other potentiel filters to integrate later
   // components: Component[];
   // dependencies: Dependency[];
   // hasTyping: boolean;
