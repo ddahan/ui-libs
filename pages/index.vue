@@ -3,7 +3,7 @@
   <UContainer class="max-w-2xl">
     <div class="text-center">
       <UIcon
-        class="mt-6 w-16 h-16 sm:w-28 sm:h-28"
+        class="mt-6 w-14 h-14 sm:w-20 sm:h-20"
         name="i-twemoji-artist-palette"
       />
       <h1 class="text-2xl sm:text-4xl">Pick the right UI Library</h1>
