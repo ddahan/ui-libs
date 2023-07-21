@@ -10,7 +10,7 @@
           variant="outline"
         />
       </div>
-      <div class="flex items-center justify-end gap-2">
+      <div class="flex items-center justify-end gap-1 md:gap-2">
         <UButton
           icon="i-mdi-github"
           :square="true"
@@ -29,6 +29,14 @@
         />
 
         <UButton
+          class="md:hidden"
+          icon="i-bx-coffee-togo"
+          to="https://volta.net"
+          target="_blank"
+        />
+
+        <UButton
+          class="hidden md:flex"
           icon="i-bx-coffee-togo"
           label="Buy Me a Coffee"
           :trailing="false"
