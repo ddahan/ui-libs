@@ -9,8 +9,6 @@ type Library = {
   };
 
   // TODO: other potentiel filters to integrate later
-
-  // publicRoadmap: boolean;
   // projects: Project[];
   // creator: User;
   // components: Component[];

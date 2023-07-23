@@ -10,6 +10,7 @@ let filterData: { [K in FilterName]: { selected: boolean; autoDisable?: FilterNa
   FDarkMode: { selected: false },
   FFree: { selected: false },
   FOfficial: { selected: false },
+  FRoadmap: { selected: false },
 };
 
 export const useFilterStore = () => {
