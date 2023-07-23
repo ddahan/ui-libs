@@ -3,25 +3,19 @@
     class="w-full"
     :icon="icon"
     :label="label"
-    :variant="selected ? 'solid' : 'ghost'"
-    @click="invertSelect()"
+    :variant="filterData[props.name].selected ? 'solid' : 'ghost'"
+    @click="invertFilter(name)"
   />
 </template>
 
 <script setup lang="ts">
 export interface Props {
+  name: ComponentName;
   label?: string;
   icon?: string;
-  defaultSelected?: boolean;
 }
 
-const props = withDefaults(defineProps<Props>(), {
-  defaultSelected: false,
-});
+const props = defineProps<Props>();
 
-let selected = ref(props.defaultSelected);
-
-const invertSelect = () => {
-  selected.value = !selected.value;
-};
+const { filterData, invertFilter } = useFilterStore();
 </script>
