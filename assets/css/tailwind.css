@@ -4,11 +4,31 @@
 
 /* The base layer is for things like reset rules or default styles applied to plain HTML elements. */
 @layer base {
+  @font-face {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 400;
+    src: local(""), url("./assets/fonts/Roobert-Regular.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 500;
+    src: local(""), url("./assets/fonts/Roobert-Medium.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 600;
+    src: local(""), url("./assets/fonts/Roobert-SemiBold.woff2") format("woff2");
+  }
+
   html,
   body,
   #__nuxt,
   #__layout {
     @apply bg-slate-50 dark:bg-slate-900;
     @apply min-h-screen w-full;
+    @apply font-roobert;
   }
 }

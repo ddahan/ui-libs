@@ -2,6 +2,7 @@
   <UAccordion
     :items="items"
     color="black"
+    size="xl"
     variant="ghost"
     :multiple="true"
   >

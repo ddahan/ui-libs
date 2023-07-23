@@ -8,7 +8,14 @@
           icon="i-material-symbols-format-list-bulleted"
           :square="true"
           variant="outline"
+          @click="isOpen = true"
         />
+        <UModal
+          class="h-64"
+          v-model="isOpen"
+        >
+          filters kikoo
+        </UModal>
       </div>
       <div class="flex items-center justify-end gap-1 md:gap-2">
         <UButton
@@ -48,4 +55,6 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const isOpen = ref(false);
+</script>

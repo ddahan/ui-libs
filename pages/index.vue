@@ -6,7 +6,7 @@
         class="mt-6 w-14 h-14 sm:w-20 sm:h-20"
         name="i-twemoji-artist-palette"
       />
-      <h1 class="text-2xl sm:text-4xl">Pick the right UI Library</h1>
+      <h1 class="text-4xl font-semibold sm:text-5xl">Pick the right UI Library</h1>
       <p class="sm:text-lg">for your Vue or Nuxt Project</p>
     </div>
 
@@ -17,7 +17,7 @@
       </div>
 
       <!-- libraries -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 flex-grow">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 flex-grow">
         <LibraryCard
           v-for="library in libraries"
           :library="library"
