@@ -10,7 +10,7 @@
 
 <script setup lang="ts">
 export interface Props {
-  name: ComponentName;
+  name: FilterName;
   label?: string;
   icon?: string;
 }

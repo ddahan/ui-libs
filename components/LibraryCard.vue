@@ -25,12 +25,12 @@ const colorMode = useColorMode();
 const getLogo = (library: Library): string =>
   colorMode.value == "dark" && library.logoDark ? library.logoDark : library.logo;
 
-const { selectedFilters } = useFilterStore();
+const { selectedFilterNames } = useFilterStore();
 
 const display = computed((): boolean => {
-  for (let filter of selectedFilters()) {
-    // TODO: handle typing issue
-    if (props.library.filters[filter[0]] == false) {
+  for (let filterName of selectedFilterNames()) {
+    // TODO: handle typing issue: we should not need to cast it!
+    if (props.library.filters[<FilterName>filterName] === false) {
       return false;
     }
   }

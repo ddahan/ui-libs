@@ -4,7 +4,7 @@ type Library = {
   logoDark?: string; // only if the logo differs in Dark Mode
   url: string;
   filters: {
-    [K in ComponentName]: boolean;
+    [K in FilterName]: boolean;
   };
 
   // TODO: other potentiel filters to integrate later

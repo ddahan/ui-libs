@@ -1,5 +1,18 @@
+type FilterName =
+  | "FStyled"
+  | "FUnstyled"
+  | "FImported"
+  | "FPasted"
+  | "FTailwind"
+  | "FComponents"
+  | "FAccessible"
+  | "FFigma"
+  | "FDarkMode"
+  | "FFree"
+  | "FOfficial";
+
 type FilterStore = {
-  [K in ComponentName]: { selected: boolean; autoDisable?: ComponentName };
+  [K in FilterName]: { selected: boolean; autoDisable?: FilterName };
 };
 
 let filters: FilterStore = {
@@ -21,35 +34,36 @@ export const useFilterStore = () => {
     return filters;
   });
 
-  const invertFilter = (componentName: ComponentName) => {
-    const oldSelected = filterData.value[componentName].selected;
-    filterData.value[componentName].selected = !oldSelected;
+  const invertFilter = (FilterName: FilterName) => {
+    const oldSelected = filterData.value[FilterName].selected;
+    filterData.value[FilterName].selected = !oldSelected;
 
     // Some filters can auto-disable already selected filters
-    const autoDisable = filterData.value[componentName].autoDisable;
+    const autoDisable = filterData.value[FilterName].autoDisable;
     if (oldSelected == false && !!autoDisable) {
       filterData.value[autoDisable].selected = false;
     }
   };
 
-  // TODO: handle type here
-  const selectedFilters = () => {
-    return Object.entries(filterData.value).filter((x) => x[1].selected == true);
+  const selectedFilterNames = () => {
+    return Object.entries(filterData.value)
+      .filter((x) => x[1].selected === true)
+      .map(([key, _]) => key);
   };
 
   const nbSelectedFilters = (): number => {
-    return selectedFilters().length;
+    return selectedFilterNames().length;
   };
 
   const resetFilters = () => {
-    for (let componentName in filters) {
-      filterData.value[<ComponentName>componentName].selected = false;
+    for (let filterName of <FilterName[]>Object.keys(filters)) {
+      filterData.value[<FilterName>filterName].selected = false;
     }
   };
 
   return {
     filterData,
-    selectedFilters,
+    selectedFilterNames,
     nbSelectedFilters,
     invertFilter,
     resetFilters,

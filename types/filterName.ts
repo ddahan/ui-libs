@@ -1,4 +1,4 @@
-type ComponentName =
+type FilterName =
   | "FStyled"
   | "FUnstyled"
   | "FImported"
