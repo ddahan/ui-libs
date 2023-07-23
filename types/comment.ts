@@ -1,3 +1,3 @@
-export interface Component {
+type Component = {
   name: string;
-}
+};

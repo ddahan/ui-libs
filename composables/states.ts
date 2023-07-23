@@ -9,8 +9,8 @@ let filters: FilterStore = {
   FPasted: { selected: false, autoDisable: "FImported" },
   FTailwind: { selected: false },
   FComponents: { selected: false },
-  FAccessible: { selected: true },
-  FFigma: { selected: true },
+  FAccessible: { selected: false },
+  FFigma: { selected: false },
   FDarkMode: { selected: false },
   FFree: { selected: false },
   FOfficial: { selected: false },
@@ -32,8 +32,13 @@ export const useFilterStore = () => {
     }
   };
 
+  // TODO: handle type here
+  const selectedFilters = () => {
+    return Object.entries(filterData.value).filter((x) => x[1].selected == true);
+  };
+
   const nbSelectedFilters = (): number => {
-    return Object.values(filterData.value).filter((x) => x.selected == true).length;
+    return selectedFilters().length;
   };
 
   const resetFilters = () => {
@@ -44,6 +49,7 @@ export const useFilterStore = () => {
 
   return {
     filterData,
+    selectedFilters,
     nbSelectedFilters,
     invertFilter,
     resetFilters,

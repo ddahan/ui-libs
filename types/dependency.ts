@@ -1,3 +1,3 @@
-export interface Dependency {
+type Dependency = {
   name: string;
-}
+};

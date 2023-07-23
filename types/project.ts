@@ -1,4 +1,4 @@
-export interface Project {
+type Project = {
   name: string;
   repoUrl: string;
-}
+};

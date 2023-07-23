@@ -1,16 +1,11 @@
-export interface Library {
+type Library = {
   name: string;
   logo: string;
   logoDark?: string; // only if the logo differs in Dark Mode
   url: string;
-  styling: "STYLED" | "UNSTYLED" | "BOTH";
-  usage: "IMPORT" | "PASTE";
-  tailwindCSSBased: boolean;
-  darkModeSupport: boolean;
-  accessible: boolean;
-  figma: boolean;
-  free: boolean;
-  official: boolean;
+  filters: {
+    [K in ComponentName]: boolean;
+  };
 
   // TODO: other potentiel filters to integrate later
 
@@ -26,4 +21,4 @@ export interface Library {
   // nbDownloads: number;
   // activityLevel: number;
   // nuxtOnly: boolean;
-}
+};

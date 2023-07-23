@@ -1,3 +1,3 @@
-export interface User {
+type User = {
   name: string;
-}
+};

@@ -16,17 +16,9 @@
         <Filters />
       </div>
 
-      <!-- libraries -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 flex-grow">
-        <LibraryCard
-          v-for="library in libraries"
-          :library="library"
-        />
-      </div>
+      <LibraryCards />
     </div>
   </UContainer>
 </template>
 
-<script setup lang="ts">
-import libraries from "@/utils/libraries";
-</script>
+<script setup lang="ts"></script>
