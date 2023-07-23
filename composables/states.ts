@@ -1,21 +1,4 @@
-type FilterName =
-  | "FStyled"
-  | "FUnstyled"
-  | "FImported"
-  | "FPasted"
-  | "FTailwind"
-  | "FComponents"
-  | "FAccessible"
-  | "FFigma"
-  | "FDarkMode"
-  | "FFree"
-  | "FOfficial";
-
-type FilterStore = {
-  [K in FilterName]: { selected: boolean; autoDisable?: FilterName };
-};
-
-let filters: FilterStore = {
+let filterData: { [K in FilterName]: { selected: boolean; autoDisable?: FilterName } } = {
   FStyled: { selected: false, autoDisable: "FUnstyled" },
   FUnstyled: { selected: false, autoDisable: "FStyled" },
   FImported: { selected: false, autoDisable: "FPasted" },
@@ -30,42 +13,40 @@ let filters: FilterStore = {
 };
 
 export const useFilterStore = () => {
-  const filterData = useState("filterStore", () => {
-    return filters;
-  });
+  const filters = useState("filterStore", () => filterData);
 
   const invertFilter = (FilterName: FilterName) => {
-    const oldSelected = filterData.value[FilterName].selected;
-    filterData.value[FilterName].selected = !oldSelected;
+    // 1 - invert the filter selected state
+    const oldSelected = filters.value[FilterName].selected;
+    filters.value[FilterName].selected = !oldSelected;
 
-    // Some filters can auto-disable already selected filters
-    const autoDisable = filterData.value[FilterName].autoDisable;
-    if (oldSelected == false && !!autoDisable) {
-      filterData.value[autoDisable].selected = false;
+    // 2 - some filters can auto-disable already selected filters
+    // (eg. selected `Styled` will auto disable `Unstyled`)
+    const autoDisable = filters.value[FilterName].autoDisable;
+    if (oldSelected === false && !!autoDisable) {
+      filters.value[autoDisable].selected = false;
     }
   };
 
-  const selectedFilterNames = () => {
-    return Object.entries(filterData.value)
-      .filter((x) => x[1].selected === true)
+  const selectedFilterNames = () => <FilterName[]>Object.entries(filters.value)
+      // NOTE: <FilterName[]> allows a more accurate type inference
+      .filter(([_, value]) => value.selected === true)
       .map(([key, _]) => key);
-  };
 
-  const nbSelectedFilters = (): number => {
-    return selectedFilterNames().length;
-  };
+  const nbSelectedFilters = () => selectedFilterNames().length;
 
   const resetFilters = () => {
-    for (let filterName of <FilterName[]>Object.keys(filters)) {
-      filterData.value[<FilterName>filterName].selected = false;
+    // NOTE: <FilterName[]> allows a more accurate type inference
+    for (let filterName of <FilterName[]>Object.keys(filterData)) {
+      filters.value[filterName].selected = false;
     }
   };
 
   return {
-    filterData,
+    filters,
+    invertFilter,
     selectedFilterNames,
     nbSelectedFilters,
-    invertFilter,
     resetFilters,
   };
 };

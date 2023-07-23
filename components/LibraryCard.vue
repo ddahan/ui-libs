@@ -35,8 +35,7 @@ const { selectedFilterNames } = useFilterStore();
 
 const display = computed((): boolean => {
   for (let filterName of selectedFilterNames()) {
-    // TODO: handle typing issue: we should not need to cast it!
-    if (props.library.filters[<FilterName>filterName] === false) {
+    if (props.library.filters[filterName] === false) {
       return false;
     }
   }
