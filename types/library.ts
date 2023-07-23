@@ -1,5 +1,6 @@
 type Library = {
   name: string;
+  subName?: string;
   logo: string;
   logoDark?: string; // only if the logo differs in Dark Mode
   url: string;

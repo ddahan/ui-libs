@@ -18,7 +18,8 @@ const libraries: Library[] = [
     },
   },
   {
-    name: "Tailwind UI (with Headless UI)",
+    name: "Tailwind UI",
+    subName: "with Headless UI",
     logo: "tailwind.svg",
     url: "https://tailwindui.com",
     filters: {

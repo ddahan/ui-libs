@@ -1,6 +1,6 @@
 <template>
   <div
-    class="sticky top-0 z-20 border-t border-transparent backdrop-blur-md shadow-sm shadow-gray-200"
+    class="sticky top-0 z-20 border-t border-transparent backdrop-blur-md shadow-sm shadow-gray-200 dark:shadow-gray-600"
   >
     <div class="flex items-center justify-between px-4 md:px-6 py-2">
       <div class="md:invisible">

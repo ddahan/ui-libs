@@ -11,6 +11,12 @@
         class="h-10 w-10 drop-shadow-lg"
       />
       <p class="mt-4 font-medium tracking-wide">{{ library.name }}</p>
+      <p
+        v-if="library.subName"
+        class="-mt-1 text-xs"
+      >
+        ({{ library.subName }})
+      </p>
     </div>
   </NuxtLink>
 </template>

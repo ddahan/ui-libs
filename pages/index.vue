@@ -7,10 +7,10 @@
         name="i-twemoji-artist-palette"
       />
       <h1 class="text-4xl font-semibold sm:text-5xl">Pick the right UI Library</h1>
-      <p class="sm:text-lg">for your Vue or Nuxt Project</p>
+      <p class="mt-0.5 sm:mt-1 sm:text-lg">for your Vue or Nuxt Project</p>
     </div>
 
-    <div class="mt-6 flex gap-4 flex-grow justify-center">
+    <div class="mt-8 flex gap-4 flex-grow justify-center">
       <!-- filters -->
       <div class="w-64 -mt-2 p-3 hidden md:block">
         <Filters />
