@@ -1,12 +1,12 @@
 type FilterStore = {
-  [K in ComponentName]: { selected: boolean; invert?: ComponentName };
+  [K in ComponentName]: { selected: boolean; autoDisable?: ComponentName };
 };
 
 let filters: FilterStore = {
-  FStyled: { selected: false, invert: "FUnstyled" },
-  FUnstyled: { selected: false, invert: "FStyled" },
-  FImported: { selected: false, invert: "FPasted" },
-  FPasted: { selected: false, invert: "FImported" },
+  FStyled: { selected: false, autoDisable: "FUnstyled" },
+  FUnstyled: { selected: false, autoDisable: "FStyled" },
+  FImported: { selected: false, autoDisable: "FPasted" },
+  FPasted: { selected: false, autoDisable: "FImported" },
   FTailwind: { selected: false },
   FComponents: { selected: false },
   FAccessible: { selected: true },
@@ -22,7 +22,14 @@ export const useFilterStore = () => {
   });
 
   const invertFilter = (componentName: ComponentName) => {
-    filterData.value[componentName].selected = !filterData.value[componentName].selected;
+    const oldSelected = filterData.value[componentName].selected;
+    filterData.value[componentName].selected = !oldSelected;
+
+    // Some filters can auto-disable already selected filters
+    const autoDisable = filterData.value[componentName].autoDisable;
+    if (oldSelected == false && !!autoDisable) {
+      filterData.value[autoDisable].selected = false;
+    }
   };
 
   const nbSelectedFilters = (): number => {
