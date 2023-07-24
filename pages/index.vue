@@ -48,5 +48,12 @@ useHead({
         "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no",
     },
   ],
+  link: [
+    {
+      rel: "icon",
+      type: "image/svg+xml",
+      href: "/favicon/palette.svg",
+    },
+  ],
 });
 </script>
