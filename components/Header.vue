@@ -10,12 +10,16 @@
           variant="outline"
           @click="isOpen = true"
         />
-        <UModal
-          class="h-64"
+        <USlideover
           v-model="isOpen"
+          class="md:hidden"
+          :ui="{ width: 'max-w-[256px]' }"
         >
-          filters kikoo
-        </UModal>
+          <!-- w-64 max-w-none does not work -->
+          <div class="w-64 p-3">
+            <Filters />
+          </div>
+        </USlideover>
       </div>
       <div class="flex items-center justify-end gap-1 md:gap-2">
         <UButton
