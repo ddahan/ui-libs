@@ -1,11 +1,11 @@
 <template>
-  <div class="flex h-12 items-center">
+  <div class="flex h-12 items-center primary-text">
     <UIcon
       :name="icon"
-      class="text-pink-500 h-5 w-5 ml-2 shrink-0"
+      class="h-5 w-5 ml-2 shrink-0"
     />
     <div class="w-full mx-2">
-      <div class="text-sm font-medium text-pink-500">
+      <div class="text-sm font-medium">
         {{ leadingLabel }} {{ value }} {{ trailingLabel }}
       </div>
       <div class="h-4 flex items-center">

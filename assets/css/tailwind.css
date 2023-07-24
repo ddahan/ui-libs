@@ -43,3 +43,22 @@
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
 }
+
+/* The components layer is for class-based styles that you want to be able to override with utilities. */
+@layer components {
+}
+
+/* The utilities layer is for small, single-purpose classes that should always take precedence over any other styles. */
+@layer utilities {
+  .primary-text {
+    @apply text-primary-500 dark:text-primary-400;
+  }
+
+  .primary-bg {
+    @apply bg-gray-100 dark:bg-gray-900;
+  }
+
+  .primary-border-hover {
+    @apply hover:border-primary-500 dark:hover:border-primary-400;
+  }
+}

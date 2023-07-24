@@ -1,7 +1,7 @@
 <template>
   <NuxtLink
     v-if="display"
-    class="rounded-lg p-3 h-40 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-700 hover:border-pink-500 dark:hover:border-pink-500"
+    class="rounded-lg p-3 h-40 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-700 primary-border-hover"
     :to="library.url"
     target="_blank"
   >

@@ -3,12 +3,14 @@
   <UContainer class="max-w-2xl">
     <div class="text-center">
       <UIcon
-        class="mt-4 sm:mt-6 w-14 h-14 sm:w-20 sm:h-20 text-pink-500"
+        class="mt-4 sm:mt-6 w-14 h-14 sm:w-20 sm:h-20 primary-text"
         name="i-ic-outline-palette"
       />
       <h1 class="text-4xl font-semibold sm:text-5xl">UI Lib Picker</h1>
       <p class="mt-0.5 sm:mt-1 sm:text-lg">
-        The right UI Library for your Vue or Nuxt Project
+        The right UI Library for your
+        <span class="primary-text font-semibold">Vue</span> or
+        <span class="primary-text font-semibold">Nuxt</span> Project
       </p>
     </div>
 
