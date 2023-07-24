@@ -1,16 +1,27 @@
 <template>
   <Header />
   <UContainer class="max-w-2xl">
-    <div class="text-center">
-      <UIcon
-        class="mt-4 sm:mt-6 w-14 h-14 sm:w-20 sm:h-20 primary-text"
-        name="i-ic-outline-palette"
-      />
-      <h1 class="text-4xl font-semibold sm:text-5xl">UI Lib Picker</h1>
-      <p class="mt-0.5 sm:mt-1 sm:text-lg">
-        The right UI Library for your
-        <span class="primary-text font-semibold">Vue</span> or
-        <span class="primary-text font-semibold">Nuxt</span> Project
+    <div class="text-center mt-6 sm:my-12">
+      <p class="text-3xl sm:text-4xl font-semibold tracking-tight">
+        Pick the right UI Library
+      </p>
+      <p class="text-lg sm:text-xl">
+        for your
+        <NuxtLink
+          to="https://vuejs.org/"
+          target="_blank"
+          class="primary-text font-semibold"
+        >
+          Vue
+        </NuxtLink>
+        or
+        <NuxtLink
+          to="https://nuxt.com/"
+          target="_blank"
+          class="primary-text font-semibold"
+          >Nuxt</NuxtLink
+        >
+        Project.
       </p>
     </div>
 
@@ -26,7 +37,7 @@
 </template>
 
 <script setup lang="ts">
-const title = ref("UI Picker");
+const title = ref("UI Lib Picker");
 
 useHead({
   title,

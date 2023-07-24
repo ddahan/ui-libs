@@ -2,7 +2,14 @@
   <div
     class="sticky top-0 z-20 border-t border-transparent backdrop-blur-md shadow-sm shadow-gray-200 dark:shadow-gray-600"
   >
-    <div class="flex items-center justify-between px-4 md:px-6 py-2">
+    <div class="flex items-center justify-between px-4 md:px-8 py-2">
+      <div class="hidden md:flex gap-2 items-center h-12">
+        <UIcon
+          class="w-8 h-8 primary-text"
+          name="i-ic-outline-palette"
+        />
+        <h1 class="text-xl font-bold">UI Lib Picker</h1>
+      </div>
       <div class="md:invisible">
         <UButton
           icon="i-material-symbols-format-list-bulleted"
