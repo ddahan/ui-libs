@@ -11,6 +11,7 @@
           @click="isOpen = true"
         />
         <USlideover
+          @dblclick.prevent=""
           v-model="isOpen"
           class="md:hidden"
           :ui="{ width: 'max-w-[256px]' }"
