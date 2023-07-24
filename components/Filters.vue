@@ -86,7 +86,7 @@
 
         <FilterRange
           leadingLabel="More than"
-          trailingLabel="npm DLs"
+          trailingLabel="k npm DLs"
           icon="i-material-symbols-download"
           :rangeMax="100"
         />

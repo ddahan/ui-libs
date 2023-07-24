@@ -1,7 +1,7 @@
 <template>
   <div class="flex h-12 items-center">
     <UIcon
-      name="i-mdi-star-outline"
+      :name="icon"
       class="text-pink-500 h-5 w-5 ml-2 shrink-0"
     />
     <div class="w-full mx-2">
