@@ -3,8 +3,8 @@
   <UContainer class="max-w-2xl">
     <div class="text-center">
       <UIcon
-        class="mt-6 w-14 h-14 sm:w-20 sm:h-20"
-        name="i-twemoji-artist-palette"
+        class="mt-6 w-14 h-14 sm:w-20 sm:h-20 text-pink-500"
+        name="i-ic-outline-palette"
       />
       <h1 class="text-4xl font-semibold sm:text-5xl">Pick the right UI Library</h1>
       <p class="mt-0.5 sm:mt-1 sm:text-lg">for your Vue or Nuxt Project</p>
