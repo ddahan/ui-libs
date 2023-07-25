@@ -3,6 +3,10 @@ const libraries: Library[] = [
     name: "NuxtLabs UI",
     logo: "nuxt.svg",
     url: "https://ui.nuxtlabs.com",
+    repoUrl: "https://github.com/nuxtlabs/ui",
+    nbStars: 1300,
+    registryUrl: "https://www.npmjs.com/package/@nuxthq/ui",
+    nbDownloads: 3305,
     filterMatchings: {
       FStyled: { match: false },
       FUnstyled: { match: false },
@@ -45,6 +49,10 @@ const libraries: Library[] = [
     name: "Prime Vue",
     logo: "primevue.svg",
     url: "https://primevue.org",
+    repoUrl: "https://github.com/primefaces/primevue",
+    nbStars: 4045,
+    registryUrl: "https://www.npmjs.com/package/primevue",
+    nbDownloads: 101039,
     filterMatchings: {
       FStyled: { match: true },
       FUnstyled: { match: true },
@@ -65,6 +73,10 @@ const libraries: Library[] = [
     logo: "quasar.svg",
     logoDark: "quasar_dark.svg",
     url: "https://quasar.dev",
+    repoUrl: "https://github.com/quasarframework/quasar",
+    nbStars: 23900,
+    registryUrl: "https://www.npmjs.com/package/quasar",
+    nbDownloads: 113977,
     filterMatchings: {
       FStyled: { match: true },
       FUnstyled: { match: false },
@@ -84,6 +96,10 @@ const libraries: Library[] = [
     name: "Vuetify",
     logo: "vuetify.svg",
     url: "https://vuetifyjs.com",
+    repoUrl: "https://github.com/vuetifyjs/vuetify",
+    nbStars: 37541,
+    registryUrl: "https://www.npmjs.com/package/vuetify",
+    nbDownloads: 469628,
     filterMatchings: {
       FStyled: { match: true },
       FUnstyled: { match: false },
@@ -101,8 +117,12 @@ const libraries: Library[] = [
   },
   {
     name: "Daisy UI",
+    repoUrl: "https://github.com/saadeghi/daisyui",
+    nbStars: 23376,
     logo: "daisyui.svg",
     url: "https://daisyui.com",
+    registryUrl: "https://www.npmjs.com/package/daisyui",
+    nbDownloads: 160146,
     filterMatchings: {
       FStyled: { match: true },
       FUnstyled: { match: false },
@@ -119,9 +139,13 @@ const libraries: Library[] = [
     },
   },
   {
-    name: "Flowbite Vue 3",
+    name: "Flowbite Vue",
     logo: "flowbite-vue.svg",
     url: "https://flowbite-vue.com",
+    repoUrl: "https://github.com/themesberg/flowbite-vue",
+    nbStars: 421,
+    registryUrl: "https://www.npmjs.com/package/flowbite-vue",
+    nbDownloads: 2952,
     filterMatchings: {
       FStyled: { match: true },
       FUnstyled: { match: false },

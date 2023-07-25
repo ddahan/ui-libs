@@ -8,6 +8,10 @@ type Library = {
   logo: string;
   logoDark?: string; // only if the logo differs in Dark Mode
   url: string;
+  repoUrl?: string;
+  nbStars?: number;
+  nbDownloads?: number;
+  registryUrl?: string;
   filterMatchings: { [K in FilterID]: FilterMatching };
 
   // TODO: other potentiel filters to integrate later
