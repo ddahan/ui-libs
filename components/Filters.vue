@@ -1,6 +1,6 @@
 <template>
   <UAccordion
-    :items="items"
+    :items="accordionSections"
     color="black"
     size="xl"
     variant="ghost"
@@ -9,68 +9,23 @@
     <template #features>
       <div class="ml-2 flex flex-col gap-1">
         <div class="grid grid-cols-2 gap-1">
-          <FilterButton
-            name="FStyled"
-            icon="i-tabler-palette"
-            label="Styled"
-          />
-          <FilterButton
-            name="FUnstyled"
-            icon="i-tabler-palette-off"
-            label="Unstyled"
-          />
+          <FilterButton :filter="findFilterbyId('FStyled')" />
+          <FilterButton :filter="findFilterbyId('FUnstyled')" />
         </div>
 
         <div class="grid grid-cols-2 gap-1">
-          <FilterButton
-            name="FImported"
-            icon="i-mdi-import"
-            label="Imported"
-          />
-          <FilterButton
-            name="FPasted"
-            icon="i-mdi-content-paste"
-            label="Pasted"
-          />
+          <FilterButton :filter="findFilterbyId('FImported')" />
+          <FilterButton :filter="findFilterbyId('FPasted')" />
         </div>
 
-        <FilterButton
-          name="FTailwind"
-          icon="i-simple-icons-tailwindcss"
-          label="Tailwind CSS based"
-        />
-
-        <FilterButton
-          name="FComponents"
-          icon="i-mdi-vuejs"
-          label="Vue Components"
-        />
-
-        <FilterButton
-          name="FAccessible"
-          icon="i-material-symbols-accessibility-new"
-          label="Fully Accessible"
-        />
-        <FilterButton
-          name="FFigma"
-          icon="i-ph-figma-logo"
-          label="Figma files"
-        />
-        <FilterButton
-          name="FDarkMode"
-          icon="i-mdi-weather-night"
-          label="Dark Mode support"
-        />
-        <FilterButton
-          name="FFree"
-          icon="i-material-symbols-money-off"
-          label="Free"
-        />
-        <FilterButton
-          name="FOfficial"
-          icon="i-solar-medal-ribbon-linear"
-          label="Official"
-        />
+        <FilterButton :filter="findFilterbyId('FTailwind')" />
+        <FilterButton :filter="findFilterbyId('FComponents')" />
+        <FilterButton :filter="findFilterbyId('FAccessible')" />
+        <FilterButton :filter="findFilterbyId('FFigma')" />
+        <FilterButton :filter="findFilterbyId('FDarkMode')" />
+        <FilterButton :filter="findFilterbyId('FFree')" />
+        <FilterButton :filter="findFilterbyId('FOfficial')" />
+        <FilterButton :filter="findFilterbyId('FRoadmap')" />
       </div>
     </template>
 
@@ -129,7 +84,9 @@
 </template>
 
 <script setup lang="ts">
-const items = [
+import findFilterbyId from "@/utils/findFilterById";
+
+const accordionSections = [
   {
     label: "Features",
     defaultOpen: true,

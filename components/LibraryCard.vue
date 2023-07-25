@@ -1,24 +1,40 @@
 <template>
-  <NuxtLink
+  <div
     v-if="display"
-    class="rounded-lg p-3 h-40 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-700 primary-border-hover"
-    :to="library.url"
-    target="_blank"
+    class="rounded-lg p-3 h-40 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-700 w-auto"
   >
-    <div class="mx-2 mt-2">
-      <img
-        :src="`/img/${getLogo(library)}`"
-        class="h-10 w-10 drop-shadow-lg"
-      />
-      <p class="mt-4 font-medium tracking-wide">{{ library.name }}</p>
-      <p
-        v-if="library.subName"
-        class="-mt-1 text-xs"
+    <div class="flex items-start justify-between px-4 py-2 gap-8">
+      <NuxtLink
+        :to="library.url"
+        target="_blank"
+        class="shrink-0"
       >
-        ({{ library.subName }})
-      </p>
+        <img
+          :src="`/img/${getLogo(library)}`"
+          class="h-10 w-10 drop-shadow-lg"
+        />
+        <p class="mt-4 font-medium tracking-wide">{{ library.name }}</p>
+        <p
+          v-if="library.subName"
+          class="-mt-1 text-xs"
+        >
+          ({{ library.subName }})
+        </p>
+      </NuxtLink>
+
+      <div class="flex gap-2 flex-wrap place-content-end">
+        <template
+          v-for="(isSelected, filterID) in library.filterMatchings"
+          :key="filterID"
+        >
+          <LibraryCardBadge
+            v-if="isSelected"
+            :filterID="filterID"
+          />
+        </template>
+      </div>
     </div>
-  </NuxtLink>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -31,11 +47,11 @@ const colorMode = useColorMode();
 const getLogo = (library: Library): string =>
   colorMode.value == "dark" && library.logoDark ? library.logoDark : library.logo;
 
-const { selectedFilterNames } = useFilterStore();
+const { selectedFilterIDs } = useFilterStore();
 
 const display = computed((): boolean => {
-  for (let filterName of selectedFilterNames()) {
-    if (props.library.filters[filterName] === false) {
+  for (let filterID of selectedFilterIDs()) {
+    if (props.library.filterMatchings[filterID] === false) {
       return false;
     }
   }

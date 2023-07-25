@@ -3,7 +3,7 @@ const libraries: Library[] = [
     name: "NuxtLabs UI",
     logo: "nuxt.svg",
     url: "https://ui.nuxtlabs.com",
-    filters: {
+    filterMatchings: {
       FStyled: true,
       FUnstyled: false,
       FImported: true,
@@ -23,7 +23,7 @@ const libraries: Library[] = [
     subName: "with Headless UI",
     logo: "tailwind.svg",
     url: "https://tailwindui.com",
-    filters: {
+    filterMatchings: {
       FStyled: true,
       FUnstyled: false,
       FImported: false,
@@ -42,7 +42,7 @@ const libraries: Library[] = [
     name: "Prime Vue",
     logo: "primevue.svg",
     url: "https://primevue.org",
-    filters: {
+    filterMatchings: {
       FStyled: true,
       FUnstyled: true,
       FImported: true,
@@ -62,7 +62,7 @@ const libraries: Library[] = [
     logo: "quasar.svg",
     logoDark: "quasar_dark.svg",
     url: "https://quasar.dev",
-    filters: {
+    filterMatchings: {
       FStyled: true,
       FUnstyled: false,
       FImported: true,
@@ -81,7 +81,7 @@ const libraries: Library[] = [
     name: "Vuetify",
     logo: "vuetify.svg",
     url: "https://vuetifyjs.com",
-    filters: {
+    filterMatchings: {
       FStyled: true,
       FUnstyled: false,
       FImported: true,
@@ -100,7 +100,7 @@ const libraries: Library[] = [
     name: "Daisy UI",
     logo: "daisyui.svg",
     url: "https://daisyui.com",
-    filters: {
+    filterMatchings: {
       FStyled: true,
       FUnstyled: false,
       FImported: true,
@@ -119,7 +119,7 @@ const libraries: Library[] = [
     name: "Flowbite Vue 3",
     logo: "flowbite-vue.svg",
     url: "https://flowbite-vue.com",
-    filters: {
+    filterMatchings: {
       FStyled: true,
       FUnstyled: false,
       FImported: true,

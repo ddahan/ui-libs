@@ -27,7 +27,7 @@
 
     <div class="mt-6 sm:mt-8 flex gap-4 flex-grow justify-center">
       <!-- filters -->
-      <div class="w-64 -mt-2 p-3 hidden md:block">
+      <div class="w-64 -mt-2 p-3 hidden md:block shrink-0">
         <Filters />
       </div>
 

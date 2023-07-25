@@ -1,4 +1,4 @@
-type FilterName =
+type FilterID =
   | "FStyled"
   | "FUnstyled"
   | "FImported"

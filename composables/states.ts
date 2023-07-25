@@ -1,4 +1,4 @@
-let filterData: { [K in FilterName]: { selected: boolean; autoDisable?: FilterName } } = {
+let filterData: { [K in FilterID]: { selected: boolean; autoDisable?: FilterID } } = {
   FStyled: { selected: false, autoDisable: "FUnstyled" },
   FUnstyled: { selected: false, autoDisable: "FStyled" },
   FImported: { selected: false, autoDisable: "FPasted" },
@@ -16,37 +16,37 @@ let filterData: { [K in FilterName]: { selected: boolean; autoDisable?: FilterNa
 export const useFilterStore = () => {
   const filters = useState("filterStore", () => filterData);
 
-  const invertFilter = (FilterName: FilterName) => {
+  const invertFilter = (FilterID: FilterID) => {
     // 1 - invert the filter selected state
-    const oldSelected = filters.value[FilterName].selected;
-    filters.value[FilterName].selected = !oldSelected;
+    const oldSelected = filters.value[FilterID].selected;
+    filters.value[FilterID].selected = !oldSelected;
 
     // 2 - some filters can auto-disable already selected filters
     // (eg. selected `Styled` will auto disable `Unstyled`)
-    const autoDisable = filters.value[FilterName].autoDisable;
+    const autoDisable = filters.value[FilterID].autoDisable;
     if (oldSelected === false && !!autoDisable) {
       filters.value[autoDisable].selected = false;
     }
   };
 
-  const selectedFilterNames = () => <FilterName[]>Object.entries(filters.value)
-      // NOTE: <FilterName[]> allows a more accurate type inference
+  const selectedFilterIDs = () => <FilterID[]>Object.entries(filters.value)
+      // NOTE: <FilterID[]> allows a more accurate type inference
       .filter(([_, value]) => value.selected === true)
       .map(([key, _]) => key);
 
-  const nbSelectedFilters = () => selectedFilterNames().length;
+  const nbSelectedFilters = () => selectedFilterIDs().length;
 
   const resetFilters = () => {
-    // NOTE: <FilterName[]> allows a more accurate type inference
-    for (let filterName of <FilterName[]>Object.keys(filterData)) {
-      filters.value[filterName].selected = false;
+    // NOTE: <FilterID[]> allows a more accurate type inference
+    for (let filterID of <FilterID[]>Object.keys(filterData)) {
+      filters.value[filterID].selected = false;
     }
   };
 
   return {
     filters,
     invertFilter,
-    selectedFilterNames,
+    selectedFilterIDs,
     nbSelectedFilters,
     resetFilters,
   };

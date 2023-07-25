@@ -1,21 +1,19 @@
 <template>
   <UButton
     class="w-full"
-    :icon="icon"
-    :label="label"
-    :variant="filters[props.name].selected ? 'solid' : 'ghost'"
-    @click="invertFilter(name)"
+    :icon="filter.icon"
+    :label="filter.label"
+    :variant="filters[filter.id].selected ? 'solid' : 'ghost'"
+    @click="invertFilter(filter.id)"
   />
 </template>
 
 <script setup lang="ts">
 export interface Props {
-  name: FilterName;
-  label?: string;
-  icon?: string;
+  filter: Filter;
 }
 
-const props = defineProps<Props>();
+defineProps<Props>();
 
 const { filters, invertFilter } = useFilterStore();
 </script>
