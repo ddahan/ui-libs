@@ -9,23 +9,23 @@
     <template #features>
       <div class="ml-2 flex flex-col gap-1">
         <div class="grid grid-cols-2 gap-1">
-          <FilterButton :filter="findFilterbyId('FStyled')" />
-          <FilterButton :filter="findFilterbyId('FUnstyled')" />
+          <FilterButton filterID="FStyled" />
+          <FilterButton filterID="FUnstyled" />
         </div>
 
         <div class="grid grid-cols-2 gap-1">
-          <FilterButton :filter="findFilterbyId('FImported')" />
-          <FilterButton :filter="findFilterbyId('FPasted')" />
+          <FilterButton filterID="FImported" />
+          <FilterButton filterID="FPasted" />
         </div>
 
-        <FilterButton :filter="findFilterbyId('FTailwind')" />
-        <FilterButton :filter="findFilterbyId('FComponents')" />
-        <FilterButton :filter="findFilterbyId('FAccessible')" />
-        <FilterButton :filter="findFilterbyId('FFigma')" />
-        <FilterButton :filter="findFilterbyId('FDarkMode')" />
-        <FilterButton :filter="findFilterbyId('FFree')" />
-        <FilterButton :filter="findFilterbyId('FOfficial')" />
-        <FilterButton :filter="findFilterbyId('FRoadmap')" />
+        <FilterButton filterID="FTailwind" />
+        <FilterButton filterID="FComponents" />
+        <FilterButton filterID="FAccessible" />
+        <FilterButton filterID="FFigma" />
+        <FilterButton filterID="FDarkMode" />
+        <FilterButton filterID="FFree" />
+        <FilterButton filterID="FOfficial" />
+        <FilterButton filterID="FRoadmap" />
       </div>
     </template>
 
@@ -84,8 +84,6 @@
 </template>
 
 <script setup lang="ts">
-import findFilterbyId from "@/utils/findFilterById";
-
 const accordionSections = [
   {
     label: "Features",

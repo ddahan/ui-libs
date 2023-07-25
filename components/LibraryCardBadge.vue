@@ -1,5 +1,8 @@
 <template>
-  <div class="text-xs text-gray-600 bg-gray-50 rounded-lg px-2 py-0.5">
+  <div
+    class="flex items-center gap-1 text-xs bg-gray-50 dark:bg-gray-600 rounded-lg px-2 py-0.5"
+  >
+    <UIcon :name="filter.icon" />
     {{ filter.label }}
   </div>
 </template>

@@ -9,11 +9,13 @@
 </template>
 
 <script setup lang="ts">
-export interface Props {
-  filter: Filter;
-}
+import findFilterbyId from "@/utils/findFilterById";
 
-defineProps<Props>();
+export interface Props {
+  filterID: FilterID;
+}
+const props = defineProps<Props>();
+const filter = findFilterbyId(props.filterID);
 
 const { filters, invertFilter } = useFilterStore();
 </script>

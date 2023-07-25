@@ -53,12 +53,4 @@
   .primary-text {
     @apply text-primary-500 dark:text-primary-400;
   }
-
-  .primary-bg {
-    @apply bg-gray-100 dark:bg-gray-900;
-  }
-
-  .primary-border-hover {
-    @apply hover:border-primary-500 dark:hover:border-primary-400;
-  }
 }
