@@ -1,12 +1,14 @@
+type TrueFilterMatching = { match: true; to?: string };
+type FalseFilterMatching = { match: false };
+type FilterMatching = TrueFilterMatching | FalseFilterMatching;
+
 type Library = {
   name: string;
   subName?: string;
   logo: string;
   logoDark?: string; // only if the logo differs in Dark Mode
   url: string;
-  filterMatchings: {
-    [K in FilterID]: boolean;
-  };
+  filterMatchings: { [K in FilterID]: FilterMatching };
 
   // TODO: other potentiel filters to integrate later
   // projects: Project[];

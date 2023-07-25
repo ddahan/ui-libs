@@ -24,12 +24,13 @@
 
       <div class="flex gap-2 flex-wrap place-content-end">
         <template
-          v-for="(isSelected, filterID) in library.filterMatchings"
+          v-for="(filterMatching, filterID) in library.filterMatchings"
           :key="filterID"
         >
           <LibraryCardBadge
-            v-if="isSelected"
+            v-if="filterMatching.match"
             :filterID="filterID"
+            :filterMatching="filterMatching"
           />
         </template>
       </div>
@@ -51,7 +52,7 @@ const { selectedFilterIDs } = useFilterStore();
 
 const display = computed((): boolean => {
   for (let filterID of selectedFilterIDs()) {
-    if (props.library.filterMatchings[filterID] === false) {
+    if (props.library.filterMatchings[filterID].match === false) {
       return false;
     }
   }

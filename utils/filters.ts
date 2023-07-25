@@ -52,7 +52,7 @@ const filters: Filter[] = [
   {
     id: "FRoadmap",
     label: "Public Roadmap",
-    icon: "i-solar-medal-ribbon-linear",
+    icon: "i-tabler-road",
   },
   {
     id: "FOfficial",
