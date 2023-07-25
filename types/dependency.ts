@@ -1,3 +1,0 @@
-type Dependency = {
-  name: string;
-};

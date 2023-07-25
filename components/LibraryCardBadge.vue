@@ -1,7 +1,6 @@
 <template>
   <!-- <UButton
     size="2xs"
-    variant="link"
     color="gray"
     :disabled="!filterMatching.to"
     :label="filter.label"

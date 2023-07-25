@@ -1,3 +1,0 @@
-type Component = {
-  name: string;
-};
