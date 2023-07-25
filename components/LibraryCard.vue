@@ -1,7 +1,7 @@
 <template>
   <div
     v-if="display"
-    class="rounded-lg p-3 h-40 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-700 w-auto"
+    class="rounded-lg p-3 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-700 w-auto min-h-[180px]"
   >
     <div class="flex items-start justify-between px-4 py-2 gap-8">
       <NuxtLink
