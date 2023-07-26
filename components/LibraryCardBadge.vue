@@ -1,14 +1,4 @@
 <template>
-  <!-- <UButton
-    size="2xs"
-    color="gray"
-    :disabled="!filterMatching.to"
-    :label="filter.label"
-    :icon="filter.icon"
-    :to="filterMatching.to"
-    target="_blank"
-  /> -->
-
   <NuxtLink
     class="flex items-center gap-1 text-xs bg-gray-50 dark:bg-gray-600 rounded-lg px-2 py-0.5"
     :class="filterMatching.to ? 'hover:bg-primary-50 dark:hover:bg-primary-900' : ''"
@@ -24,9 +14,8 @@
 import findFilterbyId from "@/utils/findFilterById";
 
 const props = defineProps<{
-  filterID: FilterID;
-  filterMatching: TrueFilterMatching; // we only display True matches
+  filterMatching: FilterMatching;
 }>();
 
-const filter = findFilterbyId(props.filterID);
+const filter = findFilterbyId(props.filterMatching.id);
 </script>

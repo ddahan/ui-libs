@@ -1,6 +1,4 @@
-type TrueFilterMatching = { match: true; to?: string };
-type FalseFilterMatching = { match: false };
-type FilterMatching = TrueFilterMatching | FalseFilterMatching;
+type FilterMatching = { id: FilterID; to?: string };
 
 type Library = {
   name: string;
@@ -11,9 +9,8 @@ type Library = {
   repoOwner?: string;
   repoName?: string;
   package?: string;
-  // IDEA: why not only put data which is true in it?
-  filterMatchings: { [K in FilterID]: FilterMatching };
-  componentMatchings: ComponentName[]; // no need to have a full dict for now. otherwise we could fo like for filter matching, to have more data.
+  filterMatchings: FilterMatching[];
+  componentMatchings: ComponentName[];
 
   // TODO: other potentiel filters to integrate later
   // projects: Project[];

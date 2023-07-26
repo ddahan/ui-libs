@@ -25,14 +25,10 @@
 
         <div class="flex gap-2 flex-wrap place-content-end">
           <template
-            v-for="(filterMatching, filterID) in library.filterMatchings"
-            :key="filterID"
+            v-for="filterMatching in library.filterMatchings"
+            :key="filterMatching.id"
           >
-            <LibraryCardBadge
-              v-if="filterMatching.match"
-              :filterID="filterID"
-              :filterMatching="filterMatching"
-            />
+            <LibraryCardBadge :filterMatching="filterMatching" />
           </template>
         </div>
       </div>
@@ -83,12 +79,8 @@ const colorMode = useColorMode();
 const display = computed((): boolean => {
   /* Return true if this card should be displayed */
   const { selectedFilterIDs } = useFilterStore();
-  for (let filterID of selectedFilterIDs()) {
-    if (props.library.filterMatchings[filterID].match === false) {
-      return false;
-    }
-  }
-  return true;
+  const libraryFilterIDs = props.library.filterMatchings.map((obj) => obj.id);
+  return isSubset(selectedFilterIDs(), libraryFilterIDs);
 });
 
 const getLogo = (library: Library): string =>
