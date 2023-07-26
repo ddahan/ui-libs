@@ -11,7 +11,7 @@
           class="shrink-0"
         >
           <img
-            :src="`/img/${getLogo(library)}`"
+            :src="`/img/${logo}`"
             class="h-10 w-10 drop-shadow-lg"
           />
           <p class="mt-4 font-medium tracking-wide">{{ library.name }}</p>
@@ -36,19 +36,19 @@
       <div class="flex items-center justify-between mt-4">
         <div class="flex ml-1">
           <UButton
-            v-if="getRepoUrl(library) && githubApiData"
+            v-if="repoUrl && githubApiData"
             icon="i-mdi-star-outline"
             :label="getDisplayableNumber(githubApiData.stargazers_count)"
-            :to="getRepoUrl(library)"
+            :to="repoUrl"
             target="_blank"
             variant="ghost"
             color="gray"
           />
           <UButton
-            v-if="getRegistryUrl(library) && npmApiData"
+            v-if="registryUrl && npmApiData"
             icon="i-material-symbols-download"
             :label="getDisplayableNumber(npmApiData.downloads)"
-            :to="getRegistryUrl(library)"
+            :to="registryUrl"
             target="_blank"
             variant="ghost"
             color="gray"
@@ -83,16 +83,18 @@ const display = computed((): boolean => {
   return isSubset(selectedFilterIDs(), libraryFilterIDs);
 });
 
-const getLogo = (library: Library): string =>
-  colorMode.value == "dark" && library.logoDark ? library.logoDark : library.logo;
+const logo = ((): string =>
+  colorMode.value == "dark" && props.library.logoDark
+    ? props.library.logoDark
+    : props.library.logo)();
 
 // Github related ------------------------------------------------------------------------
 
-const getRepoUrl = (library: Library): string | undefined => {
-  if (library.repoName && library.repoOwner) {
-    return `https://github.com/${library.repoOwner}/${library.repoName}`;
+const repoUrl = ((): string | undefined => {
+  if (props.library.repoName && props.library.repoOwner) {
+    return `https://github.com/${props.library.repoOwner}/${props.library.repoName}`;
   }
-};
+})();
 
 type GithubApiResponse = {
   stargazers_count: number; // known and useful key
@@ -109,8 +111,10 @@ const { data: githubApiData } = useFetch<GithubApiResponse>(
 
 // NPM related ---------------------------------------------------------------------------
 
-const getRegistryUrl = (library: Library): string | undefined =>
-  library.package ? `https://www.npmjs.com/package/${library.package}` : undefined;
+const registryUrl = ((library: Library): string | undefined =>
+  library.package ? `https://www.npmjs.com/package/${library.package}` : undefined)(
+  props.library
+);
 
 type NpmApiResponse = {
   downloads: number;

@@ -27,7 +27,6 @@ const libraries: Library[] = [
     logo: "tailwind.svg",
     url: "https://tailwindui.com",
     componentMatchings: ["Badge"],
-
     filterMatchings: [
       { id: "FStyled" },
       { id: "FTailwind" },
