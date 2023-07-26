@@ -1,5 +1,8 @@
 <template>
-  <div class="flex h-12 items-center primary-text">
+  <div
+    class="flex h-10 items-center primary-text border border-transparent rounded-md"
+    :class="value > 0 ? 'border-primary-500 dark:border-primary-400' : ''"
+  >
     <UIcon
       :name="icon"
       class="h-5 w-5 ml-2 shrink-0"

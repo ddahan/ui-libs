@@ -30,7 +30,7 @@
     </template>
 
     <template #popularity>
-      <div class="ml-2">
+      <div class="ml-2 flex flex-col gap-1">
         <FilterRange
           leadingLabel="More than"
           trailingLabel="stars"
