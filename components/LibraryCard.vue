@@ -40,54 +40,42 @@
       <div class="flex items-center justify-between mt-4">
         <div class="flex ml-1">
           <UButton
-            v-if="library.repoUrl && library.nbStars"
+            v-if="getRepoUrl(library) && githubApiData"
             icon="i-mdi-star-outline"
-            :label="getDisplayableNumber(library.nbStars)"
-            :to="library.repoUrl"
+            :label="getDisplayableNumber(githubApiData.stargazers_count)"
+            :to="getRepoUrl(library)"
             target="_blank"
             variant="ghost"
             color="gray"
           />
           <UButton
-            v-if="library.registryUrl && library.nbDownloads"
+            v-if="getRegistryUrl(library) && npmApiData"
             icon="i-material-symbols-download"
-            :label="getDisplayableNumber(library.nbDownloads)"
-            :to="library.registryUrl"
+            :label="getDisplayableNumber(npmApiData.downloads)"
+            :to="getRegistryUrl(library)"
             target="_blank"
             variant="ghost"
             color="gray"
           />
         </div>
-        <div class="mr-2">
-          <UButton
-            icon="i-ph-users"
-            label="30"
-            variant="ghost"
-            color="gray"
-          />
-        </div>
+        <div class="mr-2"></div>
       </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import getDisplayableNumber from "@/utils/getDisplayableNumber";
+
 const props = defineProps<{
   library: Library;
 }>();
 
 const colorMode = useColorMode();
 
-const getLogo = (library: Library): string =>
-  colorMode.value == "dark" && library.logoDark ? library.logoDark : library.logo;
-
-const getDisplayableNumber = (number: number): string =>
-  // round to the first decimal if the number is higher than 1000
-  number >= 1000 ? `${Math.round((number / 1000) * 10) / 10}k` : `${number}`;
-
-const { selectedFilterIDs } = useFilterStore();
-
 const display = computed((): boolean => {
+  /* Return true if this card should be displayed */
+  const { selectedFilterIDs } = useFilterStore();
   for (let filterID of selectedFilterIDs()) {
     if (props.library.filterMatchings[filterID].match === false) {
       return false;
@@ -95,4 +83,46 @@ const display = computed((): boolean => {
   }
   return true;
 });
+
+const getLogo = (library: Library): string =>
+  colorMode.value == "dark" && library.logoDark ? library.logoDark : library.logo;
+
+// Github related ------------------------------------------------------------------------
+
+const getRepoUrl = (library: Library): string | undefined => {
+  if (library.repoName && library.repoOwner) {
+    return `https://github.com/${library.repoOwner}/${library.repoName}`;
+  }
+};
+
+type GithubApiResponse = {
+  stargazers_count: number; // known and useful key
+  [key: string]: unknown; // unknown and useless keys
+};
+
+const { data: githubApiData } = useFetch<GithubApiResponse>(
+  `https://api.github.com/repos/${props.library.repoOwner}/${props.library.repoName}`,
+  {
+    lazy: true,
+    server: false, // This call will only be performed on the client
+  }
+);
+
+// NPM related ---------------------------------------------------------------------------
+
+const getRegistryUrl = (library: Library): string | undefined =>
+  library.package ? `https://www.npmjs.com/package/${library.package}` : undefined;
+
+type NpmApiResponse = {
+  downloads: number;
+  [key: string]: unknown;
+};
+
+const { data: npmApiData } = useFetch<NpmApiResponse>(
+  `https://api.npmjs.org/downloads/point/last-week/${props.library.package}`,
+  {
+    lazy: true,
+    server: false,
+  }
+);
 </script>
