@@ -11,7 +11,9 @@ type Library = {
   repoOwner?: string;
   repoName?: string;
   package?: string;
+  // IDEA: why not only put data which is true in it?
   filterMatchings: { [K in FilterID]: FilterMatching };
+  componentMatchings: ComponentName[]; // no need to have a full dict for now. otherwise we could fo like for filter matching, to have more data.
 
   // TODO: other potentiel filters to integrate later
   // projects: Project[];

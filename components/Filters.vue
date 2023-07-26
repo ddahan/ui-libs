@@ -43,30 +43,23 @@
           leadingLabel="More than"
           trailingLabel="k npm DLs"
           icon="i-material-symbols-download"
-          :rangeMax="100"
+          :rangeStep="10"
+          :rangeMax="200"
         />
       </div>
     </template>
 
-    <!-- <template #availableComponents>
+    <template #availableComponents>
       <div class="ml-2">
-        <UButton
-          size="xs"
-          label="Accordion"
-          variant="ghost"
-        />
-        <UButton
-          size="xs"
-          label="Dropdown"
-          variant="ghost"
-        />
-        <UButton
-          size="xs"
-          label="Badge"
-          variant="ghost"
+        <FilterRange
+          leadingLabel="Score higher than"
+          trailingLabel="%"
+          icon="i-heroicons-square-3-stack-3d"
+          :rangeMax="95"
+          :rangeStep="5"
         />
       </div>
-    </template> -->
+    </template>
   </UAccordion>
   <div
     v-if="nbSelectedFilters() > 0"
@@ -95,10 +88,11 @@ const accordionSections = [
     defaultOpen: true,
     slot: "popularity",
   },
-  // {
-  //   label: "Available Components",
-  //   slot: "availableComponents",
-  // },
+  {
+    label: "Available Components",
+    defaultOpen: true,
+    slot: "availableComponents",
+  },
 ];
 
 const { nbSelectedFilters, resetFilters } = useFilterStore();

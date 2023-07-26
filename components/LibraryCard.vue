@@ -58,7 +58,14 @@
             color="gray"
           />
         </div>
-        <div class="mr-2"></div>
+        <div class="mr-2">
+          <UButton
+            icon="i-heroicons-square-3-stack-3d"
+            label="42 %"
+            variant="ghost"
+            color="primary"
+          />
+        </div>
       </div>
     </div>
   </div>
