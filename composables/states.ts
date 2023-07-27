@@ -51,3 +51,12 @@ export const useFilterStore = () => {
     resetFilters,
   };
 };
+
+import sections from "@/utils/sections";
+export const useNbComponentsStore = () => {
+  /* Return the number of potential existing components. useful to compute the availability score  */
+  let componentCount = sections.reduce((count, section) => {
+    return count + section.components.length;
+  }, 0);
+  return useState("nbComponentsStore", () => componentCount);
+};

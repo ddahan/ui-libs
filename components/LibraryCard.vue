@@ -5,23 +5,33 @@
   >
     <div class="h-full flex flex-col justify-between">
       <div class="flex items-start justify-between px-4 py-2 gap-8">
-        <NuxtLink
-          :to="library.url"
-          target="_blank"
-          class="shrink-0"
-        >
-          <img
-            :src="`/img/${logo}`"
-            class="h-10 w-10 drop-shadow-lg"
-          />
-          <p class="mt-4 font-medium tracking-wide">{{ library.name }}</p>
+        <div class="shrink-0">
+          <UTooltip :text="`Go to ${library.name} website`">
+            <UButton
+              class="flex flex-col gap-3"
+              variant="ghost"
+              :padded="false"
+              color="black"
+              size="xl"
+              :to="library.url"
+              target="_blank"
+            >
+              <div class="w-full">
+                <img
+                  :src="`/img/${logo}`"
+                  class="h-12 w-12 drop-shadow-lg"
+                />
+              </div>
+              <p class="font-medium tracking-wide">{{ library.name }}</p>
+            </UButton>
+          </UTooltip>
           <p
             v-if="library.subName"
             class="-mt-1 text-xs"
           >
             ({{ library.subName }})
           </p>
-        </NuxtLink>
+        </div>
 
         <div class="flex gap-2 flex-wrap place-content-end">
           <template
@@ -63,7 +73,7 @@
           </UTooltip>
         </div>
         <div class="mr-2">
-          <UTooltip text="Click to browse all available components">
+          <UTooltip text="Browse all available components">
             <UButton
               icon="i-heroicons-square-3-stack-3d"
               :label="`${availabilityScore} %`"
@@ -79,7 +89,6 @@
 
 <script setup lang="ts">
 import getDisplayableNumber from "@/utils/getDisplayableNumber";
-import nbComponents from "@/types/section_and_component";
 
 const props = defineProps<{
   library: Library;
@@ -100,7 +109,9 @@ const logo = ((): string =>
     : props.library.logo)();
 
 const availabilityScore = ((): number =>
-  Math.round((props.library.componentMatchings.length / nbComponents) * 100))();
+  Math.round(
+    (props.library.componentMatchings.length / useNbComponentsStore().value) * 100
+  ))();
 
 // Github related ------------------------------------------------------------------------
 

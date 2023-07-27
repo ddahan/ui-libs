@@ -2,18 +2,17 @@ const sections: Section[] = [
   {
     name: "Elements",
     components: [
-      { name: "Avatar", description: "Rounded image of a resource", factor: 2 },
+      { name: "Avatar", description: "Rounded image of a resource" },
       {
         name: "Badge",
         aliases: ["chip"],
         description: "Rounded image of a resource",
-        factor: 2,
       },
     ],
   },
   {
     name: "Forms",
-    components: [{ name: "Input", description: "todo", factor: 1 }],
+    components: [{ name: "Input", description: "todo" }],
   },
 ];
 
