@@ -35,9 +35,11 @@
       <!-- Card footer -->
       <div class="flex items-center justify-between mt-4">
         <div class="flex ml-1">
-          <UTooltip text="Click to open github.com page">
+          <UTooltip
+            v-if="repoUrl && githubApiData"
+            text="Go to github.com page"
+          >
             <UButton
-              v-if="repoUrl && githubApiData"
               icon="i-mdi-star-outline"
               :label="getDisplayableNumber(githubApiData.stargazers_count)"
               :to="repoUrl"
@@ -46,9 +48,11 @@
               color="gray"
             />
           </UTooltip>
-          <UTooltip text="Click to open npmjs.com page">
+          <UTooltip
+            v-if="registryUrl && npmApiData"
+            text="Go to npmjs.com page"
+          >
             <UButton
-              v-if="registryUrl && npmApiData"
               icon="i-material-symbols-download"
               :label="getDisplayableNumber(npmApiData.downloads)"
               :to="registryUrl"
