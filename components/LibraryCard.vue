@@ -35,32 +35,38 @@
       <!-- Card footer -->
       <div class="flex items-center justify-between mt-4">
         <div class="flex ml-1">
-          <UButton
-            v-if="repoUrl && githubApiData"
-            icon="i-mdi-star-outline"
-            :label="getDisplayableNumber(githubApiData.stargazers_count)"
-            :to="repoUrl"
-            target="_blank"
-            variant="ghost"
-            color="gray"
-          />
-          <UButton
-            v-if="registryUrl && npmApiData"
-            icon="i-material-symbols-download"
-            :label="getDisplayableNumber(npmApiData.downloads)"
-            :to="registryUrl"
-            target="_blank"
-            variant="ghost"
-            color="gray"
-          />
+          <UTooltip text="Click to open github.com page">
+            <UButton
+              v-if="repoUrl && githubApiData"
+              icon="i-mdi-star-outline"
+              :label="getDisplayableNumber(githubApiData.stargazers_count)"
+              :to="repoUrl"
+              target="_blank"
+              variant="ghost"
+              color="gray"
+            />
+          </UTooltip>
+          <UTooltip text="Click to open npmjs.com page">
+            <UButton
+              v-if="registryUrl && npmApiData"
+              icon="i-material-symbols-download"
+              :label="getDisplayableNumber(npmApiData.downloads)"
+              :to="registryUrl"
+              target="_blank"
+              variant="ghost"
+              color="gray"
+            />
+          </UTooltip>
         </div>
         <div class="mr-2">
-          <UButton
-            icon="i-heroicons-square-3-stack-3d"
-            label="42 %"
-            variant="ghost"
-            color="primary"
-          />
+          <UTooltip text="Click to browse all available components">
+            <UButton
+              icon="i-heroicons-square-3-stack-3d"
+              :label="`${availabilityScore} %`"
+              variant="ghost"
+              color="primary"
+            />
+          </UTooltip>
         </div>
       </div>
     </div>
@@ -69,6 +75,7 @@
 
 <script setup lang="ts">
 import getDisplayableNumber from "@/utils/getDisplayableNumber";
+import nbComponents from "@/types/section_and_component";
 
 const props = defineProps<{
   library: Library;
@@ -87,6 +94,9 @@ const logo = ((): string =>
   colorMode.value == "dark" && props.library.logoDark
     ? props.library.logoDark
     : props.library.logo)();
+
+const availabilityScore = ((): number =>
+  Math.round((props.library.componentMatchings.length / nbComponents) * 100))();
 
 // Github related ------------------------------------------------------------------------
 
