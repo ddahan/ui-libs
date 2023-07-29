@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "x",
-    "@nuxthq/ui": "x",
+    "@nuxthq/ui-edge": "npm:@nuxthq/ui-edge@latest",
     "@types/node": "x",
     "nuxt": "x"
   },

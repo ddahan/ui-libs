@@ -65,6 +65,17 @@
                     "ngClass",
                     "ui"
                 ],
+                // https://ui.nuxtlabs.com/getting-started/installation#intellisense
+                "tailwindCSS.experimental.classRegex": [
+                    [
+                        "ui:\\s*{([^)]*)\\s*}",
+                        "[\"'`]([^\"'`]*).*?[\"'`]"
+                    ],
+                    [
+                        "/\\*ui\\*/\\s*{([^;]*)}",
+                        ":\\s*[\"'`]([^\"'`]*).*?[\"'`]"
+                    ]
+                ],
                 "files.associations": {
                     "*.css": "tailwindcss"
                 },
