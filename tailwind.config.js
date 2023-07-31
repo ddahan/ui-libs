@@ -14,4 +14,5 @@ module.exports = {
     // https://github.com/tailwindlabs/tailwindcss/discussions/1739
     hoverOnlyWhenSupported: true,
   },
+  plugins: [require("@tailwindcss/typography")],
 };

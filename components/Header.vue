@@ -15,11 +15,11 @@
           icon="i-material-symbols-format-list-bulleted"
           :square="true"
           variant="outline"
-          @click="isOpen = true"
+          @click="isMenuOpen = true"
         />
         <USlideover
           @dblclick.prevent=""
-          v-model="isOpen"
+          v-model="isMenuOpen"
           class="md:hidden"
           :ui="{ width: 'max-w-[256px]' }"
         >
@@ -42,31 +42,28 @@
 
         <UButton
           variant="ghost"
-          label="About"
-          to="https://volta.net"
-          target="_blank"
+          icon="i-ic-outline-help-outline"
+          @click="isHowToOpen = true"
         />
+        <USlideover v-model="isHowToOpen">
+          <HowTo class="p-6" />
+        </USlideover>
 
         <UButton
-          class="md:hidden"
           icon="i-bx-coffee-togo"
-          to="https://volta.net"
-          target="_blank"
-        />
-
-        <UButton
-          class="hidden md:flex"
-          icon="i-bx-coffee-togo"
-          label="Buy Me a Coffee"
           :trailing="false"
-          to="https://volta.net"
+          :square="true"
+          to="https://www.buymeacoffee.com/ddahan"
           target="_blank"
-        />
+        >
+          <span class="hidden md:inline-block">Buy Me a Coffee</span>
+        </UButton>
       </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-const isOpen = ref(false);
+const isHowToOpen = ref(false);
+const isMenuOpen = ref(false);
 </script>

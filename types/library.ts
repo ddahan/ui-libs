@@ -5,6 +5,7 @@ type Library = {
   subName?: string;
   logo: string;
   logoDark?: string; // only if the logo differs in Dark Mode
+  help?: string;
   url: string;
   repoOwner?: string;
   repoName?: string;
