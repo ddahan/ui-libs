@@ -20,13 +20,13 @@
         <USlideover
           @dblclick.prevent=""
           v-model="isMenuOpen"
-          class="md:hidden"
+          side="left"
           :ui="{ width: 'max-w-[256px]' }"
+          class="md:hidden"
         >
-          <!-- w-64 max-w-none does not work -->
-          <div class="w-64 p-3">
+          <SlideoverContent>
             <Filters />
-          </div>
+          </SlideoverContent>
         </USlideover>
       </div>
       <div class="flex items-center justify-end gap-1 md:gap-2">
@@ -45,8 +45,15 @@
           icon="i-ic-outline-help-outline"
           @click="isHowToOpen = true"
         />
-        <USlideover v-model="isHowToOpen">
-          <HowTo class="p-6" />
+        <USlideover
+          @dblclick.prevent=""
+          v-model="isHowToOpen"
+          side="right"
+          :ui="{ width: 'max-w-[256px] md:max-w-md' }"
+        >
+          <SlideoverContent>
+            <HowTo />
+          </SlideoverContent>
         </USlideover>
 
         <UButton
