@@ -16,6 +16,7 @@
     "nuxt": "x"
   },
   "dependencies": {
-    "@iconify/json": "x"
+    "@iconify/json": "x",
+    "zod": "^3.21.4"
   }
 }
