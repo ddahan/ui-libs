@@ -11,7 +11,7 @@
   "devDependencies": {
     "@nuxt/devtools": "x",
     "@nuxthq/ui-edge": "npm:@nuxthq/ui-edge@latest",
-    "@tailwindcss/typography": "^0.5.9",
+    "@tailwindcss/typography": "x",
     "@types/node": "x",
     "nuxt": "x"
   },
