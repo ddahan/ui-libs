@@ -1,6 +1,6 @@
 <template>
   <Header />
-  <UContainer class="max-w-2xl">
+  <UContainer class="max-w-2xl pb-6">
     <div class="text-center mt-6 sm:my-12">
       <p class="text-3xl sm:text-4xl font-semibold tracking-tight">
         Pick the right UI Library
