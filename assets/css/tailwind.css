@@ -28,7 +28,7 @@
   #__nuxt,
   #__layout {
     @apply bg-slate-50 dark:bg-slate-900;
-    @apply min-h-screen w-full;
+    @apply min-h-screen w-full h-full;
     @apply font-roobert;
   }
 

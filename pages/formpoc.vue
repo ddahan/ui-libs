@@ -1,31 +1,42 @@
 <template>
-  <UContainer>
-    <UForm
-      ref="form"
-      :schema="schema"
-      :state="state"
-      @submit.prevent="submit"
-    >
-      <UFormGroup
-        label="Email"
-        name="email"
+  <div class="flex items-center h-full">
+    <UContainer class="w-96">
+      <UForm
+        class="w-full"
+        ref="form"
+        :schema="schema"
+        :state="state"
+        @submit.prevent="submit"
       >
-        <UInput v-model="state.email" />
-      </UFormGroup>
+        <UFormGroup
+          label="Email"
+          required
+          help="We will never share your email."
+          name="email"
+        >
+          <UInput v-model="state.email" />
+        </UFormGroup>
 
-      <UFormGroup
-        label="Password"
-        name="password"
-      >
-        <UInput
-          v-model="state.password"
-          type="password"
-        />
-      </UFormGroup>
+        <UFormGroup
+          label="Password"
+          required
+          name="password"
+        >
+          <UInput
+            v-model="state.password"
+            type="password"
+          />
+        </UFormGroup>
 
-      <UButton type="submit">Submit</UButton>
-    </UForm>
-  </UContainer>
+        <UButton
+          class="mt-4"
+          size="xs"
+          type="submit"
+          >Submit</UButton
+        >
+      </UForm>
+    </UContainer>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -45,6 +56,6 @@ const form = ref();
 
 const submit = async () => {
   await form.value!.validate();
-  console.log("validated!");
+  //console.log("validated!");
 };
 </script>
