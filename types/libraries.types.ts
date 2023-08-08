@@ -1,5 +1,3 @@
-type FilterMatching = { id: FilterID; to?: string };
-
 type Library = {
   name: string;
   subName?: string;
