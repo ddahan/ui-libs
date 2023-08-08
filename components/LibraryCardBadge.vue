@@ -11,8 +11,6 @@
 </template>
 
 <script setup lang="ts">
-import findFilterbyId from "@/utils/findFilterById";
-
 const props = defineProps<{
   filterMatching: FilterMatching;
 }>();

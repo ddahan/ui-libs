@@ -42,4 +42,6 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { filters } from "@/data/filters";
+</script>

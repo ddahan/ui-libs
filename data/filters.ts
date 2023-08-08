@@ -1,4 +1,4 @@
-const filters: Filter[] = [
+export const filters: Filter[] = [
   {
     id: "FStyled",
     label: "Styled",
@@ -65,5 +65,3 @@ const filters: Filter[] = [
     icon: "i-solar-medal-ribbon-linear",
   },
 ];
-
-export default filters;

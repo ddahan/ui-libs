@@ -1,4 +1,4 @@
-const sections: Section[] = [
+export const sections: Section[] = [
   {
     name: "Elements",
     components: [
@@ -17,5 +17,3 @@ const sections: Section[] = [
 ];
 
 // TODO: need a util method to flaten the components, without the sections.
-
-export default sections;

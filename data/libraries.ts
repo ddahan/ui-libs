@@ -1,4 +1,4 @@
-const libraries: Library[] = [
+export const libraries: Library[] = [
   {
     name: "NuxtLabs UI",
     logo: "nuxt.svg",
@@ -110,5 +110,3 @@ const libraries: Library[] = [
     filterMatchings: [{ id: "FStyled" }],
   },
 ];
-
-export default libraries;

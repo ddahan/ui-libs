@@ -9,8 +9,6 @@
 </template>
 
 <script setup lang="ts">
-import findFilterbyId from "@/utils/findFilterById";
-
 export interface Props {
   filterID: FilterID;
 }

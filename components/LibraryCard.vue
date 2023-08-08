@@ -88,8 +88,6 @@
 </template>
 
 <script setup lang="ts">
-import getDisplayableNumber from "@/utils/getDisplayableNumber";
-
 const props = defineProps<{
   library: Library;
 }>();

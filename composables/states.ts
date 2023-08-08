@@ -52,7 +52,7 @@ export const useFilterStore = () => {
   };
 };
 
-import sections from "@/utils/sections";
+import { sections } from "@/data/sections";
 export const useNbComponentsStore = () => {
   /* Return the number of potential existing components. useful to compute the availability score  */
   let componentCount = sections.reduce((count, section) => {

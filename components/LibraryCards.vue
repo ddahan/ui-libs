@@ -6,3 +6,7 @@
     />
   </div>
 </template>
+
+<script setup lang="ts">
+import { libraries } from "@/data/libraries";
+</script>
