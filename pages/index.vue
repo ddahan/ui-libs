@@ -48,5 +48,12 @@ useHead({
       href: "/favicon/palette.svg",
     },
   ],
+  script: [
+    {
+      "src": "https://plausible.io/js/script.js",
+      "defer": true,
+      "data-domain": "ui-libs.vercel.app",
+    },
+  ],
 });
 </script>
