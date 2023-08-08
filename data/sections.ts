@@ -1,4 +1,4 @@
-export const sections: Section[] = [
+export const sections: ReadonlyArray<Section> = [
   {
     name: "Elements",
     components: [

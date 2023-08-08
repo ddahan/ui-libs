@@ -11,7 +11,7 @@ Visit [my website](https://david-dahan.com) to know more about me.
 
 Contributions are very welcome, especially because UI libraries change often over time.
 
-There is no database. To suggest a data update, simply change `utils/libraries.ts` and make a PR.
+There is no database. To suggest a data update, simply change data into `data/` folder and make a PR.
 
 # How to setup the project on your own machine
 

@@ -1,4 +1,4 @@
-export const filters: Filter[] = [
+export const filters: ReadonlyArray<Filter> = [
   {
     id: "FStyled",
     label: "Styled",
