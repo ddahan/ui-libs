@@ -50,9 +50,10 @@ useHead({
   ],
   script: [
     {
-      "src": "https://plausible.io/js/script.js",
-      "defer": true,
+      "src": "/stats/js/script.js",
+      "data-api": "/stats/api/event",
       "data-domain": "ui-libs.vercel.app",
+      "defer": true,
     },
   ],
 });
