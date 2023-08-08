@@ -1,4 +1,4 @@
-export const libraries: ReadonlyArray<Library> = [
+export const libraries: Array<Library> = [
   {
     name: "NuxtLabs UI",
     logo: "nuxt.svg",
