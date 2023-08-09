@@ -1,8 +1,8 @@
-let filterData: { [K in FilterID]: { selected: boolean; autoDisable?: FilterID } } = {
-  FStyled: { selected: false, autoDisable: "FUnstyled" },
-  FUnstyled: { selected: false, autoDisable: "FStyled" },
-  FImported: { selected: false, autoDisable: "FPasted" },
-  FPasted: { selected: false, autoDisable: "FImported" },
+let filterData: { [K in FilterID]: { selected: boolean } } = {
+  FStyled: { selected: false },
+  FUnstyled: { selected: false },
+  FImported: { selected: false },
+  FPasted: { selected: false },
   FTailwind: { selected: false },
   FComponents: { selected: false },
   FAccessible: { selected: false },
@@ -12,6 +12,8 @@ let filterData: { [K in FilterID]: { selected: boolean; autoDisable?: FilterID }
   FOfficial: { selected: false },
   FRoadmap: { selected: false },
 };
+
+import { filters as allFilters } from "@/data/filters";
 
 export const useFilterStore = () => {
   const filters = useState("filterStore", () => filterData);
@@ -23,7 +25,9 @@ export const useFilterStore = () => {
 
     // 2 - some filters can auto-disable already selected filters
     // (eg. selected `Styled` will auto disable `Unstyled`)
-    const autoDisable = filters.value[FilterID].autoDisable;
+
+    // const autoDisable = filters.value[FilterID].autoDisable;
+    const autoDisable = findBy("id", FilterID, allFilters)?.autoDisable;
     if (oldSelected === false && !!autoDisable) {
       filters.value[autoDisable].selected = false;
     }

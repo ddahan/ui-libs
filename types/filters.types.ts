@@ -17,6 +17,7 @@ type Filter = {
   label: string;
   icon: string;
   help?: string;
+  autoDisable?: FilterID;
 };
 
 type FilterMatching = { id: FilterID; to?: string };
