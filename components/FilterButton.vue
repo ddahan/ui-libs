@@ -3,7 +3,7 @@
     class="w-full"
     :icon="filter.icon"
     :label="filter.label"
-    :variant="filters[filter.id].selected ? 'solid' : 'ghost'"
+    :variant="filtering[filter.id].selected ? 'solid' : 'ghost'"
     @click="invertFilter(filter.id)"
   />
 </template>
@@ -18,5 +18,5 @@ export interface Props {
 const props = defineProps<Props>();
 const filter = findBy<Filter>("id", props.filterID, allFilters)!;
 
-const { filters, invertFilter } = useFilterStore();
+const { filtering, invertFilter } = useFilterStore();
 </script>
