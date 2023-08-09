@@ -9,14 +9,15 @@
 </template>
 
 <script setup lang="ts">
-import { filters as allFilters } from "@/data/filters";
+import { filters } from "@/data/filters";
 import { findBy } from "@/utils/findBy";
 
 export interface Props {
   filterID: FilterID;
 }
 const props = defineProps<Props>();
-const filter = findBy<Filter>("id", props.filterID, allFilters)!;
+const filter = findBy<Filter>("id", props.filterID, filters)!;
+console.log(filter);
 
 const { filtering, invertFilter } = useFilterStore();
 </script>

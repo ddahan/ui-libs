@@ -10,13 +10,13 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "x",
-    "@nuxthq/ui-edge": "npm:@nuxthq/ui-edge@latest",
+    "@nuxthq/ui": "x",
     "@tailwindcss/typography": "x",
     "@types/node": "x",
     "nuxt": "x"
   },
   "dependencies": {
     "@iconify/json": "x",
-    "zod": "^3.21.4"
+    "zod": "x"
   }
 }

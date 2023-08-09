@@ -11,11 +11,11 @@
 </template>
 
 <script setup lang="ts">
-import { filters as allFilters } from "@/data/filters";
+import { filters } from "@/data/filters";
 
 const props = defineProps<{
   filterMatching: FilterMatching;
 }>();
 
-const filter = findBy<Filter>("id", props.filterMatching.id, allFilters)!;
+const filter = findBy<Filter>("id", props.filterMatching.id, filters)!;
 </script>
