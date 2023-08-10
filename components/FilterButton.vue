@@ -17,7 +17,6 @@ export interface Props {
 }
 const props = defineProps<Props>();
 const filter = findBy<Filter>("id", props.filterID, filters)!;
-console.log(filter);
 
 const { filtering, invertFilter } = useFilterStore();
 </script>

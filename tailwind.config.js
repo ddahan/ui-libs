@@ -1,8 +1,7 @@
 module.exports = {
   content: [
-    "./layouts/**/*.vue",
-    "./pages/**/*.vue",
-    "./components/**/*.{js,vue,ts}",
+    // existing paths: https://github.com/nuxt-modules/tailwindcss/blob/main/src/resolvers.ts#L25
+    "./data/**/*.{js,ts}",
     "./nuxt.config.{js,ts}",
   ],
   theme: {

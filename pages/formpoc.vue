@@ -56,6 +56,5 @@ const form = ref();
 
 const submit = async () => {
   await form.value!.validate();
-  //console.log("validated!");
 };
 </script>
