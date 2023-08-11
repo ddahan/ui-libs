@@ -46,12 +46,12 @@
       <div class="flex items-center justify-between mt-4">
         <div class="flex ml-1">
           <UTooltip
-            v-if="repoUrl && githubApiData"
+            v-if="repoUrl && library.nbStars"
             text="Go to github.com page"
           >
             <UButton
               icon="i-mdi-star-outline"
-              :label="getDisplayableNumber(githubApiData.stargazers_count)"
+              :label="getDisplayableNumber(library.nbStars)"
               :to="repoUrl"
               target="_blank"
               variant="ghost"
@@ -59,12 +59,12 @@
             />
           </UTooltip>
           <UTooltip
-            v-if="registryUrl && npmApiData"
+            v-if="registryUrl && library.nbDownloads"
             text="Go to npmjs.com page"
           >
             <UButton
               icon="i-material-symbols-download"
-              :label="getDisplayableNumber(npmApiData.downloads)"
+              :label="getDisplayableNumber(library.nbDownloads)"
               :to="registryUrl"
               target="_blank"
               variant="ghost"
@@ -89,33 +89,36 @@
 
 <script setup lang="ts">
 const props = defineProps<{
-  library: Library;
+  initialLibrary: Library;
 }>();
+
+// required to mutate a prop
+const library = ref(props.initialLibrary);
 
 const colorMode = useColorMode();
 
 const display = computed((): boolean => {
   /* Return true if this card should be displayed */
   const { selectedFilterIDs } = useFilterStore();
-  const libraryFilterIDs = props.library.filterMatchings.map((obj) => obj.id);
+  const libraryFilterIDs = library.value.filterMatchings.map((obj) => obj.id);
   return isSubset(selectedFilterIDs(), libraryFilterIDs);
 });
 
 const logo = ((): string =>
-  colorMode.value == "dark" && props.library.logoDark
-    ? props.library.logoDark
-    : props.library.logo)();
+  colorMode.value == "dark" && library.value.logoDark
+    ? library.value.logoDark
+    : library.value.logo)();
 
 const availabilityScore = ((): number =>
   Math.round(
-    (props.library.componentMatchings.length / useNbComponentsStore().value) * 100
+    (library.value.componentMatchings.length / useNbComponentsStore().value) * 100
   ))();
 
 // Github related ------------------------------------------------------------------------
 
 const repoUrl = ((): string | undefined => {
-  if (props.library.repoName && props.library.repoOwner) {
-    return `https://github.com/${props.library.repoOwner}/${props.library.repoName}`;
+  if (library.value.repoName && library.value.repoOwner) {
+    return `https://github.com/${library.value.repoOwner}/${library.value.repoName}`;
   }
 })();
 
@@ -125,10 +128,13 @@ type GithubApiResponse = {
 };
 
 const { data: githubApiData } = useFetch<GithubApiResponse>(
-  `https://api.github.com/repos/${props.library.repoOwner}/${props.library.repoName}`,
+  `https://api.github.com/repos/${library.value.repoOwner}/${library.value.repoName}`,
   {
     lazy: true,
     server: false, // This call will only be performed on the client
+    onResponse({ response }) {
+      library.value.nbStars = response._data.stargazers_count;
+    },
   }
 );
 
@@ -136,7 +142,7 @@ const { data: githubApiData } = useFetch<GithubApiResponse>(
 
 const registryUrl = ((library: Library): string | undefined =>
   library.package ? `https://www.npmjs.com/package/${library.package}` : undefined)(
-  props.library
+  library.value
 );
 
 type NpmApiResponse = {
@@ -145,10 +151,13 @@ type NpmApiResponse = {
 };
 
 const { data: npmApiData } = useFetch<NpmApiResponse>(
-  `https://api.npmjs.org/downloads/point/last-week/${props.library.package}`,
+  `https://api.npmjs.org/downloads/point/last-week/${library.value.package}`,
   {
     lazy: true,
     server: false,
+    onResponse({ response }) {
+      library.value.nbDownloads = response._data.downloads;
+    },
   }
 );
 </script>

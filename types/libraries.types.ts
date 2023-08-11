@@ -10,6 +10,8 @@ type Library = {
   package?: string;
   filterMatchings: FilterMatching[];
   componentMatchings: ComponentName[];
+  nbStars?: number; // filled later
+  nbDownloads?: number; // filled later
 
   // TODO: other potentiel filters to integrate later
   // projects: Project[];
@@ -19,8 +21,7 @@ type Library = {
   // hasTyping: boolean;
   // releaseDate: Date;
   // customizability: string;
-  // nbStars: number;
-  // nbDownloads: number;
+
   // activityLevel: number;
   // nuxtOnly: boolean;
 };
