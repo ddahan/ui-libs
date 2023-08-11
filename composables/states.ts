@@ -25,8 +25,6 @@ export const useFilterStore = () => {
 
     // 2 - some filters can auto-disable already selected filters
     // (eg. selected `Styled` will auto disable `Unstyled`)
-
-    // const autoDisable = filters.value[FilterID].autoDisable;
     const autoDisable = findBy("id", FilterID, filters)?.autoDisable;
     if (oldSelected === false && !!autoDisable) {
       filtering.value[autoDisable].selected = false;
