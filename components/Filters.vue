@@ -51,7 +51,7 @@
       variant="ghost"
       size="xs"
       icon="i-material-symbols-delete-outline-rounded"
-      :label="`Clear ${nbTouchedFilters().toString()} filter${suffix}`"
+      :label="`Clear ${nbTouchedFilters()} filter${suffix}`"
       @click="clearFiltering()"
     />
   </div>

@@ -1,10 +1,10 @@
 <template>
   <div
-    class="flex h-10 items-center primary-text border border-transparent rounded-md"
+    class="flex h-10 items-center primary-text border rounded-md"
     :class="
       rangeFiltering[rangeFilter.id].qty > 0
         ? 'border-primary-500 dark:border-primary-400'
-        : ''
+        : 'border-transparent'
     "
   >
     <UIcon
