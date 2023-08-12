@@ -117,7 +117,7 @@ const display = computed((): boolean => {
   }
   if (
     rangeFiltering.value.FNbDownloads.qty > 0 &&
-    library.value.nbDownloads! < rangeFiltering.value.FNbDownloads.qty
+    library.value.nbDownloads! < rangeFiltering.value.FNbDownloads.qty * 1000
   ) {
     return false;
   }

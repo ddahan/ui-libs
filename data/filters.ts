@@ -84,8 +84,8 @@ export const rangeFilters: Array<RangeFilter> = [
     leadingLabel: "More than",
     trailingLabel: "k npm DLs",
     icon: "i-material-symbols-download",
-    rangeMax: 10,
-    rangeStep: 200,
+    rangeMax: 500,
+    rangeStep: 5,
   },
   {
     id: "FComponentScore",
