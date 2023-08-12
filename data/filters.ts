@@ -69,3 +69,30 @@ export const filters: Array<Filter> = [
     icon: "i-solar-medal-ribbon-linear",
   },
 ];
+
+export const rangeFilters: Array<RangeFilter> = [
+  {
+    id: "FNbStars",
+    leadingLabel: "More than",
+    trailingLabel: "stars",
+    icon: "i-mdi-star-outline",
+    rangeMax: 35000,
+    rangeStep: 1000,
+  },
+  {
+    id: "FNbDownloads",
+    leadingLabel: "More than",
+    trailingLabel: "k npm DLs",
+    icon: "i-material-symbols-download",
+    rangeMax: 10,
+    rangeStep: 200,
+  },
+  {
+    id: "FComponentScore",
+    leadingLabel: "Score higher than",
+    trailingLabel: "%",
+    icon: "i-heroicons-square-3-stack-3d",
+    rangeMax: 95,
+    rangeStep: 5,
+  },
+];

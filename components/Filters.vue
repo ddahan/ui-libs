@@ -31,33 +31,14 @@
 
     <template #popularity>
       <div class="ml-2 flex flex-col gap-1">
-        <FilterRange
-          leadingLabel="More than"
-          trailingLabel="stars"
-          icon="i-mdi-star-outline"
-          :rangeMax="10000"
-          :rangeStep="500"
-        />
-
-        <FilterRange
-          leadingLabel="More than"
-          trailingLabel="k npm DLs"
-          icon="i-material-symbols-download"
-          :rangeStep="10"
-          :rangeMax="200"
-        />
+        <FilterRange rangeFilterID="FNbStars" />
+        <FilterRange rangeFilterID="FNbDownloads" />
       </div>
     </template>
 
     <template #availableComponents>
       <div class="ml-2">
-        <FilterRange
-          leadingLabel="Score higher than"
-          trailingLabel="%"
-          icon="i-heroicons-square-3-stack-3d"
-          :rangeMax="95"
-          :rangeStep="5"
-        />
+        <FilterRange rangeFilterID="FComponentScore" />
       </div>
     </template>
   </UAccordion>

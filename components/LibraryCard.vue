@@ -99,9 +99,36 @@ const colorMode = useColorMode();
 
 const display = computed((): boolean => {
   /* Return true if this card should be displayed */
-  const { selectedFilterIDs } = useFilterStore();
+  const { selectedFilterIDs, rangeFiltering } = useFilterStore();
   const libraryFilterIDs = library.value.filterMatchings.map((obj) => obj.id);
-  return isSubset(selectedFilterIDs(), libraryFilterIDs);
+
+  // Check wether all the button logic is satisfied, and debranch if not
+  if (isSubset(selectedFilterIDs(), libraryFilterIDs) == false) {
+    return false;
+  }
+
+  // ... Now range logic must be verified too.
+  // We need to check every range filters living in the state
+  if (
+    rangeFiltering.value.FNbStars.value > 0 &&
+    library.value.nbStars! < rangeFiltering.value.FNbStars.value
+  ) {
+    return false;
+  }
+  if (
+    rangeFiltering.value.FNbDownloads.value > 0 &&
+    library.value.nbDownloads! < rangeFiltering.value.FNbDownloads.value
+  ) {
+    return false;
+  }
+  // if (
+  //   rangeFiltering.value.FComponentScore.value > 0 &&
+  //   library.value.! < rangeFiltering.value.FNbStars.value
+  // ) {
+  //   return false;
+  // }
+
+  return true;
 });
 
 const logo = ((): string =>
