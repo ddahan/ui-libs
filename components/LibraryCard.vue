@@ -99,11 +99,11 @@ const colorMode = useColorMode();
 
 const display = computed((): boolean => {
   /* Return true if this card should be displayed */
-  const { selectedFilterIDs, rangeFiltering } = useFilterStore();
+  const { touchedButtonFilterIDs, rangeFiltering } = useFilterStore();
   const libraryFilterIDs = library.value.filterMatchings.map((obj) => obj.id);
 
   // Check wether all the button logic is satisfied, and debranch if not
-  if (isSubset(selectedFilterIDs(), libraryFilterIDs) == false) {
+  if (isSubset(touchedButtonFilterIDs(), libraryFilterIDs) == false) {
     return false;
   }
 

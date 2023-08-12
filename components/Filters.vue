@@ -43,7 +43,7 @@
     </template>
   </UAccordion>
   <div
-    v-if="nbSelectedFilters() > 0"
+    v-if="nbTouchedFilters() > 0"
     class="flex justify-end"
   >
     <UButton
@@ -51,7 +51,7 @@
       variant="ghost"
       size="xs"
       icon="i-material-symbols-delete-outline-rounded"
-      :label="`Clear ${nbSelectedFilters().toString()} filter${suffix}`"
+      :label="`Clear ${nbTouchedFilters().toString()} filter${suffix}`"
       @click="clearFiltering()"
     />
   </div>
@@ -76,7 +76,7 @@ const accordionSections = [
   },
 ];
 
-const { nbSelectedFilters, clearFiltering } = useFilterStore();
+const { nbTouchedFilters, clearFiltering } = useFilterStore();
 
-const suffix = computed(() => (nbSelectedFilters() == 1 ? "" : "s"));
+const suffix = computed(() => (nbTouchedFilters() == 1 ? "" : "s"));
 </script>

@@ -44,22 +44,24 @@ export const useFilterStore = () => {
     rangeFiltering.value[rangeFilterID].qty = qty;
   };
 
-  const selectedFilterIDs = () => <ButtonFilterID[]>Object.entries(buttonFiltering.value)
+  const touchedButtonFilterIDs = () => <ButtonFilterID[]>Object.entries(
+      buttonFiltering.value
+    )
       // NOTE: <FilterID[]> allows a more accurate type inference
       .filter(([_, value]) => value.selected === true)
       .map(([key, _]) => key);
 
-  const selectedRangeFilterIDs = () => <RangeFilterID[]>Object.entries(
+  const touchedRangeFilterIDs = () => <RangeFilterID[]>Object.entries(
       rangeFiltering.value
     )
       .filter(([_, value]) => value.qty > 0)
       .map(([key, _]) => key);
 
-  const nbSelectedFilters = () =>
-    selectedFilterIDs().length + selectedRangeFilterIDs().length;
+  const nbTouchedFilters = () =>
+    touchedButtonFilterIDs().length + touchedRangeFilterIDs().length;
 
   const clearFiltering = () => {
-    // NOTE: <FilterID[]> allows a more accurate type inference
+    // NOTE: <ButtonFilterID[]> allows a more accurate type inference
     for (let filterID of <ButtonFilterID[]>Object.keys(buttonFiltering.value)) {
       buttonFiltering.value[filterID].selected = false;
     }
@@ -74,8 +76,8 @@ export const useFilterStore = () => {
     rangeFiltering,
     invertButtonFiltering,
     changeRangeFiltering,
-    selectedFilterIDs,
-    nbSelectedFilters,
+    touchedButtonFilterIDs,
+    nbTouchedFilters,
     clearFiltering,
   };
 };
