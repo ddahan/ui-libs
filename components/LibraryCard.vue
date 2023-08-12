@@ -121,12 +121,12 @@ const display = computed((): boolean => {
   ) {
     return false;
   }
-  // if (
-  //   rangeFiltering.value.FComponentScore.value > 0 &&
-  //   library.value.! < rangeFiltering.value.FNbStars.value
-  // ) {
-  //   return false;
-  // }
+  if (
+    rangeFiltering.value.FComponentScore.qty > 0 &&
+    availabilityScore < rangeFiltering.value.FComponentScore.qty
+  ) {
+    return false;
+  }
 
   return true;
 });
