@@ -2,7 +2,7 @@
   <div
     class="flex h-10 items-center primary-text border border-transparent rounded-md"
     :class="
-      rangeFiltering[rangeFilter.id].value > 0
+      rangeFiltering[rangeFilter.id].qty > 0
         ? 'border-primary-500 dark:border-primary-400'
         : ''
     "
@@ -13,15 +13,15 @@
     />
     <div class="w-full mx-2">
       <div class="text-sm font-medium">
-        {{ rangeFilter.leadingLabel }} {{ rangeFiltering[rangeFilter.id].value }}
+        {{ rangeFilter.leadingLabel }} {{ rangeFiltering[rangeFilter.id].qty }}
         {{ rangeFilter.trailingLabel }}
       </div>
       <div class="h-4 flex items-center">
         <URange
           @change="
-            changeRangeFiltering(rangeFilterID, rangeFiltering[rangeFilter.id].value)
+            changeRangeFiltering(rangeFilterID, rangeFiltering[rangeFilter.id].qty)
           "
-          v-model="rangeFiltering[rangeFilter.id].value"
+          v-model="rangeFiltering[rangeFilter.id].qty"
           :min="0"
           :max="rangeFilter.rangeMax"
           :step="rangeFilter.rangeStep"

@@ -13,10 +13,10 @@ let initialFiltering: { [K in FilterID]: { selected: boolean } } = {
   FRoadmap: { selected: false },
 };
 
-let initialRangeFiltering: { [K in RangeFilterID]: { value: number } } = {
-  FNbStars: { value: 0 },
-  FNbDownloads: { value: 0 },
-  FComponentScore: { value: 0 },
+let initialRangeFiltering: { [K in RangeFilterID]: { qty: number } } = {
+  FNbStars: { qty: 0 },
+  FNbDownloads: { qty: 0 },
+  FComponentScore: { qty: 0 },
 };
 
 import { filters } from "@/data/filters";
@@ -40,8 +40,8 @@ export const useFilterStore = () => {
   };
 
   // run when a range is changed
-  const changeRangeFiltering = (rangeFilterID: RangeFilterID, value: number) => {
-    rangeFiltering.value[rangeFilterID].value = value;
+  const changeRangeFiltering = (rangeFilterID: RangeFilterID, qty: number) => {
+    rangeFiltering.value[rangeFilterID].qty = qty;
   };
 
   const selectedFilterIDs = () => <FilterID[]>Object.entries(filtering.value)
@@ -52,7 +52,7 @@ export const useFilterStore = () => {
   const selectedRangeFilterIDs = () => <RangeFilterID[]>Object.entries(
       rangeFiltering.value
     )
-      .filter(([_, value]) => value.value > 0)
+      .filter(([_, value]) => value.qty > 0)
       .map(([key, _]) => key);
 
   const nbSelectedFilters = () =>
@@ -65,7 +65,7 @@ export const useFilterStore = () => {
     }
 
     for (let rangeFilterID of <RangeFilterID[]>Object.keys(rangeFiltering.value)) {
-      rangeFiltering.value[rangeFilterID].value = 0;
+      rangeFiltering.value[rangeFilterID].qty = 0;
     }
   };
 

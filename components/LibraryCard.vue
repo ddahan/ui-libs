@@ -110,14 +110,14 @@ const display = computed((): boolean => {
   // ... Now range logic must be verified too.
   // We need to check every range filters living in the state
   if (
-    rangeFiltering.value.FNbStars.value > 0 &&
-    library.value.nbStars! < rangeFiltering.value.FNbStars.value
+    rangeFiltering.value.FNbStars.qty > 0 &&
+    library.value.nbStars! < rangeFiltering.value.FNbStars.qty
   ) {
     return false;
   }
   if (
-    rangeFiltering.value.FNbDownloads.value > 0 &&
-    library.value.nbDownloads! < rangeFiltering.value.FNbDownloads.value
+    rangeFiltering.value.FNbDownloads.qty > 0 &&
+    library.value.nbDownloads! < rangeFiltering.value.FNbDownloads.qty
   ) {
     return false;
   }
