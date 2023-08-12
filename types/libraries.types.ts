@@ -8,7 +8,7 @@ type Library = {
   repoOwner?: string;
   repoName?: string;
   package?: string;
-  filterMatchings: FilterMatching[];
+  filterMatchings: ButtonFilterMatching[];
   componentMatchings: ComponentName[];
   nbStars?: number; // filled later
   nbDownloads?: number; // filled later

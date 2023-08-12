@@ -38,7 +38,7 @@
             v-for="filterMatching in library.filterMatchings"
             :key="filterMatching.id"
           >
-            <LibraryCardBadge :filterMatching="filterMatching" />
+            <LibraryCardBadge :buttonFilterMatching="filterMatching" />
           </template>
         </div>
       </div>

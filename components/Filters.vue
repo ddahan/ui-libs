@@ -9,23 +9,23 @@
     <template #features>
       <div class="ml-2 flex flex-col gap-1">
         <div class="grid grid-cols-2 gap-1">
-          <FilterButton filterID="FStyled" />
-          <FilterButton filterID="FUnstyled" />
+          <FilterButton buttonFilterID="FStyled" />
+          <FilterButton buttonFilterID="FUnstyled" />
         </div>
 
         <div class="grid grid-cols-2 gap-1">
-          <FilterButton filterID="FImported" />
-          <FilterButton filterID="FPasted" />
+          <FilterButton buttonFilterID="FImported" />
+          <FilterButton buttonFilterID="FPasted" />
         </div>
 
-        <FilterButton filterID="FTailwind" />
-        <FilterButton filterID="FComponents" />
-        <FilterButton filterID="FAccessible" />
-        <FilterButton filterID="FFigma" />
-        <FilterButton filterID="FDarkMode" />
-        <FilterButton filterID="FFree" />
-        <FilterButton filterID="FOfficial" />
-        <FilterButton filterID="FRoadmap" />
+        <FilterButton buttonFilterID="FTailwind" />
+        <FilterButton buttonFilterID="FComponents" />
+        <FilterButton buttonFilterID="FAccessible" />
+        <FilterButton buttonFilterID="FFigma" />
+        <FilterButton buttonFilterID="FDarkMode" />
+        <FilterButton buttonFilterID="FFree" />
+        <FilterButton buttonFilterID="FOfficial" />
+        <FilterButton buttonFilterID="FRoadmap" />
       </div>
     </template>
 
@@ -52,7 +52,7 @@
       size="xs"
       icon="i-material-symbols-delete-outline-rounded"
       :label="`Clear ${nbSelectedFilters().toString()} filter${suffix}`"
-      @click="resetFilters()"
+      @click="clearFiltering()"
     />
   </div>
 </template>
@@ -76,7 +76,7 @@ const accordionSections = [
   },
 ];
 
-const { nbSelectedFilters, resetFilters } = useFilterStore();
+const { nbSelectedFilters, clearFiltering } = useFilterStore();
 
 const suffix = computed(() => (nbSelectedFilters() == 1 ? "" : "s"));
 </script>

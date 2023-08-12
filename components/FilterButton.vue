@@ -1,18 +1,18 @@
 <template>
   <UButton
     class="w-full"
-    :icon="filter.icon"
-    :label="filter.label"
-    :variant="filtering[filter.id].selected ? 'solid' : 'ghost'"
-    @click="invertButtonFiltering(filter.id)"
+    :icon="buttonFilter.icon"
+    :label="buttonFilter.label"
+    :variant="buttonFiltering[buttonFilter.id].selected ? 'solid' : 'ghost'"
+    @click="invertButtonFiltering(buttonFilter.id)"
   />
 </template>
 
 <script setup lang="ts">
-import { filters } from "@/data/filters";
+import { buttonFilters } from "@/data/filters";
 
-const props = defineProps<{ filterID: FilterID }>();
-const filter = findBy<Filter>("id", props.filterID, filters)!;
+const props = defineProps<{ buttonFilterID: ButtonFilterID }>();
+const buttonFilter = findBy<ButtonFilter>("id", props.buttonFilterID, buttonFilters)!;
 
-const { filtering, invertButtonFiltering } = useFilterStore();
+const { buttonFiltering, invertButtonFiltering } = useFilterStore();
 </script>

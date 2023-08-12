@@ -38,6 +38,4 @@ import { rangeFilters } from "@/data/filters";
 const props = defineProps<{ rangeFilterID: RangeFilterID }>();
 const rangeFilter = findBy<RangeFilter>("id", props.rangeFilterID, rangeFilters)!;
 const { rangeFiltering, changeRangeFiltering } = useFilterStore();
-
-// TODO: do not use `value` as it is very confusing
 </script>

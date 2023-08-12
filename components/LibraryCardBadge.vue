@@ -1,8 +1,10 @@
 <template>
   <NuxtLink
     class="flex items-center gap-1 text-xs bg-gray-50 dark:bg-gray-600 rounded-lg px-2 py-0.5"
-    :class="filterMatching.to ? 'hover:bg-primary-50 dark:hover:bg-primary-900' : ''"
-    :to="filterMatching.to"
+    :class="
+      buttonFilterMatching.to ? 'hover:bg-primary-50 dark:hover:bg-primary-900' : ''
+    "
+    :to="buttonFilterMatching.to"
     target="_blank"
   >
     <UIcon :name="filter.icon" />
@@ -11,11 +13,11 @@
 </template>
 
 <script setup lang="ts">
-import { filters } from "@/data/filters";
+import { buttonFilters } from "@/data/filters";
 
 const props = defineProps<{
-  filterMatching: FilterMatching;
+  buttonFilterMatching: ButtonFilterMatching;
 }>();
 
-const filter = findBy<Filter>("id", props.filterMatching.id, filters)!;
+const filter = findBy<ButtonFilter>("id", props.buttonFilterMatching.id, buttonFilters)!;
 </script>

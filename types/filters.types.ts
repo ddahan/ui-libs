@@ -1,6 +1,6 @@
 // button filters
 
-type FilterID =
+type ButtonFilterID =
   | "FStyled"
   | "FUnstyled"
   | "FImported"
@@ -14,15 +14,15 @@ type FilterID =
   | "FRoadmap"
   | "FOfficial";
 
-type Filter = {
-  id: FilterID;
+type ButtonFilter = {
+  id: ButtonFilterID;
   label: string;
   icon: string;
   help?: string;
-  autoDisable?: FilterID;
+  autoDisable?: ButtonFilterID;
 };
 
-type FilterMatching = { id: FilterID; to?: string };
+type ButtonFilterMatching = { id: ButtonFilterID; to?: string };
 
 // range filters
 

@@ -1,4 +1,4 @@
-export const filters: Array<Filter> = [
+export const buttonFilters: Array<ButtonFilter> = [
   {
     id: "FStyled",
     label: "Styled",

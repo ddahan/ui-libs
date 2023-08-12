@@ -17,15 +17,15 @@
     <h3>Filter Definition</h3>
     <p>Some filters may be less explicit that others, here are short definitions:</p>
 
-    <p v-for="filter in filters">
+    <p v-for="buttonFilter in buttonFilters">
       <div
-        v-if="filter.help"
+        v-if="buttonFilter.help"
         class="flex gap-1 items-center text-primary-500 dark:text-primary-400 font-medium text-sm"
       >
-        <UIcon :name="filter.icon" />
-        <div>{{ filter.label }}</div>
+        <UIcon :name="buttonFilter.icon" />
+        <div>{{ buttonFilter.label }}</div>
       </div>
-      <div>{{ filter.help }}</div>
+      <div>{{ buttonFilter.help }}</div>
     </p>
 
     <h3>More information</h3>
@@ -43,5 +43,5 @@
 </template>
 
 <script setup lang="ts">
-import { filters } from "@/data/filters";
+import { buttonFilters } from "@/data/filters";
 </script>

@@ -1,4 +1,4 @@
-let initialFiltering: { [K in FilterID]: { selected: boolean } } = {
+let initialButtonFiltering: { [K in ButtonFilterID]: { selected: boolean } } = {
   FStyled: { selected: false },
   FUnstyled: { selected: false },
   FImported: { selected: false },
@@ -19,23 +19,23 @@ let initialRangeFiltering: { [K in RangeFilterID]: { qty: number } } = {
   FComponentScore: { qty: 0 },
 };
 
-import { filters } from "@/data/filters";
+import { buttonFilters } from "@/data/filters";
 
 export const useFilterStore = () => {
-  const filtering = useState("filterStore", () => initialFiltering);
+  const buttonFiltering = useState("filterStore", () => initialButtonFiltering);
   const rangeFiltering = useState("rangeFilterStore", () => initialRangeFiltering);
 
   // run when a filter button is clicked
-  const invertButtonFiltering = (filterID: FilterID) => {
+  const invertButtonFiltering = (filterID: ButtonFilterID) => {
     // 1 - invert the filter selected state
-    const oldSelected = filtering.value[filterID].selected;
-    filtering.value[filterID].selected = !oldSelected;
+    const oldSelected = buttonFiltering.value[filterID].selected;
+    buttonFiltering.value[filterID].selected = !oldSelected;
 
     // 2 - some filters can auto-disable already selected filters
     // (eg. selected `Styled` will auto disable `Unstyled`)
-    const autoDisable = findBy("id", filterID, filters)?.autoDisable;
+    const autoDisable = findBy("id", filterID, buttonFilters)?.autoDisable;
     if (oldSelected === false && !!autoDisable) {
-      filtering.value[autoDisable].selected = false;
+      buttonFiltering.value[autoDisable].selected = false;
     }
   };
 
@@ -44,7 +44,7 @@ export const useFilterStore = () => {
     rangeFiltering.value[rangeFilterID].qty = qty;
   };
 
-  const selectedFilterIDs = () => <FilterID[]>Object.entries(filtering.value)
+  const selectedFilterIDs = () => <ButtonFilterID[]>Object.entries(buttonFiltering.value)
       // NOTE: <FilterID[]> allows a more accurate type inference
       .filter(([_, value]) => value.selected === true)
       .map(([key, _]) => key);
@@ -58,10 +58,10 @@ export const useFilterStore = () => {
   const nbSelectedFilters = () =>
     selectedFilterIDs().length + selectedRangeFilterIDs().length;
 
-  const resetFilters = () => {
+  const clearFiltering = () => {
     // NOTE: <FilterID[]> allows a more accurate type inference
-    for (let filterID of <FilterID[]>Object.keys(filtering.value)) {
-      filtering.value[filterID].selected = false;
+    for (let filterID of <ButtonFilterID[]>Object.keys(buttonFiltering.value)) {
+      buttonFiltering.value[filterID].selected = false;
     }
 
     for (let rangeFilterID of <RangeFilterID[]>Object.keys(rangeFiltering.value)) {
@@ -70,13 +70,13 @@ export const useFilterStore = () => {
   };
 
   return {
-    filtering,
+    buttonFiltering,
     rangeFiltering,
     invertButtonFiltering,
     changeRangeFiltering,
     selectedFilterIDs,
     nbSelectedFilters,
-    resetFilters,
+    clearFiltering,
   };
 };
 
