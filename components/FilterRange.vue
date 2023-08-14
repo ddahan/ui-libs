@@ -13,7 +13,8 @@
     />
     <div class="w-full mx-2">
       <div class="text-sm font-medium">
-        {{ rangeFilter.leadingLabel }} {{ rangeFiltering[rangeFilter.id].qty }}
+        {{ rangeFilter.leadingLabel }}
+        {{ rangeFiltering[rangeFilter.id].qty }}
         {{ rangeFilter.trailingLabel }}
       </div>
       <div class="h-4 flex items-center">
