@@ -23,12 +23,16 @@
     src: local(""), url("./assets/fonts/Roobert-SemiBold.woff2") format("woff2");
   }
 
+  html {
+    overflow-y: scroll; /* Avoid width variation */
+  }
+
   html,
   body,
   #__nuxt,
   #__layout {
-    @apply bg-slate-50 dark:bg-slate-900;
-    @apply min-h-screen w-full h-full;
+    @apply min-h-screen w-full;
+    @apply bg-gray-50 dark:bg-gray-900;
     @apply font-roobert;
   }
 
