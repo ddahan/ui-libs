@@ -1,10 +1,8 @@
 <template>
   <div
-    class="flex h-10 items-center primary-text border rounded-md"
-    :class="
-      rangeFiltering[rangeFilter.id].qty > 0
-        ? 'border-primary-500 dark:border-primary-400'
-        : 'border-transparent'
+    class="flex h-10 items-center primary-text rounded-md"
+    :ui="
+      rangeFiltering[rangeFilter.id].qty > 0 ? { ui: { background: 'bg-red-500' } } : ''
     "
   >
     <UIcon

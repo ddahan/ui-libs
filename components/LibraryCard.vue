@@ -78,7 +78,7 @@
               @click="isComponentPanelOpen = true"
               icon="i-heroicons-square-3-stack-3d"
               size="xl"
-              :label="`${availabilityScore} %`"
+              :label="`${nbComponents}/${useNbComponentsStore().value}`"
               variant="ghost"
               color="primary"
             />
@@ -107,8 +107,8 @@ const props = defineProps<{
 // required to mutate a prop
 const library = ref(props.initialLibrary);
 const isComponentPanelOpen = ref(false);
-
 const colorMode = useColorMode();
+const nbComponents = library.value.componentMatchings.length;
 
 const display = computed((): boolean => {
   /* Return true if this card should be displayed */
@@ -135,8 +135,8 @@ const display = computed((): boolean => {
     return false;
   }
   if (
-    rangeFiltering.value.FComponentScore.qty > 0 &&
-    availabilityScore < rangeFiltering.value.FComponentScore.qty
+    rangeFiltering.value.FNbComponents.qty > 0 &&
+    nbComponents < rangeFiltering.value.FNbComponents.qty
   ) {
     return false;
   }
@@ -148,11 +148,6 @@ const logo = ((): string =>
   colorMode.value == "dark" && library.value.logoDark
     ? library.value.logoDark
     : library.value.logo)();
-
-const availabilityScore = ((): number =>
-  Math.round(
-    (library.value.componentMatchings.length / useNbComponentsStore().value) * 100
-  ))();
 
 // Github related ------------------------------------------------------------------------
 

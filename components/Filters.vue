@@ -38,7 +38,7 @@
 
     <template #availableComponents>
       <div class="ml-2">
-        <FilterRange rangeFilterID="FComponentScore" />
+        <FilterRange rangeFilterID="FNbComponents" />
       </div>
     </template>
   </UAccordion>

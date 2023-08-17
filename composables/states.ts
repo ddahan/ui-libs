@@ -16,7 +16,7 @@ let initialButtonFiltering: { [K in ButtonFilterID]: { selected: boolean } } = {
 let initialRangeFiltering: { [K in RangeFilterID]: { qty: number } } = {
   FNbStars: { qty: 0 },
   FNbDownloads: { qty: 0 },
-  FComponentScore: { qty: 0 },
+  FNbComponents: { qty: 0 },
 };
 
 import { buttonFilters } from "@/data/filters";

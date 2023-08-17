@@ -88,11 +88,11 @@ export const rangeFilters: Array<RangeFilter> = [
     rangeStep: 5,
   },
   {
-    id: "FComponentScore",
-    leadingLabel: "Score higher than",
-    trailingLabel: "%",
+    id: "FNbComponents",
+    leadingLabel: "More than",
+    trailingLabel: "components",
     icon: "i-heroicons-square-3-stack-3d",
-    rangeMax: 95,
+    rangeMax: 100,
     rangeStep: 5,
   },
 ];

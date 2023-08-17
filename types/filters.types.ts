@@ -26,7 +26,7 @@ type ButtonFilterMatching = { id: ButtonFilterID; to?: string };
 
 // range filters
 
-type RangeFilterID = "FNbStars" | "FNbDownloads" | "FComponentScore";
+type RangeFilterID = "FNbStars" | "FNbDownloads" | "FNbComponents";
 
 type RangeFilter = {
   // TODO: use inheritance
