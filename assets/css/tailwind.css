@@ -57,4 +57,12 @@
   .primary-text {
     @apply text-primary-500 dark:text-primary-400;
   }
+
+  .primary-text-muted {
+    @apply text-gray-500 dark:text-gray-400;
+  }
+
+  .decorated {
+    @apply underline underline-offset-8 decoration-primary-500 dark:decoration-primary-400;
+  }
 }

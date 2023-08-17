@@ -1,8 +1,6 @@
 <template>
   <div class="prose prose-a:text-primary-500 dark:prose-a:text-primary-400 prose-p:leading-5 prose-p:text-sm prose-h2:mb-8 prose-h3:mb-0 dark:prose-invert">
-    <h2
-      class="underline underline-offset-8 decoration-primary-500 dark:decoration-primary-400"
-    >
+    <h2 class="decorated">
       How does it work?
     </h2>
     <h3>Filtering Libraries</h3>

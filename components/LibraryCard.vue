@@ -75,11 +75,23 @@
         <div class="mr-2">
           <UTooltip text="Browse all available components">
             <UButton
+              @click="isComponentPanelOpen = true"
               icon="i-heroicons-square-3-stack-3d"
+              size="xl"
               :label="`${availabilityScore} %`"
               variant="ghost"
               color="primary"
             />
+            <USlideover
+              @dblclick.prevent=""
+              v-model="isComponentPanelOpen"
+              side="right"
+              :ui="{ width: 'max-w-[256px] md:max-w-md' }"
+            >
+              <SlideoverContent>
+                <LibraryCardComponentPanel :library="library" />
+              </SlideoverContent>
+            </USlideover>
           </UTooltip>
         </div>
       </div>
@@ -94,6 +106,7 @@ const props = defineProps<{
 
 // required to mutate a prop
 const library = ref(props.initialLibrary);
+const isComponentPanelOpen = ref(false);
 
 const colorMode = useColorMode();
 

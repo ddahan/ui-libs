@@ -5,8 +5,8 @@ export const sections: Array<Section> = [
       { name: "Avatar", description: "Rounded image of a resource" },
       {
         name: "Badge",
-        aliases: ["chip"],
-        description: "Rounded image of a resource",
+        aliases: ["Chip"],
+        description: "Lorem ipsum blabla",
       },
     ],
   },
