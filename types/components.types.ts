@@ -1,54 +1,68 @@
 // component sections
-// TODO: replace by key of?
-type SectionName = "Elements" | "Forms" | "Data" | "Navigation" | "Overlays" | "Layout";
+type SectionName = "Elements" | "Input" | "Data" | "Navigation" | "Overlays" | "Layout";
 
 // components
-// TODO: replace by key of?
 type ComponentName =
   // Elements
   | "Accordion"
   | "Avatar"
   | "Badge"
+  | "Breadcrumb"
   | "Button"
   | "Button Group"
+  | "Carousel"
+  | "Chat Bubble"
+  | "Divider"
   | "Dropdown"
+  | "Indicator"
+  | "Mockup"
   | "Keyboard Key"
+  | "Progress"
+  | "Stack"
 
-  // Forms
+  // Data input
+  | "Checkbox"
+  | "File Input"
+  | "Form"
+  | "Form Group"
   | "Input"
-  | "Textarea"
+  | "Radio"
+  | "Range"
+  | "Rating"
   | "Select"
   | "Select Menu"
-  | "Checkbox"
-  | "Radio"
+  | "Swap"
+  | "Textarea"
   | "Toggle"
-  | "Range"
-  | "Form Group"
-  | "Form"
 
   // Data
   | "Table"
 
   // Navigation
-  | "Vertical Navigation"
+  | "Bottom Tabs"
   | "Command Palette"
+  | "Footer"
+  | "Navbar"
   | "Pagination"
+  | "Scrollspy"
+  | "Steps"
   | "Tabs"
+  | "Vertical Navigation"
 
   // Overlays
-  | "Modal"
-  | "Slideover"
-  | "Popover"
-  | "Tooltip"
   | "Context Menu"
+  | "Modal"
+  | "Popover"
+  | "Slideover"
   | "Toast"
+  | "Tooltip"
 
   // Layout
   | "Card"
   | "Container"
   | "Skeleton";
 
-type Section = { name: SectionName; components: Component[] };
+type Section = { name: SectionName; icon: string; components: Component[] };
 
 type Component = {
   name: ComponentName;
