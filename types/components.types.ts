@@ -53,5 +53,5 @@ type Section = { name: SectionName; components: Component[] };
 type Component = {
   name: ComponentName;
   aliases?: string[];
-  description: string; // see primeVue for example
+  description?: string; // see primeVue for example
 };

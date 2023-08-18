@@ -9,7 +9,7 @@ export const sections: Array<Section> = [
         aliases: ["Chip"],
         description: "Short text to represent a status or a category",
       },
-      { name: "Button", description: "" },
+      { name: "Button" },
       { name: "Button Group", description: "Group a series of buttons together" },
       {
         name: "Dropdown",
@@ -54,15 +54,12 @@ export const sections: Array<Section> = [
     components: [
       {
         name: "Vertical Navigation",
-        description: "",
       },
       {
         name: "Command Palette",
-        description: "",
       },
       {
         name: "Pagination",
-        description: "",
       },
       {
         name: "Tabs",
@@ -75,19 +72,15 @@ export const sections: Array<Section> = [
     components: [
       {
         name: "Modal",
-        description: "",
       },
       {
         name: "Slideover",
-        description: "",
       },
       {
         name: "Popover",
-        description: "",
       },
       {
         name: "Tooltip",
-        description: "",
       },
       {
         name: "Context Menu",
@@ -96,16 +89,11 @@ export const sections: Array<Section> = [
       {
         name: "Toast",
         aliases: ["Notification", "Alert"],
-        description: "",
       },
     ],
   },
   {
     name: "Layout",
-    components: [
-      { name: "Card", description: "" },
-      { name: "Container", description: "" },
-      { name: "Skeleton", description: "" },
-    ],
+    components: [{ name: "Card" }, { name: "Container" }, { name: "Skeleton" }],
   },
 ];
