@@ -78,7 +78,7 @@
               @click="isComponentPanelOpen = true"
               icon="i-heroicons-square-3-stack-3d"
               size="xl"
-              :label="`${nbComponents}/${useNbComponentsStore().value}`"
+              :label="`${nbComponents} components`"
               variant="ghost"
               color="primary"
             />
