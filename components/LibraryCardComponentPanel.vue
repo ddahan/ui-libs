@@ -24,9 +24,6 @@
           <UTooltip
             :text="component.description"
             class="flex items-center gap-1.5 cursor-default"
-            :ui="{
-              base: component.description ? 'px-2 py-1 text-xs font-normal' : 'invisible',
-            }"
           >
             <UIcon
               :name="
