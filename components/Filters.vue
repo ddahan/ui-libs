@@ -30,6 +30,10 @@
 
     <template #moreFeatures>
       <div class="ml-2 flex flex-col gap-1">
+        <div class="grid grid-cols-2 gap-1">
+          <FilterButton buttonFilterID="FVue" />
+          <FilterButton buttonFilterID="FNuxt" />
+        </div>
         <FilterButton buttonFilterID="FAccessible" />
         <FilterButton buttonFilterID="FBuiltinThemes" />
         <FilterButton buttonFilterID="FThemeGenerator" />
@@ -40,10 +44,6 @@
         <FilterButton buttonFilterID="FRoadmap" />
         <FilterButton buttonFilterID="FRTLSupport" />
         <FilterButton buttonFilterID="FTyped" />
-        <div class="grid grid-cols-2 gap-1">
-          <FilterButton buttonFilterID="FVue" />
-          <FilterButton buttonFilterID="FNuxt" />
-        </div>
       </div>
     </template>
 
