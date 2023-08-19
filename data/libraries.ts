@@ -195,6 +195,13 @@ export const libraries: Array<Library> = [
       "Range",
       "Radio",
     ],
-    filterMatchings: [],
+    filterMatchings: [
+      { id: "FStyled" },
+      { id: "FComponents" },
+      { id: "FTailwind" },
+      { id: "FFree" },
+      { id: "FFigma", to: "https://flowbite.com/figma/" },
+      { id: "FVue" },
+    ],
   },
 ];
