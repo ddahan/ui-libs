@@ -33,7 +33,7 @@
           </p>
         </div>
 
-        <div class="flex gap-2 flex-wrap place-content-end">
+        <div class="grid grid-cols-2 gap-2 flex-wrap">
           <template
             v-for="filterMatching in library.filterMatchings"
             :key="filterMatching.id"

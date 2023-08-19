@@ -1,6 +1,6 @@
 <template>
   <NuxtLink
-    class="flex items-center gap-1 text-xs bg-gray-50 dark:bg-gray-600 rounded-lg px-2 py-0.5"
+    class="flex items-center gap-1 text-xs"
     :class="
       buttonFilterMatching.to ? 'hover:bg-primary-50 dark:hover:bg-primary-900' : ''
     "
