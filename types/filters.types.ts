@@ -7,12 +7,20 @@ type ButtonFilterID =
   | "FPasted"
   | "FTailwind"
   | "FComponents"
+  | "FCSS"
   | "FAccessible"
   | "FFigma"
   | "FDarkMode"
   | "FFree"
   | "FRoadmap"
-  | "FOfficial";
+  | "FOfficial"
+  | "FRTLSupport"
+  | "FTyped"
+  | "FBuiltinThemes"
+  | "FThemeGenerator"
+  | "FSemanticColors"
+  | "FVue"
+  | "FNuxt";
 
 type ButtonFilter = {
   id: ButtonFilterID;

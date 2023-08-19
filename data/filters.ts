@@ -14,6 +14,20 @@ export const buttonFilters: Array<ButtonFilter> = [
     autoDisable: "FStyled",
   },
   {
+    id: "FComponents",
+    label: "Components",
+    icon: "i-icon-park-outline-components",
+    help: "Provide Vue components.",
+    autoDisable: "FCSS",
+  },
+  {
+    id: "FCSS",
+    label: "CSS only",
+    icon: "i-ph-file-css",
+    help: "Provide CSS classes that you have to apply to your own Vue components.",
+    autoDisable: "FComponents",
+  },
+  {
     id: "FImported",
     label: "Imported",
     icon: "i-mdi-import",
@@ -31,12 +45,6 @@ export const buttonFilters: Array<ButtonFilter> = [
     id: "FTailwind",
     label: "Tailwind CSS based",
     icon: "i-simple-icons-tailwindcss",
-  },
-  {
-    id: "FComponents",
-    label: "Vue Components",
-    icon: "i-mdi-vuejs",
-    help: "Some UI libraries only provide styling classes that you have to apply to your own Vue components. Select this filter to remove them.",
   },
   {
     id: "FAccessible",
@@ -67,6 +75,42 @@ export const buttonFilters: Array<ButtonFilter> = [
     id: "FOfficial",
     label: "Official",
     icon: "i-solar-medal-ribbon-linear",
+  },
+  {
+    id: "FRTLSupport",
+    label: "RTL support",
+    icon: "i-material-symbols-keyboard-tab-rtl-rounded",
+    help: "Ability to display and handle text that is written from right to left (Arabic, Hebrew, etc.)",
+  },
+  {
+    id: "FTyped",
+    label: "Fully Typed",
+    icon: "i-tabler-brand-typescript",
+  },
+  {
+    id: "FBuiltinThemes",
+    label: "Built-in Themes",
+    icon: "i-solar-palette-outline",
+  },
+  {
+    id: "FThemeGenerator",
+    label: "Theme Generator",
+    icon: "i-fluent-wand-24-regular",
+  },
+  {
+    id: "FSemanticColors",
+    label: "Semantic Colors",
+    icon: "i-mingcute-color-filter-line",
+  },
+  {
+    id: "FVue",
+    label: "For Vue",
+    icon: "i-mdi-vuejs",
+  },
+  {
+    id: "FNuxt",
+    label: "For Nuxt",
+    icon: "i-simple-icons-nuxtdotjs",
   },
 ];
 

@@ -5,12 +5,20 @@ let initialButtonFiltering: { [K in ButtonFilterID]: { selected: boolean } } = {
   FPasted: { selected: false },
   FTailwind: { selected: false },
   FComponents: { selected: false },
+  FCSS: { selected: false },
   FAccessible: { selected: false },
   FFigma: { selected: false },
   FDarkMode: { selected: false },
   FFree: { selected: false },
   FOfficial: { selected: false },
   FRoadmap: { selected: false },
+  FRTLSupport: { selected: false },
+  FTyped: { selected: false },
+  FBuiltinThemes: { selected: false },
+  FThemeGenerator: { selected: false },
+  FSemanticColors: { selected: false },
+  FVue: { selected: false },
+  FNuxt: { selected: false },
 };
 
 let initialRangeFiltering: { [K in RangeFilterID]: { qty: number } } = {

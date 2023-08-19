@@ -6,7 +6,7 @@
     variant="ghost"
     :multiple="true"
   >
-    <template #features>
+    <template #mainFeatures>
       <div class="ml-2 flex flex-col gap-1">
         <div class="grid grid-cols-2 gap-1">
           <FilterButton buttonFilterID="FStyled" />
@@ -18,14 +18,38 @@
           <FilterButton buttonFilterID="FPasted" />
         </div>
 
+        <div class="grid grid-cols-2 gap-1">
+          <FilterButton buttonFilterID="FComponents" />
+          <FilterButton buttonFilterID="FCSS" />
+        </div>
+
         <FilterButton buttonFilterID="FTailwind" />
-        <FilterButton buttonFilterID="FComponents" />
+        <FilterButton buttonFilterID="FFree" />
+      </div>
+    </template>
+
+    <template #moreFeatures>
+      <div class="ml-2 flex flex-col gap-1">
         <FilterButton buttonFilterID="FAccessible" />
+        <FilterButton buttonFilterID="FBuiltinThemes" />
+        <FilterButton buttonFilterID="FThemeGenerator" />
+        <FilterButton buttonFilterID="FSemanticColors" />
         <FilterButton buttonFilterID="FFigma" />
         <FilterButton buttonFilterID="FDarkMode" />
-        <FilterButton buttonFilterID="FFree" />
         <FilterButton buttonFilterID="FOfficial" />
         <FilterButton buttonFilterID="FRoadmap" />
+        <FilterButton buttonFilterID="FRTLSupport" />
+        <FilterButton buttonFilterID="FTyped" />
+        <div class="grid grid-cols-2 gap-1">
+          <FilterButton buttonFilterID="FVue" />
+          <FilterButton buttonFilterID="FNuxt" />
+        </div>
+      </div>
+    </template>
+
+    <template #availableComponents>
+      <div class="ml-2">
+        <FilterRange rangeFilterID="FNbComponents" />
       </div>
     </template>
 
@@ -33,12 +57,6 @@
       <div class="ml-2 flex flex-col gap-1">
         <FilterRange rangeFilterID="FNbStars" />
         <FilterRange rangeFilterID="FNbDownloads" />
-      </div>
-    </template>
-
-    <template #availableComponents>
-      <div class="ml-2">
-        <FilterRange rangeFilterID="FNbComponents" />
       </div>
     </template>
   </UAccordion>
@@ -60,19 +78,24 @@
 <script setup lang="ts">
 const accordionSections = [
   {
-    label: "Features",
+    label: "Main Features",
     defaultOpen: true,
-    slot: "features",
+    slot: "mainFeatures",
   },
   {
-    label: "Popularity",
-    defaultOpen: true,
-    slot: "popularity",
+    label: "More Features",
+    defaultOpen: false,
+    slot: "moreFeatures",
   },
   {
     label: "Available Components",
     defaultOpen: true,
     slot: "availableComponents",
+  },
+  {
+    label: "Popularity",
+    defaultOpen: true,
+    slot: "popularity",
   },
 ];
 

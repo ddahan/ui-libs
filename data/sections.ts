@@ -1,3 +1,5 @@
+// Tour: https://saas-ui.dev/docs/components/engagement/tour
+
 export const sections: Array<Section> = [
   {
     name: "Elements",
