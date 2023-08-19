@@ -19,6 +19,7 @@ type ComponentName =
   | "Keyboard Key"
   | "Progress"
   | "Stack"
+  | "Timeline"
 
   // Data input
   | "Checkbox"

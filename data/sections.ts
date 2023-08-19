@@ -59,6 +59,11 @@ export const sections: Array<Section> = [
         name: "Stack",
         description: "Stack visually puts elements on top of each other",
       },
+      {
+        name: "Timeline",
+        description:
+          "A visual representation used to display a sequence of events or processes in chronological order.",
+      },
     ],
   },
   {
