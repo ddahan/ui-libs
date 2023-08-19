@@ -26,7 +26,7 @@ type ButtonFilter = {
   id: ButtonFilterID;
   label: string;
   icon: string;
-  help?: string;
+  help: string;
   autoDisable?: ButtonFilterID;
 };
 
