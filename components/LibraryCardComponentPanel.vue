@@ -22,7 +22,7 @@
           :key="component.name"
         >
           <UTooltip
-            :text="component.description"
+            :text="component.help"
             class="flex items-center gap-1.5 cursor-default"
           >
             <UIcon

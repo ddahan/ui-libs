@@ -70,5 +70,5 @@ type Section = { name: SectionName; icon: string; components: Component[] };
 type Component = {
   name: ComponentName;
   aliases?: string[];
-  description?: string; // see primeVue for example
+  help: string;
 };
