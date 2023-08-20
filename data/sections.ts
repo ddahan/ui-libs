@@ -100,16 +100,6 @@ export const sections: Array<Section> = [
     ],
   },
   {
-    name: "Data",
-    icon: "i-heroicons-table-cells",
-    components: [
-      {
-        name: "Table",
-        help: "Data displayed in a table",
-      },
-    ],
-  },
-  {
     name: "Navigation",
     icon: "i-heroicons-link-solid",
     components: [
@@ -194,7 +184,7 @@ export const sections: Array<Section> = [
   },
   {
     name: "Layout",
-    icon: "i-teenyicons-grid-layout-outline",
+    icon: "i-ph-layout",
     components: [
       { name: "Card", help: "Content with a header, body and footer" },
       { name: "Container", help: "Let constrain the user's content" },
@@ -202,6 +192,16 @@ export const sections: Array<Section> = [
         name: "Skeleton",
         aliases: ["Placeholder"],
         help: "A placeholder typically used while content is loading",
+      },
+    ],
+  },
+  {
+    name: "Data",
+    icon: "i-heroicons-table-cells",
+    components: [
+      {
+        name: "Table",
+        help: "Data displayed in a table",
       },
     ],
   },

@@ -39,6 +39,9 @@
 <script setup lang="ts">
 const title = ref("UI Lib Picker");
 
+const runtimeConfig = useRuntimeConfig();
+const loadPlausible = runtimeConfig.public.loadPlausible == "yes";
+
 useHead({
   title,
   link: [
@@ -48,13 +51,17 @@ useHead({
       href: "/favicon/palette.svg",
     },
   ],
-  script: [
-    {
-      "src": "/stats/js/script.js",
-      "data-api": "/stats/api/event",
-      "data-domain": "ui-libs.vercel.app",
-      "defer": true,
-    },
-  ],
+  ...(loadPlausible
+    ? {
+        script: [
+          {
+            "src": "/stats/js/script.js",
+            "data-api": "/stats/api/event",
+            "data-domain": "ui-libs.vercel.app",
+            "defer": true,
+          },
+        ],
+      }
+    : {}),
 });
 </script>
