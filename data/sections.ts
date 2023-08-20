@@ -7,7 +7,7 @@ export const sections: Array<Section> = [
     components: [
       {
         name: "Accordion",
-        aliases: ["Collapse"],
+        aliases: ["Collapse", "Disclosure"],
         help: "Vertically collapsing accordion panels",
       },
       {
@@ -44,6 +44,7 @@ export const sections: Array<Section> = [
       },
       {
         name: "Dropdown",
+        aliases: ["Menu"],
         help: "Toggle contextual overlays for displaying lists of actions",
       },
       {
@@ -77,6 +78,7 @@ export const sections: Array<Section> = [
       { name: "Select", help: "A select field" },
       {
         name: "Select Menu",
+        aliases: ["Listbox"],
         help: "A select menu with advanced features (search, multiple select, etc.)",
       },
       {
@@ -85,7 +87,7 @@ export const sections: Array<Section> = [
       },
       { name: "Checkbox", help: "A checkbox field" },
       { name: "Radio", help: "A radio field" },
-      { name: "Toggle", help: "A toggle field" },
+      { name: "Toggle", aliases: ["Switch"], help: "A toggle field" },
       { name: "Range", help: "A range field" },
       {
         name: "Rating",
@@ -152,6 +154,7 @@ export const sections: Array<Section> = [
     components: [
       {
         name: "Modal",
+        aliases: ["Dialog"],
         help: "Dialog box or popup window that is displayed on top of the current page.",
       },
       {
