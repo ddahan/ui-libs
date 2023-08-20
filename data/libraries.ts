@@ -176,6 +176,11 @@ export const libraries: Array<Library> = [
       "Avatar",
       "Badge",
       "Dropdown",
+      "Button",
+      "Button Group",
+      "Divider",
+      "Container",
+      "Card",
     ],
     filterMatchings: [
       { id: "FStyled" },

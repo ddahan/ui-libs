@@ -23,6 +23,11 @@
           <FilterButton buttonFilterID="FCSS" />
         </div>
 
+        <div class="grid grid-cols-2 gap-1">
+          <FilterButton buttonFilterID="FVue" />
+          <FilterButton buttonFilterID="FNuxt" />
+        </div>
+
         <FilterButton buttonFilterID="FTailwind" />
         <FilterButton buttonFilterID="FFree" />
       </div>
@@ -30,10 +35,6 @@
 
     <template #moreFeatures>
       <div class="ml-2 flex flex-col gap-1">
-        <div class="grid grid-cols-2 gap-1">
-          <FilterButton buttonFilterID="FVue" />
-          <FilterButton buttonFilterID="FNuxt" />
-        </div>
         <FilterButton buttonFilterID="FAccessible" />
         <FilterButton buttonFilterID="FBuiltinThemes" />
         <FilterButton buttonFilterID="FThemeGenerator" />
