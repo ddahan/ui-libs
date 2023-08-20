@@ -154,27 +154,28 @@ const logo = ((): string =>
 
 // Github related ------------------------------------------------------------------------
 
-const repoUrl = ((): string | undefined => {
-  if (library.value.repoName && library.value.repoOwner) {
-    return `https://github.com/${library.value.repoOwner}/${library.value.repoName}`;
-  }
-})();
+const repoUrl = ((library: Library): string | undefined =>
+  library.repoName && library.repoOwner
+    ? `https://github.com/${library.repoOwner}/${library.repoName}`
+    : undefined)(library.value);
 
 type GithubApiResponse = {
   stargazers_count: number; // known and useful key
   [key: string]: unknown; // unknown and useless keys
 };
 
-const { data: githubApiData } = useFetch<GithubApiResponse>(
-  `https://api.github.com/repos/${library.value.repoOwner}/${library.value.repoName}`,
-  {
-    lazy: true,
-    server: false, // This call will only be performed on the client
-    onResponse({ response }) {
-      library.value.nbStars = response._data.stargazers_count;
-    },
-  }
-);
+if (repoUrl) {
+  const { data: githubApiData } = useFetch<GithubApiResponse>(
+    `https://api.github.com/repos/${library.value.repoOwner}/${library.value.repoName}`,
+    {
+      lazy: true,
+      server: false, // This call will only be performed on the client
+      onResponse({ response }) {
+        library.value.nbStars = response._data.stargazers_count;
+      },
+    }
+  );
+}
 
 // NPM related ---------------------------------------------------------------------------
 
@@ -188,14 +189,16 @@ type NpmApiResponse = {
   [key: string]: unknown;
 };
 
-const { data: npmApiData } = useFetch<NpmApiResponse>(
-  `https://api.npmjs.org/downloads/point/last-week/${library.value.package}`,
-  {
-    lazy: true,
-    server: false,
-    onResponse({ response }) {
-      library.value.nbDownloads = response._data.downloads;
-    },
-  }
-);
+if (registryUrl) {
+  const { data: npmApiData } = useFetch<NpmApiResponse>(
+    `https://api.npmjs.org/downloads/point/last-week/${library.value.package}`,
+    {
+      lazy: true,
+      server: false,
+      onResponse({ response }) {
+        library.value.nbDownloads = response._data.downloads;
+      },
+    }
+  );
+}
 </script>
