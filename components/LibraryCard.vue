@@ -4,7 +4,7 @@
     class="rounded-lg px-3 py-2 border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-700 w-auto min-h-[180px]"
   >
     <div class="h-full flex flex-col justify-between">
-      <div class="flex items-start justify-between px-4 py-2 gap-8">
+      <div class="flex items-start justify-between px-4 py-2 gap-8 @container">
         <div class="shrink-0">
           <UTooltip :text="`Go to ${library.name} website`">
             <UButton
@@ -33,7 +33,7 @@
           </p>
         </div>
 
-        <div class="grid grid-cols-2 gap-2 flex-wrap">
+        <div class="grid grid-cols-1 @sm:grid-cols-2 @md:grid-cols-3 gap-2 flex-wrap">
           <template
             v-for="filterMatching in library.filterMatchings"
             :key="filterMatching.id"

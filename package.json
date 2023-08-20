@@ -11,6 +11,7 @@
   "devDependencies": {
     "@nuxt/devtools": "x",
     "@nuxthq/ui": "x",
+    "@tailwindcss/container-queries": "x",
     "@tailwindcss/typography": "x",
     "@types/node": "x",
     "nuxt": "x"
