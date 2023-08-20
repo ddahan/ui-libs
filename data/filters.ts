@@ -43,7 +43,7 @@ export const buttonFilters: Array<ButtonFilter> = [
   },
   {
     id: "FTailwind",
-    label: "Tailwind CSS based",
+    label: "Tailwind CSS",
     icon: "i-simple-icons-tailwindcss",
     help: "The library uses Tailwind CSS itself and allows you to use it to customize components. As a Tailwind CSS user, this allows to keep a unique tool for all your styling.",
   },
@@ -61,7 +61,7 @@ export const buttonFilters: Array<ButtonFilter> = [
   },
   {
     id: "FDarkMode",
-    label: "Dark Mode support",
+    label: "Dark Mode",
     icon: "i-mdi-weather-night",
     help: "Components are designed tu support both a light and dark version.",
   },
