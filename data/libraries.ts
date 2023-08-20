@@ -8,6 +8,7 @@ export const libraries: Array<Library> = [
     package: "@nuxthq/ui",
     componentMatchings: [
       "Accordion",
+      "Alert",
       "Avatar",
       "Badge",
       "Button",
@@ -64,6 +65,7 @@ export const libraries: Array<Library> = [
     url: "https://daisyui.com",
     componentMatchings: [
       "Accordion",
+      "Alert",
       "Avatar",
       "Badge",
       "Bottom Tabs",
@@ -98,7 +100,6 @@ export const libraries: Array<Library> = [
       "Tabs",
       "Table",
       "Textarea",
-      "Toast",
       "Toggle",
       "Tooltip",
     ],
@@ -163,7 +164,7 @@ export const libraries: Array<Library> = [
     package: "flowbite-vue",
     componentMatchings: [
       "Accordion",
-      "Toast",
+      "Alert",
       "Avatar",
       "Breadcrumb",
       "Button",
@@ -187,6 +188,7 @@ export const libraries: Array<Library> = [
       "File Input",
       "Checkbox",
       "Select",
+      "Toast",
       "Toggle",
       "Textarea",
       "Range",

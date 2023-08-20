@@ -5,6 +5,7 @@ type SectionName = "Elements" | "Input" | "Data" | "Navigation" | "Overlays" | "
 type ComponentName =
   // Elements
   | "Accordion"
+  | "Alert"
   | "Avatar"
   | "Badge"
   | "Breadcrumb"
@@ -57,6 +58,7 @@ type ComponentName =
   | "Slideover"
   | "Toast"
   | "Tooltip"
+  | "Tour"
 
   // Layout
   | "Card"

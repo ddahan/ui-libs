@@ -1,13 +1,11 @@
 <template>
-  <UTooltip :text="buttonFilter.help">
-    <UButton
-      class="w-full"
-      :icon="buttonFilter.icon"
-      :label="buttonFilter.label"
-      :variant="buttonFiltering[buttonFilter.id].selected ? 'solid' : 'ghost'"
-      @click="invertButtonFiltering(buttonFilter.id)"
-    />
-  </UTooltip>
+  <UButton
+    class="w-full"
+    :icon="buttonFilter.icon"
+    :label="buttonFilter.label"
+    :variant="buttonFiltering[buttonFilter.id].selected ? 'solid' : 'ghost'"
+    @click="invertButtonFiltering(buttonFilter.id)"
+  />
 </template>
 
 <script setup lang="ts">

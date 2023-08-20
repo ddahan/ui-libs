@@ -1,15 +1,10 @@
 <template>
-  <NuxtLink
-    class="flex items-center gap-1 text-xs"
-    :class="
-      buttonFilterMatching.to ? 'hover:bg-primary-50 dark:hover:bg-primary-900' : ''
-    "
-    :to="buttonFilterMatching.to"
-    target="_blank"
-  >
-    <UIcon :name="filter.icon" />
-    {{ filter.label }}
-  </NuxtLink>
+  <UTooltip :text="buttonFilter.help">
+    <div class="flex items-center gap-1 text-xs cursor-default">
+      <UIcon :name="buttonFilter.icon" />
+      {{ buttonFilter.label }}
+    </div>
+  </UTooltip>
 </template>
 
 <script setup lang="ts">
@@ -19,5 +14,9 @@ const props = defineProps<{
   buttonFilterMatching: ButtonFilterMatching;
 }>();
 
-const filter = findBy<ButtonFilter>("id", props.buttonFilterMatching.id, buttonFilters)!;
+const buttonFilter = findBy<ButtonFilter>(
+  "id",
+  props.buttonFilterMatching.id,
+  buttonFilters
+)!;
 </script>

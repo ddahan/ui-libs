@@ -10,6 +10,10 @@ export const sections: Array<Section> = [
         aliases: ["Collapse"],
         description: "Vertically collapsing accordion panels",
       },
+      {
+        name: "Alert",
+        description: "Contextual information to be emphasized to the user",
+      },
       { name: "Avatar", description: "Rounded image of a resource" },
       {
         name: "Badge",
@@ -189,9 +193,13 @@ export const sections: Array<Section> = [
       },
       {
         name: "Toast",
-        aliases: ["Notification", "Alert"],
+        aliases: ["Notification"],
         description:
           "A small, non-modal notification that provides feedback to a user, typically appearing for a short duration and then disappearing automatically",
+      },
+      {
+        name: "Tour",
+        description: "Used to display a contextual help on features to new users.",
       },
     ],
   },
