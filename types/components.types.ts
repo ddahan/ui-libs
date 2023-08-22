@@ -1,5 +1,5 @@
 // component sections
-type SectionName = "Elements" | "Input" | "Data" | "Navigation" | "Overlays" | "Layout";
+type SectionName = "Elements" | "Inputs" | "Data" | "Navigation" | "Overlays" | "Layout";
 
 // components
 type ComponentName =
@@ -17,20 +17,31 @@ type ComponentName =
   | "Dropdown"
   | "Indicator"
   | "Mockup"
+  | "Panel Splitter"
   | "Keyboard Key"
   | "Progress"
+  | "Scroll Bar"
   | "Stack"
+  | "Speed Dial"
   | "Timeline"
 
   // Data input
+  | "Auto Complete"
+  | "Color Picker"
   | "Checkbox"
+  | "Input Chips"
+  | "Date Picker"
   | "File Input"
   | "Form"
   | "Form Group"
   | "Input"
+  | "Input Mask"
+  | "Knob"
+  | "Password Indicator"
   | "Radio"
   | "Range"
   | "Rating"
+  | "Rich Text Editor"
   | "Select"
   | "Select Menu"
   | "Swap"
@@ -39,14 +50,19 @@ type ComponentName =
 
   // Data
   | "Table"
+  | "Order List"
+  | "Tree"
+  | "Pick List"
+  | "Virtual Scroller"
 
   // Navigation
   | "Bottom Tabs"
   | "Command Palette"
-  | "Footer"
+  | "Dock"
   | "Navbar"
   | "Pagination"
-  | "Scrollspy"
+  | "Scroll Spy"
+  | "Scroll Top"
   | "Steps"
   | "Tabs"
   | "Vertical Navigation"

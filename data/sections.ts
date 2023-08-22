@@ -17,8 +17,7 @@ export const sections: Array<Section> = [
       { name: "Avatar", help: "Rounded image of a resource" },
       {
         name: "Badge",
-        aliases: ["Chip"],
-        help: "Short text to represent a status or a category",
+        help: "Short text indicator to represent a status",
       },
       {
         name: "Button",
@@ -31,7 +30,7 @@ export const sections: Array<Section> = [
       },
       {
         name: "Carousel",
-        aliases: ["Slideshow"],
+        aliases: ["Slideshow", "Galleria"],
         help: "A slideshow component for cycling through elements, typically images or slides of text",
       },
       {
@@ -55,9 +54,18 @@ export const sections: Array<Section> = [
         name: "Mockup",
         help: "Shows a fake box (browser, code, phone, window, etc.)",
       },
+      { name: "Panel Splitter", help: "Used to separate and resize panels" },
       {
         name: "Keyboard Key",
         help: "A keyboard key in a text block, typically to display a shortcut to a user",
+      },
+      {
+        name: "Scroll Bar",
+        help: "A customizable and cross browser alternative to native browser scrollbar",
+      },
+      {
+        name: "Speed Dial",
+        help: "When pressed, this floating action button, displays multiple other action buttons. It is used to quickly access features.",
       },
       {
         name: "Stack",
@@ -70,16 +78,49 @@ export const sections: Array<Section> = [
     ],
   },
   {
-    name: "Input",
+    name: "Inputs",
     icon: "i-heroicons-pencil-square",
     components: [
+      {
+        name: "Auto Complete",
+        help: "An input component that provides real-time suggestions when being typed",
+      },
+      {
+        name: "Color Picker",
+        help: "An input component to select a color",
+      },
+      {
+        name: "Input Chips",
+        help: "Used to enter multiple values on a single input fields",
+      },
+      {
+        name: "Date Picker",
+        aliases: ["Calendar"],
+        help: "A popover to select a date from a calendar-like interface",
+      },
+      {
+        name: "Rich Text Editor",
+        help: "A component that allows users to format and style text, offering various options like bold, italics, lists, and more, without needing to write HTML or other markup code",
+      },
       { name: "Input", help: "An input field" },
+      {
+        name: "Input Mask",
+        help: "Automatically formats inputs like date, currency, email and phone",
+      },
+      {
+        name: "Knob",
+        help: "An input element to adjust a value by turning or dragging the control, similar to a physical knob on an electronic device. It's often used to control volume, brightness, or other continuous values",
+      },
+      {
+        name: "Password Indicator",
+        help: "Helper to provide information on password field like strength, while entering it",
+      },
       { name: "Textarea", help: "A textarea field" },
       { name: "Select", help: "A select field" },
       {
         name: "Select Menu",
         aliases: ["Listbox"],
-        help: "A select menu with advanced features (search, multiple select, etc.)",
+        help: "A select menu with advanced features (search, multiple select, etc)",
       },
       {
         name: "Swap",
@@ -87,8 +128,8 @@ export const sections: Array<Section> = [
       },
       { name: "Checkbox", help: "A checkbox field" },
       { name: "Radio", help: "A radio field" },
-      { name: "Toggle", aliases: ["Switch"], help: "A toggle field" },
-      { name: "Range", help: "A range field" },
+      { name: "Toggle", aliases: ["Switch", "Input Switch"], help: "A toggle field" },
+      { name: "Range", aliases: ["Slider"], help: "A range field" },
       {
         name: "Rating",
         help: "A set of radio buttons that allow the user to rate something",
@@ -98,7 +139,11 @@ export const sections: Array<Section> = [
         help: "A label and additional informations around a form element",
       },
       { name: "Form", help: "Form data collection and validation" },
-      { name: "File Input", help: "An input field for uploading files" },
+      {
+        name: "File Input",
+        aliases: ["File Upload"],
+        help: "An input field for uploading files",
+      },
     ],
   },
   {
@@ -111,19 +156,17 @@ export const sections: Array<Section> = [
       },
       {
         name: "Command Palette",
-        help: "A powerful user interface element that allows users to access various commands, functions, or actions from a single input panel.",
+        help: "A powerful user interface element that allows users to access various commands, functions, or actions from a single input panel",
       },
-      {
-        name: "Footer",
-        help: "Bottom page navigation which usually contains logo, copyright notice, and links to other pages",
-      },
+      { name: "Dock", help: "A macOS-like Dock to navigate, using icons" },
       {
         name: "Navbar",
         help: "An horizontal bar or section typically located at the top of a webpage, which contains links, buttons, or other navigational elements",
       },
       {
         name: "Pagination",
-        help: "Navigation system for large amount of data that need to be displayed one at a time.",
+        aliases: ["Paginator"],
+        help: "Navigation system for large amount of data that need to be displayed one at a time",
       },
       {
         name: "Progress",
@@ -131,12 +174,16 @@ export const sections: Array<Section> = [
         help: "A graphical element used to visualize the progression of a particular process, such as a file download, a setup process, or any task that might take some time to complete",
       },
       {
-        name: "Scrollspy",
-        help: "A navigation mechanism that automatically highlights the navigation links based on the scroll position to indicate which section of the page is currently in the viewport. It's a common feature in single-page websites or long pages with distinct sections.",
+        name: "Scroll Spy",
+        help: "A navigation mechanism that automatically highlights the navigation links based on the scroll position to indicate which section of the page is currently in the viewport. It's a common feature in single-page websites or long pages with distinct sections",
+      },
+      {
+        name: "Scroll Top",
+        help: "Display an item after a certain scroll position. It's usually used to navigates to the top of the page",
       },
       {
         name: "Steps",
-        help: "Used to show a list of steps in a process.",
+        help: "Used to show a list of steps in a process",
       },
       {
         name: "Tabs",
@@ -164,7 +211,7 @@ export const sections: Array<Section> = [
       },
       {
         name: "Popover",
-        help: "A transient view that appears above other content onscreen when a user clicks or taps on a control or within a defined area.",
+        help: "A transient view that appears above other content onscreen when a user clicks or taps on a control or within a defined area",
       },
       {
         name: "Tooltip",
@@ -181,7 +228,7 @@ export const sections: Array<Section> = [
       },
       {
         name: "Tour",
-        help: "Used to display a contextual help on features to new users.",
+        help: "Used to display a contextual help on features to new users",
       },
     ],
   },
@@ -204,7 +251,24 @@ export const sections: Array<Section> = [
     components: [
       {
         name: "Table",
-        help: "Data displayed in a table",
+        help: "Data displayed in a tabular format",
+      },
+      {
+        name: "Order List",
+        help: "A component to display a list of items with actions to sort those items",
+      },
+      {
+        name: "Tree",
+        aliases: ["Organization Chart"],
+        help: "A component to visualize and interact with hierarchical data",
+      },
+      {
+        name: "Pick List",
+        help: "A component for moving items between different lists and ordering them",
+      },
+      {
+        name: "Virtual Scroller",
+        help: "A performant approach to render large amounts of data efficiently",
       },
     ],
   },
