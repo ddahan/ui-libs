@@ -12,14 +12,14 @@
           target="_blank"
           class="primary-text font-semibold"
         >
-          Vue
+          Vue 3
         </NuxtLink>
         or
         <NuxtLink
           to="https://nuxt.com/"
           target="_blank"
           class="primary-text font-semibold"
-          >Nuxt</NuxtLink
+          >Nuxt 3</NuxtLink
         >
         Project.
       </p>

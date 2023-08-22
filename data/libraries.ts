@@ -199,7 +199,21 @@ export const libraries: Array<Library> = [
     repoName: "primevue",
     package: "primevue",
     componentMatchings: [],
-    filterMatchings: [],
+    filterMatchings: [
+      { id: "FStyled" },
+      { id: "FUnstyled" },
+      { id: "FImported" },
+      { id: "FTailwind" }, // but not forced, two versions
+      { id: "FComponents" },
+      { id: "FAccessible" },
+      { id: "FFigma" },
+      { id: "FFree" }, // not for Figma
+      { id: "FRoadmap" }, // https://primevue.org/roadmap/
+      { id: "FThemeGenerator" }, // https://designer.primevue.org/
+      { id: "FBuiltinThemes" }, // https://primevue.org/theming/#builtinthemes
+      { id: "FSemanticColors" }, // https://primevue.org/colors/
+      { id: "FVue" },
+    ],
   },
   {
     name: "Quasar",

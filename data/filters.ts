@@ -17,7 +17,7 @@ export const buttonFilters: Array<ButtonFilter> = [
     id: "FComponents",
     label: "Components",
     icon: "i-icon-park-outline-components",
-    help: "Provide Vue components able to handle both logic and stying, but it is coupled to the Vue framework.",
+    help: "Provide Vue components handling both logic and stying (or logic only if unstyled), but it is coupled to the Vue framework.",
     autoDisable: "FCSS",
   },
   {
@@ -117,7 +117,7 @@ export const buttonFilters: Array<ButtonFilter> = [
     id: "FVue",
     label: "For Vue",
     icon: "i-mdi-vuejs",
-    help: "Dedicated to Vue framework (but can be used with Nuxt too)",
+    help: "Dedicated to Vue framework (can be used with Nuxt too)",
     autoDisable: "FNuxt",
   },
   {

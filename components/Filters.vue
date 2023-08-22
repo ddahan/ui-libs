@@ -38,9 +38,9 @@
         <FilterButton buttonFilterID="FAccessible" />
         <FilterButton buttonFilterID="FBuiltinThemes" />
         <FilterButton buttonFilterID="FThemeGenerator" />
+        <FilterButton buttonFilterID="FDarkMode" />
         <FilterButton buttonFilterID="FSemanticColors" />
         <FilterButton buttonFilterID="FFigma" />
-        <FilterButton buttonFilterID="FDarkMode" />
         <FilterButton buttonFilterID="FOfficial" />
         <FilterButton buttonFilterID="FRoadmap" />
         <FilterButton buttonFilterID="FRTLSupport" />
