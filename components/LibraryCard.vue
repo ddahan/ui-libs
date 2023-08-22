@@ -89,7 +89,7 @@
               @dblclick.prevent=""
               v-model="isComponentPanelOpen"
               side="right"
-              :ui="{ width: 'max-w-[256px] md:max-w-md' }"
+              :ui="{ width: 'max-w-[256px] md:max-w-2xl' }"
             >
               <SlideoverContent>
                 <LibraryCardComponentPanel :library="library" />

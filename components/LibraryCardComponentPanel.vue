@@ -1,8 +1,14 @@
 <template>
   <div>
-    <h2 class="text-xl md:text-2xl font-semibold decorated mb-8">
-      {{ library.name }} components
-    </h2>
+    <div class="flex gap-3 items-center mb-8">
+      <img
+        :src="`/img/${library.logo}`"
+        class="h-10 w-10 drop-shadow-lg mt-2"
+      />
+      <h2 class="text-xl md:text-2xl font-semibold decorated">
+        {{ library.name }} components
+      </h2>
+    </div>
 
     <div
       class="mb-5"
@@ -16,7 +22,8 @@
         />
         <h3 class="font-semibold">{{ section.name }}</h3>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2">
+      <!-- TODO: use flex instead -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
         <div
           v-for="component in section.components"
           :key="component.name"

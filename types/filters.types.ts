@@ -37,11 +37,11 @@ type ButtonFilterMatching = { id: ButtonFilterID; to?: string };
 type RangeFilterID = "FNbStars" | "FNbDownloads" | "FNbComponents";
 
 type RangeFilter = {
-  // TODO: use inheritance
   id: RangeFilterID;
   leadingLabel: string;
   trailingLabel: string;
   icon: string;
+  help: string;
   rangeMax: number;
   rangeStep: number;
 };

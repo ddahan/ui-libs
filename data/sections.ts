@@ -52,7 +52,7 @@ export const sections: Array<Section> = [
       },
       {
         name: "Mockup",
-        help: "Shows a fake box (browser, code, phone, window, etc.)",
+        help: "A fake box (browser, code, phone, window) around the content",
       },
       { name: "Panel Splitter", help: "Used to separate and resize panels" },
       {
