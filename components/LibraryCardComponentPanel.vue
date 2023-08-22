@@ -22,15 +22,14 @@
         />
         <h3 class="font-semibold">{{ section.name }}</h3>
       </div>
-      <!-- TODO: use flex instead -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-        <div
+      <div class="flex gap-0 space-y-1 flex-wrap">
+        <template
           v-for="component in section.components"
           :key="component.name"
         >
           <UTooltip
             :text="component.help"
-            class="flex items-center gap-1.5 cursor-default"
+            class="w-[150px] flex items-center gap-1.5 cursor-default"
           >
             <UIcon
               :name="
@@ -47,7 +46,7 @@
               {{ component.name }}
             </span>
           </UTooltip>
-        </div>
+        </template>
       </div>
     </div>
   </div>
