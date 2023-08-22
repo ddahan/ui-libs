@@ -1,6 +1,4 @@
-# About
-
-### Why this project?
+# UI Lib Picker for Vue 3 / Nuxt 3
 
 Choosing the right UI library is hard! There are many things to consider. This project is a simple tool to have an overview of different UI frameworks, and help you pick the right one.
 
@@ -13,9 +11,7 @@ Choosing the right UI library is hard! There are many things to consider. This p
 
 While every effort has been made to ensure the accuracy of the information provided, the author assumes no responsibility for any errors or omissions.
 
-### Roadmap
-
-# Contributions
+## Contributions
 
 ### How to Contribute
 
@@ -31,7 +27,7 @@ This repository is based on a [Dev Container](https://code.visualstudio.com/docs
 
 Once installed, run `npm run dev` to start the project.
 
-# FAQ
+## FAQ
 
 ### Why Library X is not listed?
 
@@ -44,15 +40,15 @@ However, I may have forgotten some relevant libraries, so feel free to open a PR
 
 ### Why Component X is not listed?
 
-- It's too basic to be relevant (e.g., A Loading Spinner)
+- It's too basic to be relevant (e.g., a Loading Spinner)
 - It's a "block" (a composition of different UI components) rather than a component (e.g., Hero, NavBar)
-- It's a pure utility which could or should live in a collection of utilities like [VueUse](https://vueuse.org/)
-- It's a broad familiy of dedicated components that make sense to have apart (e.g. Charts)
+- It's a pure utility which could or should live in a collection of utilities like [VueUse](https://vueuse.org/).
+- It's a broad familiy of dedicated components that make sense to have apart (e.g. Charts).
 
-# About me
+## About me
 
-I'm David, 35, living in Paris, and available for hiring.
-Visit [my website](https://david-dahan.com) to know more about me, or [contact me](https://david-dahan.com/contact)
+I'm David, 35, living in Paris, and <b>available for hiring</b>.
+Visit [my website](https://david-dahan.com) to know more about me, or [contact me](https://david-dahan.com/contact).
 
 ### Wants to support?
 
