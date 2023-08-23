@@ -7,4 +7,8 @@ export default defineAppConfig({
       popper: { placement: "top" },
     },
   },
+  repoUrl: "https://github.com/ddahan/ui-libs",
+  buyMeACoffeeUrl: "https://www.buymeacoffee.com/ddahan",
+  myWebsiteUrl: "https://david-dahan.com",
+  myContactUrl: "https://david-dahan.com/contact",
 });

@@ -34,33 +34,17 @@
           icon="i-mdi-github"
           :square="true"
           variant="ghost"
-          to="https://volta.net"
+          :to="appConfig.repoUrl"
           target="_blank"
         />
 
         <ThemeSelector />
 
         <UButton
-          variant="ghost"
-          icon="i-ic-outline-help-outline"
-          @click="isHowToOpen = true"
-        />
-        <USlideover
-          @dblclick.prevent=""
-          v-model="isHowToOpen"
-          side="right"
-          :ui="{ width: 'max-w-[256px] md:max-w-md' }"
-        >
-          <SlideoverContent>
-            <HowTo />
-          </SlideoverContent>
-        </USlideover>
-
-        <UButton
           icon="i-bx-coffee-togo"
           :trailing="false"
           :square="true"
-          to="https://www.buymeacoffee.com/ddahan"
+          :to="appConfig.buyMeACoffeeUrl"
           target="_blank"
         >
           <span class="hidden md:inline-block">Buy Me a Coffee</span>
@@ -71,6 +55,7 @@
 </template>
 
 <script setup lang="ts">
-const isHowToOpen = ref(false);
 const isMenuOpen = ref(false);
+
+const appConfig = useAppConfig();
 </script>
