@@ -41,6 +41,14 @@
         <ThemeSelector />
 
         <UButton
+          icon="i-ph-chat-circle-dots-bold"
+          :square="true"
+          variant="ghost"
+          :to="appConfig.myContactUrl"
+          target="_blank"
+        />
+
+        <UButton
           icon="i-bx-coffee-togo"
           :trailing="false"
           :square="true"
