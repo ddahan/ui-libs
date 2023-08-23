@@ -8,15 +8,5 @@
 </template>
 
 <script setup lang="ts">
-import { buttonFilters } from "@/data/filters";
-
-const props = defineProps<{
-  buttonFilterMatching: ButtonFilterMatching;
-}>();
-
-const buttonFilter = findBy<ButtonFilter>(
-  "id",
-  props.buttonFilterMatching.id,
-  buttonFilters
-)!;
+defineProps<{ buttonFilter: ButtonFilter }>();
 </script>

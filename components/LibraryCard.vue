@@ -35,12 +35,12 @@
 
         <div class="flex gap-2 flex-wrap place-content-end">
           <template
-            v-for="filterMatching in library.filterMatchings"
-            :key="filterMatching.id"
+            v-for="buttonFilter in buttonFiltersToShow"
+            :key="buttonFilter.id"
           >
             <LibraryCardBadge
               class="w-28"
-              :buttonFilterMatching="filterMatching"
+              :buttonFilter="buttonFilter"
             />
           </template>
         </div>
@@ -103,6 +103,8 @@
 </template>
 
 <script setup lang="ts">
+import { buttonFilters } from "@/data/filters";
+
 const props = defineProps<{
   initialLibrary: Library;
 }>();
@@ -112,6 +114,17 @@ const library = ref(props.initialLibrary);
 const isComponentPanelOpen = ref(false);
 const colorMode = useColorMode();
 const nbComponents = library.value.componentMatchings.length;
+
+const buttonFiltersToShow = computed((): ButtonFilter[] => {
+  /* Return the button filters (ordered by indexex, to keep consistency over the different cards) than must be showed on the card */
+
+  let result: ButtonFilter[] = [];
+  for (let filterMatching of library.value.filterMatchings) {
+    const buttonFilter = findBy<ButtonFilter>("id", filterMatching.id, buttonFilters)!;
+    result.push(buttonFilter);
+  }
+  return result.sort((a, b) => a.index - b.index);
+});
 
 const display = computed((): boolean => {
   /* Return true if this card should be displayed */

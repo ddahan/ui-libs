@@ -24,6 +24,7 @@ type ButtonFilterID =
 
 type ButtonFilter = {
   id: ButtonFilterID;
+  index: number; // used to keep a consistent order in badge
   label: string;
   icon: string;
   help: string;
