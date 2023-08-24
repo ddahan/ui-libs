@@ -230,6 +230,10 @@ export const sections = [
         name: "Tour" as const,
         help: "Used to display a contextual help on features to new users",
       },
+      {
+        name: "Watermark" as const,
+        help: "Add specific text or patterns to the page. It can be used to identify copyright or prevent information theft.",
+      },
     ],
   },
   {
