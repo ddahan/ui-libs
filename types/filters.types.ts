@@ -1,28 +1,10 @@
 // button filters
 
-type ButtonFilterID =
-  | "FStyled"
-  | "FUnstyled"
-  | "FImported"
-  | "FPasted"
-  | "FTailwind"
-  | "FComponents"
-  | "FCSS"
-  | "FAccessible"
-  | "FFigma"
-  | "FDarkMode"
-  | "FFree"
-  | "FRoadmap"
-  | "FOfficial"
-  | "FRTLSupport"
-  | "FTyped"
-  | "FBuiltinThemes"
-  | "FThemeGenerator"
-  | "FSemanticColors"
-  | "FVue"
-  | "FNuxt";
+import { buttonFilters, rangeFilters } from "@/data/filters";
 
-type ButtonFilter = {
+export type ButtonFilterID = (typeof buttonFilters)[number]["id"];
+
+export type ButtonFilter = {
   id: ButtonFilterID;
   index: number; // used to keep a consistent order in badge
   label: string;
@@ -31,13 +13,13 @@ type ButtonFilter = {
   autoDisable?: ButtonFilterID;
 };
 
-type ButtonFilterMatching = { id: ButtonFilterID; to?: string };
+export type ButtonFilterMatching = { id: ButtonFilterID; to?: string };
 
 // range filters
 
-type RangeFilterID = "FNbStars" | "FNbDownloads" | "FNbComponents";
+export type RangeFilterID = (typeof rangeFilters)[number]["id"];
 
-type RangeFilter = {
+export type RangeFilter = {
   id: RangeFilterID;
   leadingLabel: string;
   trailingLabel: string;

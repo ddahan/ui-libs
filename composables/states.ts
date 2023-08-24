@@ -27,6 +27,7 @@ let initialRangeFiltering: { [K in RangeFilterID]: { qty: number } } = {
   FNbComponents: { qty: 0 },
 };
 
+import { ButtonFilterID, RangeFilterID } from "@/types/filters.types";
 import { buttonFilters } from "@/data/filters";
 
 export const useFilterStore = () => {
@@ -41,7 +42,9 @@ export const useFilterStore = () => {
 
     // 2 - some filters can auto-disable already selected filters
     // (eg. selected `Styled` will auto disable `Unstyled`)
-    const autoDisable = findBy("id", filterID, buttonFilters)?.autoDisable;
+    const autoDisable = <ButtonFilterID>(
+      findBy("id", filterID, buttonFilters)!.autoDisable
+    );
     if (oldSelected === false && !!autoDisable) {
       buttonFiltering.value[autoDisable].selected = false;
     }

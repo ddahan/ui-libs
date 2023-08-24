@@ -12,9 +12,10 @@
 
 <script setup lang="ts">
 import { buttonFilters } from "@/data/filters";
+import { ButtonFilterID } from "@/types/filters.types";
 
 const props = defineProps<{ buttonFilterID: ButtonFilterID }>();
-const buttonFilter = findBy<ButtonFilter>("id", props.buttonFilterID, buttonFilters)!;
+const buttonFilter = findBy("id", props.buttonFilterID, buttonFilters)!;
 
 const { buttonFiltering, invertButtonFiltering } = useFilterStore();
 </script>

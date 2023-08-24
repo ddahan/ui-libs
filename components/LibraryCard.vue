@@ -104,6 +104,8 @@
 
 <script setup lang="ts">
 import { buttonFilters } from "@/data/filters";
+import { Library } from "@/types/libraries.types";
+import { ButtonFilter } from "@/types/filters.types";
 
 const props = defineProps<{
   initialLibrary: Library;
@@ -116,11 +118,11 @@ const colorMode = useColorMode();
 const nbComponents = library.value.componentMatchings.length;
 
 const buttonFiltersToShow = computed((): ButtonFilter[] => {
-  /* Return the button filters (ordered by indexex, to keep consistency over the different cards) than must be showed on the card */
+  /* Return the button filters (ordered by indexes, to keep consistency over the different cards) than must be showed on the card */
 
   let result: ButtonFilter[] = [];
   for (let filterMatching of library.value.filterMatchings) {
-    const buttonFilter = findBy<ButtonFilter>("id", filterMatching.id, buttonFilters)!;
+    const buttonFilter = <ButtonFilter>findBy("id", filterMatching.id, buttonFilters)!;
     result.push(buttonFilter);
   }
   return result.sort((a, b) => a.index - b.index);

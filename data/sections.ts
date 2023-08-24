@@ -1,272 +1,269 @@
-// Tour: https://saas-ui.dev/docs/components/engagement/tour
-
-export const sections: Array<Section> = [
+export const sections = [
   {
-    name: "Elements",
+    name: "Elements" as const,
     icon: "i-heroicons-square-3-stack-3d",
     components: [
       {
-        name: "Accordion",
+        name: "Accordion" as const,
         aliases: ["Collapse", "Disclosure"],
         help: "Vertically collapsing accordion panels",
       },
       {
-        name: "Alert",
+        name: "Alert" as const,
         help: "Contextual information to be emphasized to the user",
       },
-      { name: "Avatar", help: "Rounded image of a resource" },
+      { name: "Avatar" as const, help: "Rounded image of a resource" },
       {
-        name: "Badge",
+        name: "Badge" as const,
         help: "Short text indicator to represent a status",
       },
       {
-        name: "Button",
+        name: "Button" as const,
         help: "Interactive element that users can click or tap to perform an action",
       },
-      { name: "Button Group", help: "Group a series of buttons together" },
+      { name: "Button Group" as const, help: "Group a series of buttons together" },
       {
-        name: "Breadcrumb",
+        name: "Breadcrumb" as const,
         help: "Indicate the current page's location within a navigational hierarchy",
       },
       {
-        name: "Carousel",
+        name: "Carousel" as const,
         aliases: ["Slideshow", "Galleria"],
         help: "A slideshow component for cycling through elements, typically images or slides of text",
       },
       {
-        name: "Chat Bubble",
+        name: "Chat Bubble" as const,
         help: "Show one line of conversation and its data, like author image, name, time.",
       },
       {
-        name: "Divider",
+        name: "Divider" as const,
         help: "Visual element which separates content vertically or horizontally.",
       },
       {
-        name: "Dropdown",
+        name: "Dropdown" as const,
         aliases: ["Select Menu"],
         help: "Toggle contextual overlays for displaying lists of actions or items to select.",
       },
       {
-        name: "Listbox",
+        name: "Listbox" as const,
         help: "Select one or more values from a displayed list of items.",
       },
       {
-        name: "Indicator",
+        name: "Indicator" as const,
         help: "Used to place an element on the corner of another element",
       },
       {
-        name: "Mockup",
+        name: "Mockup" as const,
         help: "A fake box (browser, code, phone, window) around the content",
       },
-      { name: "Panel Splitter", help: "Used to separate and resize panels" },
+      { name: "Panel Splitter" as const, help: "Used to separate and resize panels" },
       {
-        name: "Keyboard Key",
+        name: "Keyboard Key" as const,
         help: "A keyboard key in a text block, typically to display a shortcut to a user",
       },
       {
-        name: "Scroll Bar",
+        name: "Scroll Bar" as const,
         help: "A customizable and cross browser alternative to native browser scrollbar",
       },
       {
-        name: "Speed Dial",
+        name: "Speed Dial" as const,
         help: "When pressed, this floating action button, displays multiple other action buttons. It is used to quickly access features.",
       },
       {
-        name: "Stack",
+        name: "Stack" as const,
         help: "Stack visually puts elements on top of each other",
       },
       {
-        name: "Timeline",
+        name: "Timeline" as const,
         help: "A visual representation used to display a sequence of events or processes in chronological order.",
       },
     ],
   },
   {
-    name: "Inputs",
+    name: "Inputs" as const,
     icon: "i-heroicons-pencil-square",
     components: [
       {
-        name: "Auto Complete",
+        name: "Auto Complete" as const,
         help: "An input component that provides real-time suggestions when being typed",
       },
       {
-        name: "Color Picker",
+        name: "Color Picker" as const,
         help: "An input component to select a color",
       },
       {
-        name: "Input Chips",
+        name: "Input Chips" as const,
         help: "Used to enter multiple values on a single input fields",
       },
       {
-        name: "Date Picker",
+        name: "Date Picker" as const,
         aliases: ["Calendar"],
         help: "A popover to select a date from a calendar-like interface",
       },
       {
-        name: "Rich Text Editor",
+        name: "Rich Text Editor" as const,
         help: "A component that allows users to format and style text, offering various options like bold, italics, lists, and more, without needing to write HTML or other markup code",
       },
-      { name: "Input", help: "An input field" },
+      { name: "Input" as const, help: "An input field" },
       {
-        name: "Input Mask",
+        name: "Input Mask" as const,
         help: "Automatically formats inputs like date, currency, email and phone",
       },
       {
-        name: "Knob",
+        name: "Knob" as const,
         help: "An input element to adjust a value by turning or dragging the control, similar to a physical knob on an electronic device. It's often used to control volume, brightness, or other continuous values",
       },
       {
-        name: "Password Indicator",
+        name: "Password Indicator" as const,
         help: "Helper to provide information on password field like strength, while entering it",
       },
-      { name: "Textarea", help: "A textarea field" },
-      { name: "Select", help: "A select field" },
+      { name: "Textarea" as const, help: "A textarea field" },
+      { name: "Select" as const, help: "A select field" },
       {
-        name: "Swap",
+        name: "Swap" as const,
         help: "Allows to toggle the visibility of two elements",
       },
-      { name: "Checkbox", help: "A checkbox field" },
-      { name: "Radio", help: "A radio field" },
-      { name: "Toggle", aliases: ["Switch", "Input Switch"], help: "A toggle field" },
-      { name: "Range", aliases: ["Slider"], help: "A range field" },
+      { name: "Checkbox" as const, help: "A checkbox field" },
+      { name: "Radio" as const, help: "A radio field" },
       {
-        name: "Rating",
+        name: "Toggle" as const,
+        aliases: ["Switch", "Input Switch"],
+        help: "A toggle field",
+      },
+      { name: "Range" as const, aliases: ["Slider"], help: "A range field" },
+      {
+        name: "Rating" as const,
         help: "A set of radio buttons that allow the user to rate something",
       },
       {
-        name: "Form Group",
-        help: "A label and additional informations around a form element",
-      },
-      { name: "Form", help: "Form data collection and validation" },
-      {
-        name: "File Input",
+        name: "File Input" as const,
         aliases: ["File Upload"],
         help: "An input field for uploading files",
       },
     ],
   },
   {
-    name: "Navigation",
+    name: "Navigation" as const,
     icon: "i-heroicons-link-solid",
     components: [
       {
-        name: "Bottom Tabs",
+        name: "Bottom Tabs" as const,
         help: "Bottom navigation that allows navigation between primary screens, usually used on mobile",
       },
       {
-        name: "Command Palette",
+        name: "Command Palette" as const,
         help: "A powerful user interface element that allows users to access various commands, functions, or actions from a single input panel",
       },
-      { name: "Dock", help: "A macOS-like Dock to navigate, using icons" },
+      { name: "Dock" as const, help: "A macOS-like Dock to navigate, using icons" },
       {
-        name: "Navbar",
+        name: "Navbar" as const,
         help: "An horizontal bar or section typically located at the top of a webpage, which contains links, buttons, or other navigational elements",
       },
       {
-        name: "Pagination",
+        name: "Pagination" as const,
         aliases: ["Paginator"],
         help: "Navigation system for large amount of data that need to be displayed one at a time",
       },
       {
-        name: "Progress",
+        name: "Progress" as const,
         aliases: ["Progress Bar", "Progress Indicator"],
         help: "A graphical element used to visualize the progression of a particular process, such as a file download, a setup process, or any task that might take some time to complete",
       },
       {
-        name: "Scroll Spy",
+        name: "Scroll Spy" as const,
         help: "A navigation mechanism that automatically highlights the navigation links based on the scroll position to indicate which section of the page is currently in the viewport. It's a common feature in single-page websites or long pages with distinct sections",
       },
       {
-        name: "Scroll Top",
+        name: "Scroll Top" as const,
         help: "Display an item after a certain scroll position. It's usually used to navigates to the top of the page",
       },
       {
-        name: "Steps",
+        name: "Steps" as const,
         help: "Used to show a list of steps in a process",
       },
       {
-        name: "Tabs",
+        name: "Tabs" as const,
         help: "A set of tab panels that are displayed one at a time",
       },
       {
-        name: "Vertical Navigation",
+        name: "Vertical Navigation" as const,
         help: "Navigation menu with items vertically stacked",
       },
     ],
   },
   {
-    name: "Overlays",
+    name: "Overlays" as const,
     icon: "i-heroicons-square-2-stack",
     components: [
       {
-        name: "Modal",
+        name: "Modal" as const,
         aliases: ["Dialog"],
         help: "Dialog box or popup window that is displayed on top of the current page.",
       },
       {
-        name: "Slideover",
+        name: "Slideover" as const,
         aliases: ["Slide-out panel", "Sliding Overlay", "Offcanvas", "Drawer"],
         help: "Extra content or navigation options to slide over the main content of a page, from one side of the screen",
       },
       {
-        name: "Popover",
+        name: "Popover" as const,
         help: "A transient view that appears above other content onscreen when a user clicks or taps on a control or within a defined area",
       },
       {
-        name: "Tooltip",
+        name: "Tooltip" as const,
         help: "A brief, informative message that appears when a user hovers over an element",
       },
       {
-        name: "Context Menu",
+        name: "Context Menu" as const,
         help: "A dedicated menu that appears on right click",
       },
       {
-        name: "Toast",
+        name: "Toast" as const,
         aliases: ["Notification"],
         help: "A small, non-modal notification that provides feedback to a user, typically appearing for a short duration and then disappearing automatically",
       },
       {
-        name: "Tour",
+        name: "Tour" as const,
         help: "Used to display a contextual help on features to new users",
       },
     ],
   },
   {
-    name: "Layout",
+    name: "Layout" as const,
     icon: "i-ph-layout",
     components: [
-      { name: "Card", help: "Content with a header, body and footer" },
-      { name: "Container", help: "Let constrain the user's content" },
+      { name: "Card" as const, help: "Content with a header, body and footer" },
+      { name: "Container" as const, help: "Let constrain the user's content" },
       {
-        name: "Skeleton",
+        name: "Skeleton" as const,
         aliases: ["Placeholder"],
         help: "A placeholder typically used while content is loading",
       },
     ],
   },
   {
-    name: "Data",
+    name: "Data" as const,
     icon: "i-heroicons-table-cells",
     components: [
       {
-        name: "Table",
+        name: "Table" as const,
         help: "Data displayed in a tabular format",
       },
       {
-        name: "Order List",
+        name: "Order List" as const,
         help: "A component to display a list of items with actions to sort those items",
       },
       {
-        name: "Tree",
+        name: "Tree" as const,
         aliases: ["Organization Chart"],
         help: "A component to visualize and interact with hierarchical data",
       },
       {
-        name: "Pick List",
+        name: "Pick List" as const,
         help: "A component for moving items between different lists and ordering them",
       },
       {
-        name: "Virtual Scroller",
+        name: "Virtual Scroller" as const,
         help: "A performant approach to render large amounts of data efficiently",
       },
     ],

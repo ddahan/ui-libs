@@ -1,3 +1,5 @@
+import { Library } from "@/types/libraries.types";
+
 export const libraries: Array<Library> = [
   {
     name: "NuxtLabs UI",
@@ -24,8 +26,6 @@ export const libraries: Array<Library> = [
       "Radio",
       "Toggle",
       "Range",
-      "Form Group",
-      "Form",
       "Table",
       "Vertical Navigation",
       "Command Palette",
@@ -194,8 +194,6 @@ export const libraries: Array<Library> = [
       "Navbar",
       "Popover",
       "Select",
-      "Form",
-      "Form Group",
       "Input",
       "Textarea",
       "Radio",

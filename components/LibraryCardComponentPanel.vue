@@ -54,6 +54,8 @@
 
 <script setup lang="ts">
 import { sections } from "@/data/sections";
+import { Library } from "@/types/libraries.types";
+import { Component } from "@/types/components.types";
 
 const props = defineProps<{ library: Library }>();
 

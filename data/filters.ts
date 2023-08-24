@@ -1,6 +1,6 @@
-export const buttonFilters: Array<ButtonFilter> = [
+export const buttonFilters = [
   {
-    id: "FStyled",
+    id: "FStyled" as const,
     index: 1,
     label: "Styled",
     icon: "i-tabler-palette",
@@ -8,7 +8,7 @@ export const buttonFilters: Array<ButtonFilter> = [
     autoDisable: "FUnstyled",
   },
   {
-    id: "FUnstyled",
+    id: "FUnstyled" as const,
     index: 2,
     label: "Unstyled",
     icon: "i-tabler-palette-off",
@@ -16,7 +16,7 @@ export const buttonFilters: Array<ButtonFilter> = [
     autoDisable: "FStyled",
   },
   {
-    id: "FImported",
+    id: "FImported" as const,
     index: 3,
     label: "Imported",
     icon: "i-mdi-import",
@@ -24,7 +24,7 @@ export const buttonFilters: Array<ButtonFilter> = [
     autoDisable: "FPasted",
   },
   {
-    id: "FPasted",
+    id: "FPasted" as const,
     index: 4,
     label: "Pasted",
     icon: "i-mdi-content-paste",
@@ -32,7 +32,7 @@ export const buttonFilters: Array<ButtonFilter> = [
     autoDisable: "FImported",
   },
   {
-    id: "FComponents",
+    id: "FComponents" as const,
     index: 5,
     label: "Components",
     icon: "i-icon-park-outline-components",
@@ -40,7 +40,7 @@ export const buttonFilters: Array<ButtonFilter> = [
     autoDisable: "FCSS",
   },
   {
-    id: "FCSS",
+    id: "FCSS" as const,
     index: 6,
     label: "CSS only",
     icon: "i-ph-file-css",
@@ -48,7 +48,7 @@ export const buttonFilters: Array<ButtonFilter> = [
     autoDisable: "FComponents",
   },
   {
-    id: "FVue",
+    id: "FVue" as const,
     index: 7,
     label: "For Vue",
     icon: "i-mdi-vuejs",
@@ -56,7 +56,7 @@ export const buttonFilters: Array<ButtonFilter> = [
     autoDisable: "FNuxt",
   },
   {
-    id: "FNuxt",
+    id: "FNuxt" as const,
     index: 8,
     label: "For Nuxt",
     icon: "i-simple-icons-nuxtdotjs",
@@ -64,94 +64,101 @@ export const buttonFilters: Array<ButtonFilter> = [
     autoDisable: "FVue",
   },
   {
-    id: "FTailwind",
+    id: "FTailwind" as const,
     index: 9,
     label: "Tailwind CSS",
     icon: "i-simple-icons-tailwindcss",
     help: "The library uses Tailwind CSS itself and allows you to use it to customize components. As a Tailwind CSS user, this allows to keep a unique tool for all your styling.",
   },
   {
-    id: "FFree",
+    id: "FFree" as const,
     index: 10,
     label: "Free",
     icon: "i-material-symbols-money-off",
     help: "The UI Library is entirely free for all available components.",
   },
   {
-    id: "FAccessible",
+    id: "FAccessible" as const,
     index: 11,
     label: "Fully Accessible",
     icon: "i-material-symbols-accessibility-new",
     help: "All components are designed with accessibility in mind.",
   },
   {
-    id: "FBuiltinThemes",
+    id: "FBuiltinThemes" as const,
     index: 12,
     label: "Built-in Themes",
     icon: "i-solar-palette-outline",
     help: "Provide different themes ready to be used.",
   },
   {
-    id: "FThemeGenerator",
+    id: "FThemeGenerator" as const,
     index: 13,
     label: "Theme Generator",
     icon: "i-fluent-wand-24-regular",
     help: "Provide a tool to help developpers generate new themes in an easy way.",
   },
   {
-    id: "FDarkMode",
+    id: "FDarkMode" as const,
     index: 14,
     label: "Dark Mode",
     icon: "i-mdi-weather-night",
     help: "Components are designed tu support both a light and dark version.",
   },
   {
-    id: "FSemanticColors",
+    id: "FSemanticColors" as const,
     index: 15,
     label: "Semantic Colors",
     icon: "i-mingcute-color-filter-line",
     help: "Colors can be associated with particular meanings, like 'primary', 'secondary', etc.",
   },
   {
-    id: "FFigma",
+    id: "FFigma" as const,
     index: 16,
     label: "Figma files",
     icon: "i-ph-figma-logo",
     help: "Figma is the leading design tool. Figma files contain the same components that the UI Library, sothat designers can create designs without coding skills.",
   },
   {
-    id: "FOfficial",
+    id: "FOfficial" as const,
     index: 17,
     label: "Official",
     icon: "i-solar-medal-ribbon-linear",
     help: "Made by a team responsible for managing a framework itself.",
   },
   {
-    id: "FRoadmap",
+    id: "FRoadmap" as const,
     index: 18,
     label: "Public Roadmap",
     icon: "i-tabler-road",
     help: "A public roadmap is available to help you see next library features.",
   },
   {
-    id: "FRTLSupport",
+    id: "FRTLSupport" as const,
     index: 19,
     label: "RTL support",
     icon: "i-material-symbols-keyboard-tab-rtl-rounded",
     help: "Ability to display text that is written from right to left (Arabic, Hebrew, etc.)",
   },
   {
-    id: "FTyped",
+    id: "FTyped" as const,
     index: 20,
     label: "Fully Typed",
     icon: "i-tabler-brand-typescript",
     help: "Provided components are all typed to help developpers with auto-completion and potential errors.",
   },
+  // {
+  //   id: "FForm" as const,
+  //   index: 21,
+  //   label: "Form Helpers",
+  //   icon: "todo",
+  //   help: "Provided tools or examples for integration with form management libraries.",
+  // },
 ];
 
-export const rangeFilters: Array<RangeFilter> = [
+export const rangeFilters = [
   {
-    id: "FNbStars",
+    id: "FNbStars" as const,
     leadingLabel: "More than",
     trailingLabel: "stars",
     icon: "i-mdi-star-outline",
@@ -160,7 +167,7 @@ export const rangeFilters: Array<RangeFilter> = [
     rangeStep: 1000,
   },
   {
-    id: "FNbDownloads",
+    id: "FNbDownloads" as const,
     leadingLabel: "More than",
     trailingLabel: "k npm DLs",
     icon: "i-material-symbols-download",
@@ -169,7 +176,7 @@ export const rangeFilters: Array<RangeFilter> = [
     rangeStep: 5,
   },
   {
-    id: "FNbComponents",
+    id: "FNbComponents" as const,
     leadingLabel: "More than",
     trailingLabel: "components",
     icon: "i-heroicons-square-3-stack-3d",

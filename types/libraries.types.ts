@@ -1,4 +1,7 @@
-type Library = {
+import { ButtonFilterMatching } from "@/types/filters.types";
+import { ComponentName } from "@/types/components.types";
+
+export type Library = {
   name: string;
   subName?: string;
   logo: string;
