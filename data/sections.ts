@@ -254,6 +254,10 @@ export const sections = [
         help: "Data displayed in a tabular format",
       },
       {
+        name: "Calendar" as const,
+        help: "Data displayed in a calendar format",
+      },
+      {
         name: "Order List" as const,
         help: "A component to display a list of items with actions to sort those items",
       },
@@ -264,6 +268,7 @@ export const sections = [
       },
       {
         name: "Pick List" as const,
+        aliases: ["Transfer"],
         help: "A component for moving items between different lists and ordering them",
       },
       {
