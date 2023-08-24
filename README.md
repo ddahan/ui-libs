@@ -17,7 +17,11 @@ While every effort has been made to ensure the accuracy of the information provi
 
 ### How to Contribute
 
-Contributions are very welcome both on features and on content, especially because UI libraries change a lot over time.
+Contributions are very welcome especially because UI libraries change a lot over time. In particular, here are particularly useful contributions:
+
+- Editing existing content (new components for an existing UI)
+- Suggesting a new filter
+- Improving the tool itself
 
 There is no database. To suggest a data update, simply change data into `data/` folder and make a PR.
 

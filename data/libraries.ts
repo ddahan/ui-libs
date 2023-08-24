@@ -375,6 +375,7 @@ export const libraries: Array<Library> = [
       "Popover",
       "Tooltip",
       "Divider",
+      "Virtual Scroller",
     ],
     filterMatchings: [
       { id: "FStyled" },
