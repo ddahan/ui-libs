@@ -15,11 +15,20 @@ export const sections = [
       { name: "Avatar" as const, help: "Rounded image of a resource" },
       {
         name: "Badge" as const,
+        aliases: ["Chip", "Tag"],
         help: "Short text indicator to represent a status",
       },
       {
         name: "Button" as const,
         help: "Interactive element that users can click or tap to perform an action",
+      },
+      {
+        name: "Select Button" as const,
+        help: "A button (or button group) used for selection.",
+      },
+      {
+        name: "Toggle Button" as const,
+        help: "A button used to select a boolean value.",
       },
       {
         name: "Breadcrumb" as const,
@@ -154,10 +163,6 @@ export const sections = [
         help: "A powerful user interface element that allows users to access various commands, functions, or actions from a single input panel",
       },
       { name: "Dock" as const, help: "A macOS-like Dock to navigate, using icons" },
-      {
-        name: "Navbar" as const,
-        help: "An horizontal bar or section typically located at the top of a webpage, which contains links, buttons, or other navigational elements",
-      },
       {
         name: "Pagination" as const,
         aliases: ["Paginator"],
