@@ -1,21 +1,19 @@
 import { sections } from "@/data/sections";
 
-/* Types are defined entirely from the data */
-export type Component = (typeof sections)[0]["components"][0];
-export type ComponentName = Component["name"];
-export type Section = (typeof sections)[0];
-export type SectionName = Section["name"];
+/* Types are defined from the data */
 
-// TODO: try to be less data -> type (only for names!)
+export type SectionName = (typeof sections)[number]["name"];
 
-// type Section = {
-//   name: (typeof sections)[0]["name"];
-//   icon: string;
-//   components: Component[];
-// };
+export type Section = {
+  name: SectionName;
+  icon: string;
+  components: Component[];
+};
 
-// type Component = {
-//   name: ComponentName;
-//   aliases?: string[];
-//   help: string;
-// };
+export type ComponentName = (typeof sections)[number]["components"][number]["name"];
+
+export type Component = {
+  name: ComponentName;
+  aliases?: string[];
+  help: string;
+};

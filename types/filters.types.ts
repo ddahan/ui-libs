@@ -1,6 +1,6 @@
-// button filters
-
 import { buttonFilters, rangeFilters } from "@/data/filters";
+
+// button filters
 
 export type ButtonFilterID = (typeof buttonFilters)[number]["id"];
 
