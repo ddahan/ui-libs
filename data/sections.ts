@@ -43,8 +43,12 @@ export const sections: Array<Section> = [
       },
       {
         name: "Dropdown",
-        aliases: ["Menu"],
-        help: "Toggle contextual overlays for displaying lists of actions",
+        aliases: ["Select Menu"],
+        help: "Toggle contextual overlays for displaying lists of actions or items to select.",
+      },
+      {
+        name: "Listbox",
+        help: "Select one or more values from a displayed list of items.",
       },
       {
         name: "Indicator",
@@ -117,11 +121,6 @@ export const sections: Array<Section> = [
       },
       { name: "Textarea", help: "A textarea field" },
       { name: "Select", help: "A select field" },
-      {
-        name: "Select Menu",
-        aliases: ["Listbox"],
-        help: "A select menu with advanced features (search, multiple select, etc)",
-      },
       {
         name: "Swap",
         help: "Allows to toggle the visibility of two elements",

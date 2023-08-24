@@ -43,7 +43,8 @@ However, I may have forgotten some relevant libraries, so feel free to open a PR
 ### Why Component X is not listed?
 
 - It's too basic to be relevant (e.g., a Loading Spinner)
-- It's a "block" (a composition of different UI components) rather than a component (e.g., Hero, NavBar)
+- It's listed with a different name (libraries don't always use the exact same names for same components)
+- It's a "block" (a composition of different UI components like a Hero or a Nav bar) rather than a component
 - It's a pure utility which could or should live in a collection of utilities like [VueUse](https://vueuse.org/).
 - It's a broad familiy of dedicated components that make sense to have apart (e.g. Charts).
 

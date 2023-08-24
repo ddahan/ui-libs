@@ -19,7 +19,7 @@ export const libraries: Array<Library> = [
       "Input",
       "Textarea",
       "Select",
-      "Select Menu",
+      "Dropdown",
       "Checkbox",
       "Radio",
       "Toggle",
@@ -68,7 +68,6 @@ export const libraries: Array<Library> = [
       "Auto Complete",
       "Date Picker",
       "Select",
-      "Select Menu", // with cascade feature
       "Checkbox",
       "Input Chips",
       "Color Picker",
@@ -119,6 +118,7 @@ export const libraries: Array<Library> = [
       "Scroll Top",
       "Skeleton",
       "Progress",
+      "Listbox",
     ],
     filterMatchings: [
       { id: "FStyled" },
@@ -166,7 +166,6 @@ export const libraries: Array<Library> = [
     url: "https://headlessui.com/",
     componentMatchings: [
       "Dropdown",
-      "Select Menu",
       "Command Palette",
       "Toggle",
       "Accordion",
@@ -195,7 +194,6 @@ export const libraries: Array<Library> = [
       "Navbar",
       "Popover",
       "Select",
-      "Select Menu",
       "Form",
       "Form Group",
       "Input",
@@ -231,7 +229,6 @@ export const libraries: Array<Library> = [
       { id: "FOfficial" },
     ],
   },
-
   {
     name: "Daisy UI",
     repoOwner: "saadeghi",
@@ -253,7 +250,6 @@ export const libraries: Array<Library> = [
       "Chat Bubble",
       "Checkbox",
       "Divider",
-      "Dropdown",
       "File Input",
       "Indicator",
       "Input",
@@ -277,6 +273,7 @@ export const libraries: Array<Library> = [
       "Textarea",
       "Toggle",
       "Tooltip",
+      "Popover",
     ],
     filterMatchings: [
       { id: "FStyled" },
