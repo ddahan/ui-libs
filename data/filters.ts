@@ -147,13 +147,13 @@ export const buttonFilters = [
     icon: "i-tabler-brand-typescript",
     help: "Provided components are all typed to help developpers with auto-completion and potential errors.",
   },
-  // {
-  //   id: "FForm" as const,
-  //   index: 21,
-  //   label: "Form Helpers",
-  //   icon: "todo",
-  //   help: "Provided tools or examples for integration with form management libraries.",
-  // },
+  {
+    id: "FForm" as const,
+    index: 21,
+    label: "Form Helpers",
+    icon: "i-material-symbols-dynamic-form-outline",
+    help: "Provided tools or examples for integration with form management libraries (Vee-Validate, Zod, Yup, etc.)",
+  },
 ];
 
 export const rangeFilters = [

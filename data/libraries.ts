@@ -55,6 +55,7 @@ export const libraries: Array<Library> = [
       { id: "FRTLSupport" },
       { id: "FTyped" },
       { id: "FNuxt" },
+      { id: "FForm" },
     ],
   },
   {
@@ -134,6 +135,7 @@ export const libraries: Array<Library> = [
       { id: "FBuiltinThemes" }, // https://primevue.org/theming/#builtinthemes
       { id: "FSemanticColors" }, // https://primevue.org/colors/
       { id: "FVue" },
+      { id: "FForm" },
     ],
   },
   {

@@ -19,6 +19,7 @@ let initialButtonFiltering: { [K in ButtonFilterID]: { selected: boolean } } = {
   FSemanticColors: { selected: false },
   FVue: { selected: false },
   FNuxt: { selected: false },
+  FForm: { selected: false },
 };
 
 let initialRangeFiltering: { [K in RangeFilterID]: { qty: number } } = {
