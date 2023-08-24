@@ -4,7 +4,7 @@ export default defineAppConfig({
     gray: "slate",
     tooltip: {
       // Hide the tooltip on touch devices
-      base: "[@media(pointer:coarse)]:invisible px-2 py-1 text-xs font-normal",
+      base: "[@media(pointer:coarse)]:hidden px-2 py-1 text-xs font-normal",
       popper: { placement: "top" },
     },
   },
