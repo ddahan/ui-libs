@@ -21,7 +21,6 @@ export const sections = [
         name: "Button" as const,
         help: "Interactive element that users can click or tap to perform an action",
       },
-      { name: "Button Group" as const, help: "Group a series of buttons together" },
       {
         name: "Breadcrumb" as const,
         help: "Indicate the current page's location within a navigational hierarchy",
