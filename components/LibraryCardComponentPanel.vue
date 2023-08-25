@@ -28,6 +28,7 @@
           :key="component.name"
         >
           <UTooltip
+            v-if="showMissing || (!showMissing && isFound(component))"
             :text="component.help"
             class="w-[150px] flex items-center gap-1.5 cursor-default"
           >
@@ -49,6 +50,16 @@
         </template>
       </div>
     </div>
+    <hr class="my-3" />
+    <div class="flex items-center gap-2">
+      <UToggle
+        v-model="showMissing"
+        size="xs"
+        on-icon="i-heroicons-check-20-solid"
+        off-icon="i-heroicons-x-mark-20-solid"
+      />
+      <p class="primary-text-muted text-xs">Show missing components</p>
+    </div>
   </div>
 </template>
 
@@ -61,4 +72,6 @@ const props = defineProps<{ library: Library }>();
 
 const isFound = (component: Component): boolean =>
   props.library.componentMatchings.includes(component.name);
+
+const { showMissing, invertMissing } = useShowMissingStore();
 </script>

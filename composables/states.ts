@@ -32,7 +32,7 @@ import { ButtonFilterID, RangeFilterID } from "@/types/filters.types";
 import { buttonFilters } from "@/data/filters";
 
 export const useFilterStore = () => {
-  const buttonFiltering = useState("filterStore", () => initialButtonFiltering);
+  const buttonFiltering = useState("buttonFilterStore", () => initialButtonFiltering);
   const rangeFiltering = useState("rangeFilterStore", () => initialRangeFiltering);
 
   // run when a filter button is clicked
@@ -94,6 +94,8 @@ export const useFilterStore = () => {
   };
 };
 
+// ---------------------------------------------------------------------------------------
+
 import { sections } from "@/data/sections";
 export const useNbComponentsStore = () => {
   /* Return the number of potential existing components. useful to compute the availability score  */
@@ -101,4 +103,21 @@ export const useNbComponentsStore = () => {
     return count + section.components.length;
   }, 0);
   return useState("nbComponentsStore", () => componentCount);
+};
+
+// ---------------------------------------------------------------------------------------
+
+export const useShowMissingStore = () => {
+  /* Show all components, even the missing ones, on a library detail */
+  const showMissing = useState("showMissingStore", () => true);
+
+  /* Toggle */
+  const invertMissing = () => {
+    showMissing.value = !showMissing.value;
+  };
+
+  return {
+    showMissing,
+    invertMissing,
+  };
 };
