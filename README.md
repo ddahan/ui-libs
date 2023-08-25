@@ -44,6 +44,7 @@ However, I may have forgotten some relevant libraries, so feel free to open a PR
 
 - It's too basic to be relevant (e.g., a Loading Spinner)
 - It's a Group component (e.g., a Button Group)
+- It's mobile only (e.g., Pull To Refresh)
 - It's listed with a different name (libraries don't always use the exact same names for same components)
 - It's a "block" (a composition of different UI components like a Hero or a Nav bar) rather than a component
 - It's a pure utility which could or should live in a collection of utilities like [VueUse](https://vueuse.org/).

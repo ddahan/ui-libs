@@ -75,6 +75,7 @@ export const sections = [
       },
       {
         name: "Speed Dial" as const,
+        aliases: ["Floating Action Button"],
         help: "When pressed, this floating action button, displays multiple other action buttons. It is used to quickly access features.",
       },
       {
@@ -110,7 +111,7 @@ export const sections = [
       {
         name: "Date Picker" as const,
         aliases: ["Calendar"],
-        help: "A popover to select a date from a calendar-like interface",
+        help: "A popover to select a date or a time from a calendar-like interface",
       },
       {
         name: "Rich Text Editor" as const,
