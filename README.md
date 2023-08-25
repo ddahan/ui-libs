@@ -58,6 +58,6 @@ However, I may have forgotten some relevant libraries, so feel free to open a PR
 I'm David, 35, living in Paris, and <b>available for hiring</b>.
 Visit [my website](https://david-dahan.com) to know more about me, or [contact me](https://david-dahan.com/contact).
 
-### Wants to support?
+### Want to support?
 
 If you want to show your support, you can [buy me a coffee](https://www.buymeacoffee.com/ddahan), it will be very appreciated.

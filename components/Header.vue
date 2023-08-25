@@ -21,7 +21,7 @@
           @dblclick.prevent=""
           v-model="isMenuOpen"
           side="left"
-          :ui="{ width: 'max-w-[256px]' }"
+          :ui="{ width: 'max-w-xs' }"
           class="md:hidden"
         >
           <SlideoverContent>
