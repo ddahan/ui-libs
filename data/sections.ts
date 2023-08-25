@@ -5,7 +5,7 @@ export const sections = [
     components: [
       {
         name: "Accordion" as const,
-        aliases: ["Collapse", "Disclosure"],
+        aliases: ["Collapse", "Disclosure", "Expansion Panel"],
         help: "Vertically collapsing accordion panels",
       },
       {
@@ -102,6 +102,10 @@ export const sections = [
       {
         name: "Input Chips" as const,
         help: "Used to enter multiple values on a single input fields",
+      },
+      {
+        name: "OTP Input" as const,
+        help: "Used for MFA procedure of authenticating users by a one-time password",
       },
       {
         name: "Date Picker" as const,
@@ -223,7 +227,7 @@ export const sections = [
       },
       {
         name: "Toast" as const,
-        aliases: ["Notification"],
+        aliases: ["Notification", "Snack Bar"],
         help: "A small, non-modal notification that provides feedback to a user, typically appearing for a short duration and then disappearing automatically",
       },
       {

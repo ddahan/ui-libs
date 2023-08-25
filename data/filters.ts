@@ -44,7 +44,7 @@ export const buttonFilters = [
     index: 6,
     label: "CSS only",
     icon: "i-ph-file-css",
-    help: "Provide CSS classes to inject into your own Vue components. It can't provide some logic, but is not tied to a particular framework.",
+    help: "Only provide CSS classes to inject into your own Vue components. You get no logic, but the library can be use with any framework (not only Vue).",
     autoDisable: "FComponents",
   },
   {
