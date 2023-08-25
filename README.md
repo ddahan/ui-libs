@@ -2,16 +2,12 @@
 
 Choosing the right UI library is hard! There are many things to consider. This project is a simple tool to have an overview of different UI frameworks, and help you pick the right one.
 
-[![social preview](https://ui-libs.vercel.app/img/github_pres.png)](https://ui-libs.vercel.app/)
+[![social preview](https://ui-libs.vercel.app/img/social_pres.webp)](https://ui-libs.vercel.app/)
 
 ### How does it work?
 
 - Hover features to know about them, and click them to filter libraries which implement it
-- For any library, you can see the detail of available components
-
-### Disclaimer
-
-While every effort has been made to ensure the accuracy of the information provided, the author assumes no responsibility for any errors or omissions.
+- For any library, you can see the detail of available components.
 
 ## Contributions
 
@@ -61,3 +57,7 @@ Visit [my website](https://david-dahan.com) to know more about me, or [contact m
 ### Want to support?
 
 If you want to show your support, you can [buy me a coffee](https://www.buymeacoffee.com/ddahan), it will be very appreciated.
+
+### Disclaimer
+
+While every effort has been made to ensure the accuracy of the information provided, the author assumes no responsibility for any errors or omissions.

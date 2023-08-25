@@ -43,7 +43,13 @@ const runtimeConfig = useRuntimeConfig();
 const loadPlausible = runtimeConfig.public.loadPlausible == "yes";
 
 useHead({
+  // dynamic title
   title,
+
+  // helps for accessibility - remove if using i18n
+  htmlAttrs: { lang: "en" },
+
+  // favicon
   link: [
     {
       rel: "icon",
@@ -51,6 +57,8 @@ useHead({
       href: "/favicon/palette.svg",
     },
   ],
+
+  // plausible
   ...(loadPlausible
     ? {
         script: [
@@ -63,5 +71,20 @@ useHead({
         ],
       }
     : {}),
+});
+
+// Meta tags, OG, Twitter
+const description = "🎨 Pick the Right UI Library for your Vue 3 or Nuxt 3 Project";
+useSeoMeta({
+  title: title.value,
+  description: description,
+  ogTitle: title,
+  ogDescription: description,
+  ogType: "website",
+  ogSiteName: title.value,
+  ogUrl: "https://ui-libs.vercel.app/",
+  ogImage: "https://ui-libs.vercel.app/img/social_pres.webp",
+  ogImageWidth: "2626",
+  ogImageHeight: "1714",
 });
 </script>
