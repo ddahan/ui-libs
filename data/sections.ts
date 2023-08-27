@@ -180,10 +180,12 @@ export const sections = [
       },
       {
         name: "Scroll Spy" as const,
+        aliases: ["Anchor"],
         help: "A navigation mechanism that automatically highlights the navigation links based on the scroll position to indicate which section of the page is currently in the viewport. It's a common feature in single-page websites or long pages with distinct sections",
       },
       {
         name: "Scroll Top" as const,
+        aliases: ["Back Top"],
         help: "Display an item after a certain scroll position. It's usually used to navigates to the top of the page",
       },
       {
