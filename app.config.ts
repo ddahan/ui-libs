@@ -3,8 +3,8 @@ export default defineAppConfig({
     primary: "emerald",
     gray: "slate",
     tooltip: {
-      // Hide the tooltip on touch devices
-      base: "[@media(pointer:coarse)]:hidden px-2 py-1 text-xs font-normal",
+      // removes fixed height and truncate
+      base: "[@media(pointer:coarse)]:hidden h-auto px-2 py-1 text-xs font-normal",
       popper: { placement: "top" },
     },
   },

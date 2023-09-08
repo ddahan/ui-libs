@@ -1,11 +1,6 @@
 <template>
   <UTooltip :text="rangeFilter.help">
-    <div
-      class="flex h-10 items-center primary-text rounded-md w-56"
-      :ui="
-        rangeFiltering[rangeFilter.id].qty > 0 ? { ui: { background: 'bg-red-500' } } : ''
-      "
-    >
+    <div class="flex h-10 items-center primary-text rounded-md w-56">
       <UIcon
         :name="rangeFilter.icon"
         class="h-5 w-5 ml-2 shrink-0"
