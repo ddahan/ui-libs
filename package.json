@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
-    "@nuxt/ui": "latest",
+    "@nuxt/ui": "npm:@nuxt/ui-edge@latest",
     "@tailwindcss/typography": "latest",
     "@types/node": "latest",
     "nuxt": "3.6.x"
