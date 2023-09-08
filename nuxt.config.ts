@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ["@nuxthq/ui"],
+  modules: ["@nuxt/ui"],
   runtimeConfig: {
     public: {
       loadPlausible: "", // overrided by env,

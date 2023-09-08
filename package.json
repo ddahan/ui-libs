@@ -9,14 +9,14 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@nuxt/devtools": "x",
-    "@nuxthq/ui": "x",
-    "@tailwindcss/typography": "x",
-    "@types/node": "x",
-    "nuxt": "x"
+    "@nuxt/devtools": "latest",
+    "@nuxt/ui": "latest",
+    "@tailwindcss/typography": "latest",
+    "@types/node": "latest",
+    "nuxt": "3.6.x"
   },
   "dependencies": {
-    "@iconify/json": "x",
-    "zod": "x"
+    "@iconify/json": "latest",
+    "zod": "latest"
   }
 }
