@@ -19,6 +19,7 @@
               <div class="w-full">
                 <img
                   :src="`/img/${logo}`"
+                  :alt="logo"
                   class="h-12 w-12 drop-shadow-lg"
                 />
               </div>

@@ -1,5 +1,5 @@
 <template>
-  <UTooltip :text="buttonFilter.help">
+  <UTooltip>
     <UButton
       class="w-full"
       :icon="buttonFilter.icon"
@@ -7,6 +7,9 @@
       :variant="buttonFiltering[buttonFilter.id].selected ? 'solid' : 'ghost'"
       @click="invertButtonFiltering(buttonFilter.id)"
     />
+    <template #text>
+      {{ buttonFilter.help }}
+    </template>
   </UTooltip>
 </template>
 

@@ -3,6 +3,7 @@
     <div class="flex gap-3 items-center mb-8">
       <img
         :src="`/img/${library.logo}`"
+        :alt="library.logo"
         class="h-10 w-10 drop-shadow-lg mt-2"
       />
       <h2 class="text-xl md:text-2xl font-semibold decorated">
