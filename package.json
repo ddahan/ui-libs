@@ -16,7 +16,6 @@
     "nuxt": "3.6.x"
   },
   "dependencies": {
-    "@iconify/json": "latest",
-    "zod": "latest"
+    "@iconify/json": "latest"
   }
 }

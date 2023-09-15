@@ -2,10 +2,10 @@
     "name": "🎨 ui-libs",
     "image": "node:18-bullseye",
     "forwardPorts": [
-        3001
+        3000
     ],
     "portsAttributes": {
-        "3001": {
+        "3000": {
             "label": "Nuxt",
             "onAutoForward": "notify"
         }
