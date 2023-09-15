@@ -45,6 +45,7 @@ export const sections = [
       },
       {
         name: "Divider" as const,
+        aliases: ["Separator"],
         help: "Visual element which separates content vertically or horizontally.",
       },
       {
@@ -71,6 +72,7 @@ export const sections = [
       },
       {
         name: "Scroll Bar" as const,
+        aliases: ["Scroll Area"],
         help: "A customizable and cross browser alternative to native browser scrollbar",
       },
       {
@@ -213,7 +215,7 @@ export const sections = [
       },
       {
         name: "Slideover" as const,
-        aliases: ["Slide-out panel", "Sliding Overlay", "Offcanvas", "Drawer"],
+        aliases: ["Slide-out panel", "Sliding Overlay", "Offcanvas", "Drawer", "Sheet"],
         help: "Extra content or navigation options to slide over the main content of a page, from one side of the screen",
       },
       {
