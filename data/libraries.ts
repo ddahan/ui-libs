@@ -7,7 +7,7 @@ export const libraries: Array<Library> = [
     url: "https://ui.nuxt.com",
     repoOwner: "nuxtlabs",
     repoName: "ui",
-    package: "@nuxthq/ui",
+    package: "@nuxt/ui",
     componentMatchings: [
       "Accordion",
       "Alert",
@@ -438,7 +438,6 @@ export const libraries: Array<Library> = [
       { id: "FOfficial" },
     ],
   },
-
   {
     name: "Daisy UI",
     repoOwner: "saadeghi",

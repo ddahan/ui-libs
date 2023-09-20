@@ -30,9 +30,17 @@
         >
           <UTooltip
             v-if="showMissing || (!showMissing && isFound(component))"
-            :text="component.help"
             class="w-[150px] flex items-center gap-1.5 cursor-default"
           >
+            <template #text>
+              {{ component.help }}
+              <div
+                v-if="component.aliases"
+                class="mt-2 italic"
+              >
+                Aliases: {{ component.aliases.join(", ") }}
+              </div>
+            </template>
             <UIcon
               :name="
                 isFound(component)

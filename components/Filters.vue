@@ -86,7 +86,7 @@ const accordionSections = [
   },
   {
     label: "More Features",
-    defaultOpen: false,
+    defaultOpen: true,
     slot: "moreFeatures",
   },
   {
