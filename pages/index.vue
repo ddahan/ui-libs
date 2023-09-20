@@ -78,13 +78,11 @@ const description = "🎨 Pick the Right UI Library for your Vue 3 or Nuxt 3 Pro
 useSeoMeta({
   title: title.value,
   description: description,
-  ogTitle: title,
+  ogTitle: title.value,
   ogDescription: description,
   ogType: "website",
   ogSiteName: title.value,
   ogUrl: "https://ui-libs.vercel.app/",
-  ogImage: "https://ui-libs.vercel.app/img/social_pres.webp",
-  ogImageWidth: "2626",
-  ogImageHeight: "1714",
+  ogImage: "https://ui-libs.vercel.app/img/social.png",
 });
 </script>
