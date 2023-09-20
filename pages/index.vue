@@ -83,6 +83,8 @@ useSeoMeta({
   ogType: "website",
   ogSiteName: title.value,
   ogUrl: "https://ui-libs.vercel.app/",
-  ogImage: "https://ui-libs.vercel.app/img/social.png",
+  ogImage: "https://ui-libs.vercel.app/img/social_small.png",
+  ogImageWidth: "1142",
+  ogImageHeight: "760",
 });
 </script>
