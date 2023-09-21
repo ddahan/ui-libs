@@ -2,7 +2,7 @@
 
 Choosing the right UI library is hard! There are many things to consider. This project is a simple tool to have an overview of different UI frameworks, and help you pick the right one.
 
-[![social preview](https://ui-libs.vercel.app/img/social_pres.webp)](https://ui-libs.vercel.app/)
+[![social preview](https://ui-libs.vercel.app/img/social_small.png)](https://ui-libs.vercel.app/)
 
 ### How does it work?
 
