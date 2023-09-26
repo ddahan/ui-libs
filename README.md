@@ -34,6 +34,7 @@ Once installed, run `npm run dev` to start the project.
 ### Why Library X is not listed?
 
 This tool is **made to help** people make a choice. A huge list of every single UI libs rather than a currated list may be counterproductive, while I understand it can feel _unfair_ or _frustrating_ that some libraries are absent of this list.
+Besides, adding more libraries increases the maintenance work and the likelihood of having outdated information.
 
 Here are some reasons that automatically discard the library to be listed:
 
