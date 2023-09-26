@@ -292,7 +292,7 @@ export const libraries: Array<Library> = [
       "Toggle", // switch
       "Tabs",
       "Toast",
-      // Toggle (select button -> not listed now but could be in the future)
+      "Toggle Button",
       // Toggle Group
       // Toolbar
     ],
