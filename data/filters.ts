@@ -50,17 +50,17 @@ export const buttonFilters = [
   {
     id: "FVue" as const,
     index: 7,
-    label: "For Vue",
+    label: "Vue/Nuxt",
     icon: "i-mdi-vuejs",
-    help: "Dedicated to Vue framework (can be used with Nuxt too)",
+    help: "Made for Vue framework, can be used with Nuxt too.",
     autoDisable: "FNuxt",
   },
   {
     id: "FNuxt" as const,
     index: 8,
-    label: "For Nuxt",
+    label: "Nuxt only",
     icon: "i-simple-icons-nuxtdotjs",
-    help: "Dedicated to Nuxt framework (can't be used with Vue)",
+    help: "Dedicated to Nuxt framework, can't be used with Vue.",
     autoDisable: "FVue",
   },
   {
