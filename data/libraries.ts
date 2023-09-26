@@ -218,7 +218,7 @@ export const libraries: Array<Library> = [
       "Breadcrumb",
       "Tabs",
       "Auto Complete",
-      "Input Chips",
+      "Input Chips", // https://vuetifyjs.com/en/components/combobox/#multiple-combobox
       "Input",
       "Checkbox",
       "Toggle",
@@ -242,9 +242,10 @@ export const libraries: Array<Library> = [
       "Avatar",
       "Color Picker",
       "Date Picker",
-      "Keyboard Key",
-      "Listbox",
-      "Container",
+      "Keyboard Key", // https://vuetifyjs.com/en/api/v-kbd/
+      "Listbox", // https://vuetifyjs.com/en/components/lists/
+      "Container", // https://vuetifyjs.com/en/components/grids/
+      "Select Button", // https://vuetifyjs.com/en/components/button-groups/
     ],
     filterMatchings: [
       { id: "FStyled" },
@@ -260,7 +261,7 @@ export const libraries: Array<Library> = [
       { id: "FSemanticColors" },
       { id: "FBuiltinThemes" }, // https://vuetifyjs.com/en/resources/themes/
       { id: "FForm" }, // https://vuetifyjs.com/en/components/forms/
-      { id: "FRTLSupport" },
+      { id: "FRTLSupport" }, // https://vuetifyjs.com/en/features/internationalization/#rtl
       { id: "FTyped" },
     ],
   },
