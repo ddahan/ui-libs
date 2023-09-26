@@ -191,7 +191,6 @@ export const libraries: Array<Library> = [
       { id: "FStyled" },
       { id: "FImported" },
       { id: "FComponents" },
-      { id: "FVue" },
       { id: "FFree" },
       { id: "FRoadmap" }, // https://github.com/quasarframework/quasar/blob/dev/ROADMAP.md
       { id: "FSemanticColors" },
