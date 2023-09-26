@@ -134,6 +134,7 @@ export const libraries: Array<Library> = [
       { id: "FBuiltinThemes" }, // https://primevue.org/theming/#builtinthemes
       { id: "FSemanticColors" }, // https://primevue.org/colors/
       { id: "FVue" },
+      { id: "FTyped" },
       { id: "FForm" },
       { id: "FDarkMode" },
     ],
