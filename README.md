@@ -40,7 +40,7 @@ Here are some reasons that automatically discard the library to be listed:
 
 - It does not support the latest Vue or Nuxt version.
 - It seems unmaintained (e.g., [iView](https://github.com/iview/iview))
-- It looks like more an "in progress" that final work (e.g., [Radix-vue](https://www.radix-vue.com/))
+- It looks like more an "in progress" that final work
 - It aims to mirror Android / iOS UIs (e.g., [Ionic Framework](https://ionicframework.com/), [Framework7](https://framework7.io/)).
 
 Here are some (potentially subjective) reasons that could discard the library to be listed:
