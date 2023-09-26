@@ -41,21 +41,12 @@
         <ThemeSelector />
 
         <UButton
-          icon="i-ph-chat-circle-dots-bold"
-          :square="true"
-          variant="ghost"
-          :to="appConfig.myContactUrl"
-          target="_blank"
-        />
-
-        <UButton
-          icon="i-bx-coffee-togo"
+          icon="i-material-symbols-account-circle-outline"
           :trailing="false"
-          :square="true"
-          :to="appConfig.buyMeACoffeeUrl"
+          :to="appConfig.myWebsiteUrl"
           target="_blank"
         >
-          <span class="hidden md:inline-block">Buy Me a Coffee</span>
+          <span class="hidden md:inline-block">About Me</span>
         </UButton>
       </div>
     </div>
