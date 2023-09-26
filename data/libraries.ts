@@ -135,6 +135,7 @@ export const libraries: Array<Library> = [
       { id: "FSemanticColors" }, // https://primevue.org/colors/
       { id: "FVue" },
       { id: "FForm" },
+      { id: "FDarkMode" },
     ],
   },
   {
