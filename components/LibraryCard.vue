@@ -34,7 +34,7 @@
           </p>
         </div>
 
-        <div class="flex gap-2 flex-wrap place-content-end">
+        <div class="flex gap-1 flex-wrap place-content-end">
           <template
             v-for="buttonFilter in buttonFiltersToShow"
             :key="buttonFilter.id"
