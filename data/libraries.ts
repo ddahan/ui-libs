@@ -662,4 +662,87 @@ export const libraries: Array<Library> = [
       { id: "FForm" },
     ],
   },
+  {
+    name: 'Vuestic UI',
+    logo: 'vuestic-ui.png',
+    url: 'https://ui.vuestic.dev',
+    repoOwner: 'epicmaxco',
+    repoName: 'vuestic-ui',
+    package: 'vuestic-ui',
+    componentMatchings: [
+      'Accordion', // also have a Collapse
+      'Auto Complete', // used as prop in Select
+      'Alert',
+      'Avatar',
+      'Scroll Top', // called BackTop
+      'Badge', // called Badge or Chip
+      'Indicator', // called Badge
+      'Breadcrumb', // called Breadcrumbs
+      'Button',
+      'Select Button', // called ButtonGroup
+      'Toggle Button', // called ButtonToggle
+      'Card',
+      'Carousel',
+      'Checkbox',
+      'Input Chips', // chips prop in select and Chip component
+      'Input Mask', // uses Cleave under the hood
+      // 'ColorInput', // uses native color picker
+      // 'Config', // Scoped props provider
+      // 'Counter', // Number input
+      'Table', // called DataTable or Table
+      'Date Picker', // called 'DateInput'
+      'Calendar', // called 'Datepicker'
+      'Divider', // called 'Divider' or Separator'
+      'Dropdown',
+      'Context Menu', // have an example of Dropdown usage
+      'File Input', // called 'FileInput'
+      // 'Form',
+      // 'Icon',
+      // 'Image',
+      // 'InfiniteScroll',
+      // 'InnerLoading',
+      'Input',
+      // 'Layout', // Used instead of Drawers
+      'Modal',
+      // 'Navbar',
+      'Pagination',
+      // 'Parallax',
+      'Popover', // called Dropdown
+      'Tooltip', // called 'Popover'
+      'Progress', // called ProgressBar and ProgressCircle or InnerLoading
+      'Radio',
+      'Rating',
+      'Select',
+      'Toast',
+      // 'Sidebar', // is it vertical navigation?
+      'Range', // called Slider
+      'Skeleton',
+      'Steps', // called Stepper
+      'Panel Splitter', // called Split
+      'Toggle', // called Switch
+      'Tabs',
+      // 'TimeInput',
+      // 'TimePicker',
+      'Tree', // called TreeView
+      // 'ScrollContainer', // Uses native scroll
+      'Virtual Scroller',
+      'Textarea',
+    ],
+    filterMatchings: [
+      { id: 'FAccessible' },
+      { id: 'FComponents' },
+      { id: 'FStyled' },
+      // { id: 'FTailwind' }, // Not made with Tailwind, but do not conflict and 
+                              // have utilities to use Tailwind classes tougher
+      { id: 'FFree' },
+      { id: 'FSemanticColors' },
+      { id: 'FImported' },
+      { id: 'FRoadmap' }, // Open dev discussion in Discord + Roadmap in docs
+      { id: 'FDarkMode' },
+      { id: 'FVue' },
+      { id: 'FNuxt' },
+      { id: 'FForm' },
+      { id: 'FTyped' },
+    ]
+  }
 ];
