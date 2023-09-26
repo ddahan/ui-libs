@@ -55,6 +55,7 @@ export const libraries: Array<Library> = [
       { id: "FTyped" },
       { id: "FNuxt" },
       { id: "FForm" },
+      { id: "FFigma" }, // https://www.figma.com/community/file/1288455405058138934/nuxt-ui
     ],
   },
   {
