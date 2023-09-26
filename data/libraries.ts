@@ -58,7 +58,7 @@ export const libraries: Array<Library> = [
     ],
   },
   {
-    name: "Prime Vue",
+    name: "PrimeVue",
     logo: "primevue.svg",
     url: "https://primevue.org",
     repoOwner: "primefaces",
