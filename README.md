@@ -33,12 +33,21 @@ Once installed, run `npm run dev` to start the project.
 
 ### Why Library X is not listed?
 
+This tool is **made to help** people make a choice. A huge list of every single UI libs rather than a currated list may be counterproductive, while I understand it can feel _unfair_ or _frustrating_ that some libraries are absent of this list.
+
+Here are some reasons that automatically discard the library to be listed:
+
 - It does not support the latest Vue or Nuxt version.
 - It seems unmaintained (e.g., [iView](https://github.com/iview/iview))
 - It looks like more an "in progress" that final work (e.g., [Radix-vue](https://www.radix-vue.com/))
 - It aims to mirror Android / iOS UIs (e.g., [Ionic Framework](https://ionicframework.com/), [Framework7](https://framework7.io/)).
 
-However, I may have forgotten some relevant libraries, so feel free to open a PR. Note that the purpose of this tool is not to have a comprehensive list, but rather keep a curated list of "serious" projects.
+Here are some (potentially subjective) reasons that could discard the library to be listed:
+
+- It is not popular enough and doesn't bring anything new or cool to the table (specific component or feature, very high quality, ...)
+- Majority of discussions (PR, issues) are in Chinese.
+
+With all that being said, I'm open to discussion and new libraries evaluation, so feel free to open a PR.
 
 ### Why Component X is not listed?
 
@@ -52,7 +61,7 @@ However, I may have forgotten some relevant libraries, so feel free to open a PR
 
 ## About me
 
-I'm David, 35, living in Paris, and <b>available for hiring</b>.
+I'm David, 35, living in Paris, and <b>available for hire</b>.
 Visit [my website](https://david-dahan.com) to know more about me, or [contact me](https://david-dahan.com/contact).
 
 ### Want to support?
