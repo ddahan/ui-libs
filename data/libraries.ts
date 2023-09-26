@@ -58,7 +58,7 @@ export const libraries: Array<Library> = [
     ],
   },
   {
-    name: "PrimeVue",
+    name: "Prime Vue",
     logo: "primevue.svg",
     url: "https://primevue.org",
     repoOwner: "primefaces",
@@ -218,6 +218,7 @@ export const libraries: Array<Library> = [
       "Breadcrumb",
       "Tabs",
       "Auto Complete",
+      "Input Chips",
       "Input",
       "Checkbox",
       "Toggle",
@@ -241,6 +242,9 @@ export const libraries: Array<Library> = [
       "Avatar",
       "Color Picker",
       "Date Picker",
+      "Keyboard Key",
+      "Listbox",
+      "Container",
     ],
     filterMatchings: [
       { id: "FStyled" },
@@ -256,6 +260,8 @@ export const libraries: Array<Library> = [
       { id: "FSemanticColors" },
       { id: "FBuiltinThemes" }, // https://vuetifyjs.com/en/resources/themes/
       { id: "FForm" }, // https://vuetifyjs.com/en/components/forms/
+      { id: "FRTLSupport" },
+      { id: "FTyped" },
     ],
   },
   {
