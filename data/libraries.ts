@@ -793,5 +793,57 @@ export const libraries: Array<Library> = [
       { id: "FForm" },
       { id: "FTyped" },
     ],
+  },,
+  {
+    name: "Inkline",
+    logo: "inkline.svg",
+    url: "https://inkline.io",
+    repoOwner: "inkline",
+    repoName: "inkline",
+    package: "@inkline/inkline",
+    componentMatchings: [
+      // Elements
+      "Accordion",
+      "Alert",
+      "Badge",
+      "Button",
+      "Breadcrumb",
+      "Listbox",
+      "Keyboard Key",
+      // Inputs
+      "Input",
+      "Textarea",
+      "Select",
+      "Checkbox",
+      "Radio",
+      "Toggle",
+      // Navigation
+      "Command Palette",
+      "Pagination",
+      "Progress",
+      "Tabs",
+      "Vertical Navigation",
+      // Overlays
+      "Modal",
+      "Popover",
+      "Tooltip",
+      "Toast",
+      // Layout
+      "Card",
+      "Container",
+      // Data
+      "Table",
+    ],
+    filterMatchings: [
+      { id: "FAccessible" },
+      { id: "FComponents" },
+      { id: "FStyled" },
+      { id: "FVue" },
+      { id: "FFree" },
+      { id: "FDarkMode" },
+      { id: "FSemanticColors" },
+      { id: "FTyped" },
+      { id: "FForm" },
+    ],
   },
 ];
