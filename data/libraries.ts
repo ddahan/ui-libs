@@ -39,6 +39,8 @@ export const libraries: Array<Library> = [
       "Card",
       "Container",
       "Skeleton",
+      "Divider",
+      "Progress",
     ],
     filterMatchings: [
       { id: "FStyled" },
