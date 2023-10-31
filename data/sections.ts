@@ -88,6 +88,10 @@ export const sections = [
         name: "Timeline" as const,
         help: "A visual representation used to display a sequence of events or processes in chronological order.",
       },
+      {
+        name: "Gallery" as const,
+        help: "Visual element to display images with a defined layout.",
+      },
     ],
   },
   {
@@ -154,6 +158,14 @@ export const sections = [
         name: "File Input" as const,
         aliases: ["File Upload"],
         help: "An input field for uploading files",
+      },
+      {
+        name: "Phone Number Input" as const,
+        help: "An input field to validate and format phone numbers",
+      },
+      {
+        name: "Price Input" as const,
+        help: "An input field to format to currency",
       },
     ],
   },
@@ -255,6 +267,11 @@ export const sections = [
         name: "Skeleton" as const,
         aliases: ["Placeholder"],
         help: "A placeholder typically used while content is loading",
+      },
+      {
+        name: "Drawer" as const,
+        aliases: ["Sidebar"],
+        help: "An expandable sidebar",
       },
     ],
   },
