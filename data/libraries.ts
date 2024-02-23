@@ -1,4 +1,4 @@
-import { Library } from "@/types/libraries.types";
+import { Library } from "@/types/libraries.types"
 
 export const libraries: Array<Library> = [
   {
@@ -796,4 +796,4 @@ export const libraries: Array<Library> = [
       { id: "FTyped" },
     ],
   },
-];
+]

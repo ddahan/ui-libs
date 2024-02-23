@@ -14,11 +14,11 @@
 </template>
 
 <script setup lang="ts">
-import { buttonFilters } from "@/data/filters";
-import type { ButtonFilterID } from "@/types/filters.types";
+import { buttonFilters } from "@/data/filters"
+import type { ButtonFilterID } from "@/types/filters.types"
 
-const props = defineProps<{ buttonFilterID: ButtonFilterID }>();
-const buttonFilter = findBy("id", props.buttonFilterID, buttonFilters)!;
+const props = defineProps<{ buttonFilterID: ButtonFilterID }>()
+const buttonFilter = findBy("id", props.buttonFilterID, buttonFilters)!
 
-const { buttonFiltering, invertButtonFiltering } = useFilterStore();
+const { buttonFiltering, invertButtonFiltering } = useFilterStore()
 </script>

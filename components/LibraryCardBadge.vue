@@ -1,6 +1,6 @@
 <template>
   <UTooltip :text="buttonFilter.help">
-    <div class="flex items-center gap-1 text-xs cursor-default">
+    <div class="flex cursor-default items-center gap-1 text-xs">
       <UIcon :name="buttonFilter.icon" />
       {{ buttonFilter.label }}
     </div>
@@ -8,7 +8,7 @@
 </template>
 
 <script setup lang="ts">
-import type { ButtonFilter } from "@/types/filters.types";
+import type { ButtonFilter } from "@/types/filters.types"
 
-defineProps<{ buttonFilter: ButtonFilter }>();
+defineProps<{ buttonFilter: ButtonFilter }>()
 </script>

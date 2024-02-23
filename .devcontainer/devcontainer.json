@@ -1,30 +1,28 @@
 {
-    "name": "🎨 ui-libs",
-    "image": "node:20-bullseye",
-    "forwardPorts": [
-        3000
-    ],
-    "portsAttributes": {
-        "3000": {
-            "label": "Nuxt",
-            "onAutoForward": "notify"
-        }
-    },
-    "onCreateCommand": "npm install",
-    "features": {
-        "ghcr.io/ddahan/feature-starter/custom_bashrc:latest": {}
-    },
-    "customizations": {
-        "vscode": {
-            "extensions": [
-                "esbenp.prettier-vscode",
-                "bradlc.vscode-tailwindcss",
-                "Vue.volar",
-                "antfu.iconify",
-                "yoavbls.pretty-ts-errors",
-                "yzhang.markdown-all-in-one"
-            ],
-            "settings": {}
-        }
+  "name": "🎨 ui-libs",
+  "image": "node:20-bullseye",
+  "forwardPorts": [3000],
+  "portsAttributes": {
+    "3000": {
+      "label": "Nuxt",
+      "onAutoForward": "notify"
     }
+  },
+  "onCreateCommand": "npm install",
+  "features": {
+    "ghcr.io/ddahan/feature-starter/custom_bashrc:latest": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "esbenp.prettier-vscode",
+        "bradlc.vscode-tailwindcss",
+        "Vue.volar",
+        "antfu.iconify",
+        "yoavbls.pretty-ts-errors",
+        "yzhang.markdown-all-in-one"
+      ],
+      "settings": {}
+    }
+  }
 }

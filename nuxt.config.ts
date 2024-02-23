@@ -28,4 +28,4 @@ export default defineNuxtConfig({
     configPath: "tailwind.config.js",
   },
   devtools: { enabled: true },
-});
+})

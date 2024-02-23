@@ -5,21 +5,17 @@
       :items="items"
       :popper="{ placement: 'bottom-start' }"
     >
-      <UButton
-        icon="i-mdi-weather-night"
-        :square="true"
-        variant="ghost"
-      />
+      <UButton icon="i-mdi-weather-night" :square="true" variant="ghost" />
     </UDropdown>
   </div>
 </template>
 
 <script setup lang="ts">
-const colorMode = useColorMode();
+const colorMode = useColorMode()
 
 const toMode = (mode: string) => {
-  colorMode.preference = mode;
-};
+  colorMode.preference = mode
+}
 
 const items = [
   [
@@ -28,23 +24,23 @@ const items = [
       slot: "light",
       icon: "i-material-symbols-light-mode-outline",
       click: () => {
-        toMode("light");
+        toMode("light")
       },
     },
     {
       label: "Dark",
       icon: "i-material-symbols-dark-mode-outline",
       click: () => {
-        toMode("dark");
+        toMode("dark")
       },
     },
     {
       label: "System",
       icon: "i-material-symbols-desktop-windows-outline",
       click: () => {
-        toMode("system");
+        toMode("system")
       },
     },
   ],
-];
+]
 </script>

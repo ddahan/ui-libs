@@ -62,10 +62,7 @@
       </div>
     </template>
   </UAccordion>
-  <div
-    v-if="nbTouchedFilters() > 0"
-    class="flex justify-end"
-  >
+  <div v-if="nbTouchedFilters() > 0" class="flex justify-end">
     <UButton
       color="gray"
       variant="ghost"
@@ -99,9 +96,9 @@ const accordionSections = [
     defaultOpen: true,
     slot: "popularity",
   },
-];
+]
 
-const { nbTouchedFilters, clearFiltering } = useFilterStore();
+const { nbTouchedFilters, clearFiltering } = useFilterStore()
 
-const suffix = computed(() => (nbTouchedFilters() == 1 ? "" : "s"));
+const suffix = computed(() => (nbTouchedFilters() == 1 ? "" : "s"))
 </script>

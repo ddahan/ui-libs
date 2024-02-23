@@ -9,9 +9,7 @@
   //*********************************************************************
   // editor
   //*********************************************************************
-  "editor.rulers": [
-    90
-  ],
+  "editor.rulers": [90],
   "editor.wordWrap": "wordWrapColumn",
   "editor.wordWrapColumn": 90,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -35,22 +33,11 @@
   "css.validate": false,
   "tailwindCSS.validate": true,
   "tailwindCSS.emmetCompletions": true,
-  "tailwindCSS.classAttributes": [
-    "class",
-    "className",
-    "ngClass",
-    "ui"
-  ],
+  "tailwindCSS.classAttributes": ["class", "className", "ngClass", "ui"],
   // https://ui.nuxtlabs.com/getting-started/installation#intellisense
   "tailwindCSS.experimental.classRegex": [
-    [
-      "ui:\\s*{([^)]*)\\s*}",
-      "[\"'`]([^\"'`]*).*?[\"'`]"
-    ],
-    [
-      "/\\*ui\\*/\\s*{([^;]*)}",
-      ":\\s*[\"'`]([^\"'`]*).*?[\"'`]"
-    ]
+    ["ui:\\s*{([^)]*)\\s*}", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["/\\*ui\\*/\\s*{([^;]*)}", ":\\s*[\"'`]([^\"'`]*).*?[\"'`]"]
   ],
   "files.associations": {
     "*.css": "tailwindcss"

@@ -154,7 +154,7 @@ export const buttonFilters = [
     icon: "i-material-symbols-dynamic-form-outline",
     help: "Provided tools or examples for integration with form management libraries (Vee-Validate, Zod, Yup, etc.)",
   },
-];
+]
 
 export const rangeFilters = [
   {
@@ -184,4 +184,4 @@ export const rangeFilters = [
     rangeMax: 100,
     rangeStep: 5,
   },
-];
+]
