@@ -8,7 +8,7 @@
 </template>
 
 <script setup lang="ts">
-import { ButtonFilter } from "@/types/filters.types";
+import type { ButtonFilter } from "@/types/filters.types";
 
 defineProps<{ buttonFilter: ButtonFilter }>();
 </script>

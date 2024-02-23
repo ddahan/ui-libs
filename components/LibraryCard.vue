@@ -105,8 +105,8 @@
 
 <script setup lang="ts">
 import { buttonFilters } from "@/data/filters";
-import { Library } from "@/types/libraries.types";
-import { ButtonFilter } from "@/types/filters.types";
+import type { Library } from "@/types/libraries.types";
+import type { ButtonFilter } from "@/types/filters.types";
 
 const props = defineProps<{
   initialLibrary: Library;

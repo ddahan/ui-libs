@@ -74,13 +74,13 @@
 
 <script setup lang="ts">
 import { sections } from "@/data/sections";
-import { Library } from "@/types/libraries.types";
-import { Component } from "@/types/components.types";
+import type { Library } from "@/types/libraries.types";
+import type { Component } from "@/types/components.types";
 
 const props = defineProps<{ library: Library }>();
 
 const isFound = (component: Component): boolean =>
   props.library.componentMatchings.includes(component.name);
 
-const { showMissing, invertMissing } = useShowMissingStore();
+const { showMissing } = useShowMissingStore();
 </script>

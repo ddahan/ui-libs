@@ -30,7 +30,7 @@
 
 <script setup lang="ts">
 import { rangeFilters } from "@/data/filters";
-import { RangeFilter, RangeFilterID } from "@/types/filters.types";
+import type { RangeFilter, RangeFilterID } from "@/types/filters.types";
 
 const props = defineProps<{ rangeFilterID: RangeFilterID }>();
 const rangeFilter = findBy<RangeFilter>("id", props.rangeFilterID, rangeFilters)!;
