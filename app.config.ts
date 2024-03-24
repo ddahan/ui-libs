@@ -1,10 +1,11 @@
 export default defineAppConfig({
   ui: {
+    strategy: "merge",
     primary: "emerald",
     gray: "slate",
     tooltip: {
       // removes fixed height and truncate
-      base: "[@media(pointer:coarse)]:hidden h-auto px-2 py-1 text-xs font-normal",
+      base: "h-auto overflow-visible text-overflow-clip whitespace-normal",
       popper: { placement: "top" },
     },
   },
