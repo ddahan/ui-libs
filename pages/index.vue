@@ -1,42 +1,50 @@
 <template>
-  <Header />
-  <UContainer class="pb-6">
-    <div class="mt-6 text-center sm:my-12">
-      <p class="text-3xl font-semibold tracking-tight sm:text-4xl">
-        Pick the right UI Library
-      </p>
-      <p class="text-lg sm:text-xl">
-        for your
-        <NuxtLink
-          to="https://vuejs.org/"
-          target="_blank"
-          class="primary-text font-semibold"
-        >
-          Vue 3
-        </NuxtLink>
-        or
-        <NuxtLink
-          to="https://nuxt.com/"
-          target="_blank"
-          class="primary-text font-semibold"
-          >Nuxt 3</NuxtLink
-        >
-        Project.
-      </p>
+  <div>
+    <div class="sticky top-0 z-20">
+      <VueSchoolBanner />
+      <Header />
     </div>
-
-    <div class="mt-6 flex flex-grow justify-center gap-4 sm:mt-8">
-      <!-- filters -->
-      <div class="-mt-2 hidden w-72 shrink-0 p-3 md:block">
-        <Filters />
+    <UContainer class="pb-6">
+      <div class="mt-6 text-center sm:my-12">
+        <p class="text-3xl font-semibold tracking-tight sm:text-4xl">
+          Pick the right UI Library
+        </p>
+        <p class="text-lg sm:text-xl">
+          for your
+          <NuxtLink
+            to="https://vuejs.org/"
+            target="_blank"
+            class="primary-text font-semibold"
+          >
+            Vue 3
+          </NuxtLink>
+          or
+          <NuxtLink
+            to="https://nuxt.com/"
+            target="_blank"
+            class="primary-text font-semibold"
+          >
+            Nuxt 3
+          </NuxtLink>
+          Project.
+        </p>
       </div>
 
-      <LibraryCards />
-    </div>
-  </UContainer>
+      <div class="mt-6 flex flex-grow justify-center gap-4 sm:mt-8">
+        <!-- filters -->
+        <div class="-mt-2 hidden w-72 shrink-0 p-3 md:block">
+          <Filters />
+        </div>
+
+        <LibraryCards />
+      </div>
+    </UContainer>
+  </div>
 </template>
 
 <script setup lang="ts">
+import VueSchoolBanner from "@/components/VueSchoolBanner.vue"
+
 const title = ref("UI Lib Picker")
 
 const runtimeConfig = useRuntimeConfig()

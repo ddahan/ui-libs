@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="sticky top-0 z-20 border-t border-transparent shadow-sm shadow-gray-200 backdrop-blur-md dark:shadow-gray-600"
-  >
+  <div class="shadow-sm shadow-gray-200 backdrop-blur-md dark:shadow-gray-600">
     <div class="flex items-center justify-between px-4 py-2 md:px-8">
       <div class="hidden h-12 items-center gap-2 md:flex">
         <UIcon class="primary-text h-8 w-8" name="i-ic-outline-palette" />
@@ -39,12 +37,10 @@
 
         <UButton
           icon="i-material-symbols-account-circle-outline"
-          :trailing="false"
+          :square="true"
           :to="appConfig.myWebsiteUrl"
           target="_blank"
-        >
-          <span class="hidden md:inline-block">About Me</span>
-        </UButton>
+        />
       </div>
     </div>
   </div>
