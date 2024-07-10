@@ -40,7 +40,11 @@
         trailing
         @click="navigate"
       />
-      <UIcon name="i-ph-x" class="size-5 hover:opacity-80" @click.stop="open = false" />
+      <UIcon
+        name="i-ph-x"
+        class="size-8 p-2 hover:opacity-80"
+        @click.stop="open = false"
+      />
     </div>
   </div>
 </template>
