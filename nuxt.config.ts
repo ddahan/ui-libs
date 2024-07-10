@@ -1,14 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: ["@nuxt/ui"],
+
   runtimeConfig: {
     public: {
       loadPlausible: "", // overrided by env,
     },
-  },
-  ui: {
-    global: true,
-    icons: "all",
   },
   typescript: {
     shim: false,
@@ -23,9 +20,12 @@ export default defineNuxtConfig({
       },
     },
   },
+
   tailwindcss: {
     cssPath: "~/assets/css/tailwind.css",
     configPath: "tailwind.config.js",
   },
+
   devtools: { enabled: true },
+  compatibilityDate: "2024-07-10",
 })

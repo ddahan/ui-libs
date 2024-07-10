@@ -10,14 +10,10 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
-    "@nuxt/ui": "latest",
-    "@tailwindcss/typography": "latest",
+    "@nuxt/ui": "^2.17.0",
+    "nuxt": "^3.12.3",
     "@types/node": "latest",
-    "nuxt": "3.10.x",
     "prettier": "latest",
     "prettier-plugin-tailwindcss": "latest"
-  },
-  "dependencies": {
-    "@iconify/json": "latest"
   }
 }
