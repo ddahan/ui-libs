@@ -1,7 +1,7 @@
 <template>
   <div class="bg-blue-950 backdrop-blur-md hover:cursor-pointer" v-show="open">
     <div
-      class="flex h-16 shrink-0 items-center justify-between px-4 text-white"
+      class="plausible-event-name=VueSchoolBanner+click flex h-16 shrink-0 items-center justify-between px-4 text-white"
       @click="navigate"
     >
       <div></div>
@@ -32,7 +32,7 @@
         </span>
       </div>
       <UButton
-        class="hidden px-4 font-bold md:inline-flex"
+        class="plausible-event-name=VueSchoolBanner+click hidden px-4 font-bold md:inline-flex"
         label="Buy Now"
         icon="i-tabler-caret-right-filled"
         variant="solid"
