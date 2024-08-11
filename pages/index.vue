@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="sticky top-0 z-20">
-      <VueSchoolBanner />
+      <!-- <VueSchoolBanner /> -->
       <Header />
     </div>
     <UContainer class="pb-6">
