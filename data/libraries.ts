@@ -2,6 +2,98 @@ import { Library } from "@/types/libraries.types"
 
 export const libraries: Array<Library> = [
   {
+    name: "use-bootstrap",
+    logo: "use-bootstrap.svg",
+    url: "https://usebootstrap.org/",
+    repoOwner: "simplise",
+    repoName: "use-bootstrap",
+    package: "usebootstrap",
+    componentMatchings: [
+      "Accordion", // https://usebootstrap.org/lang-en/components/accordion
+      "Alert", // https://usebootstrap.org/lang-en/components/alerts
+      "Avatar", // https://usebootstrap.org/lang-en/extend/components/avatar
+      "Badge", // https://usebootstrap.org/lang-en/components/badge
+      "Button", // https://usebootstrap.org/lang-en/components/buttons
+      "Select Button", // https://usebootstrap.org/lang-en/components/button-group
+      "Toggle Button", // https://usebootstrap.org/lang-en/components/buttons#toggleStates
+      "Breadcrumb", // https://usebootstrap.org/lang-en/components/breadcrumb
+      "Carousel", // https://usebootstrap.org/lang-en/components/carousel , https://usebootstrap.org/lang-en/extend/components/swiper
+      // "Chat Bubble", 
+      "Divider", // https://usebootstrap.org/lang-en/helpers/vertical-rule , https://usebootstrap.org/lang-en/extend/components/responsive-divider
+      "Dropdown", // https://usebootstrap.org/lang-en/components/dropdowns
+      "Listbox", // https://usebootstrap.org/lang-en/components/list-group
+      "Indicator", // https://usebootstrap.org/lang-en/extend/components/status-indicator
+      // "Mockup" ,
+      // "Panel Splitter", 
+      // "Keyboard Key",
+      "Scroll Bar", // https://usebootstrap.org/lang-en/utilities/overflow
+      // "Speed Dial",
+      "Stack", // https://usebootstrap.org/lang-en/helpers/stacks
+      // "Timeline", 
+      "Input", // https://usebootstrap.org/lang-en/forms/form-control
+      // "Auto Complete",
+      "Color Picker", // https://usebootstrap.org/lang-en/forms/form-control#color
+      // "Input Chips",
+      // "OTP Input",
+      // "Date Picker", 
+      "Rich Text Editor", // https://usebootstrap.org/lang-en/extend/components/editor
+      "Input", // https://usebootstrap.org/lang-en/forms/form-control
+      // "Input Mask",
+      // "Knob",
+      "Password Indicator", // https://usebootstrap.org/lang-en/extend/components/password-strength
+      "Textarea", // https://usebootstrap.org/lang-en/forms/form-control
+      "Select", // https://usebootstrap.org/lang-en/forms/select
+      // "Swap",
+      "Checkbox", // https://usebootstrap.org/lang-en/forms/checks-radios
+      "Radio", // https://usebootstrap.org/lang-en/forms/checks-radios
+      "Toggle", // https://usebootstrap.org/lang-en/forms/checks-radios#switches
+      "Range", // https://usebootstrap.org/lang-en/forms/range
+      // "Rating",
+      "File Input", // https://usebootstrap.org/lang-en/forms/form-control#fileInput
+      // "Bottom Tabs",
+      // "Command Palette",
+      // "Dock" ,
+      "Pagination", // https://usebootstrap.org/lang-en/components/pagination
+      "Progress", // https://usebootstrap.org/lang-en/components/progress
+      "Scrollspy", // https://usebootstrap.org/lang-en/components/scrollspy
+      "Scroll Top",  // https://usebootstrap.org/lang-en/extend/components/back-to-top
+      // "Step", 
+      "Tabs", // https://usebootstrap.org/lang-en/components/navs-tabs#tabs
+      "Vertical Navigation", // https://usebootstrap.org/lang-en/components/list-group , https://usebootstrap.org/lang-en/extend/components/sidebar
+      "Modal", // https://usebootstrap.org/lang-en/components/modal
+      "Slideover", // https://usebootstrap.org/lang-en/components/offcanvas#liveDemo
+      "Popover", // https://usebootstrap.org/lang-en/components/popovers
+      "Tooltip", // https://usebootstrap.org/lang-en/components/tooltips
+      // "Context Menu", 
+      "Toast", // https://usebootstrap.org/lang-en/components/toasts
+      // "Tour",
+      // "Watermark", 
+      "Card", // https://usebootstrap.org/lang-en/components/card
+      "Container", // https://usebootstrap.org/lang-en/layout/containers
+      "Skeleton", // https://usebootstrap.org/lang-en/components/placeholders
+      "Table", // https://usebootstrap.org/lang-en/content/tables
+      // "Calendar"
+      "Order List", // https://usebootstrap.org/lang-en/extend/components/sortable
+      // "Tree",
+      // "Pick List"
+      // "Virtual Scroller"     
+    ],
+    filterMatchings: [
+      { id: "FStyled" }, // https://usebootstrap.org/lang-en/getting-started/customize
+      { id: "FImported" },
+      { id: "FComponents" },
+      { id: "FNuxt" },
+      { id: "FTailwind" }, // https://usebootstrap.org/lang-en/extend/modules/unocss
+      { id: "FFree" },
+      { id: "FAccessible" }, // https://usebootstrap.org/lang-en/getting-started/concept#moderateAbstractionAndAutomation
+      { id: "FThemeGenerator" },  // https://usebootstrap.org/lang-en/getting-started/customize#sass
+      { id: "FDarkMode" }, // https://usebootstrap.org/lang-en/extend/components/color-mode
+      { id: "FSemanticColors" }, // https://usebootstrap.org/lang-en/getting-started/color-management
+      { id: "FTyped" },
+      { id: "FForm" }, // https://usebootstrap.org/lang-en/integration
+    ],
+  },
+  {
     name: "Nuxt UI",
     logo: "nuxt.svg",
     url: "https://ui.nuxt.com",
