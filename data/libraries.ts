@@ -1,5 +1,6 @@
 import { Library } from "@/types/libraries.types"
 
+// @ts-ignore
 export const libraries: Array<Library> = [
   {
     name: "Nuxt UI",
@@ -794,6 +795,79 @@ export const libraries: Array<Library> = [
       { id: "FVue" },
       { id: "FForm" },
       { id: "FTyped" },
+    ],
+  },
+
+  {
+    name: "TW Elements",
+    logo: "tw-elements.webp",
+    url: "https://tw-elements.com",
+    repoOwner: "mdbootstrap",
+    repoName: "TW-Elements",
+    package: "tw-elements",
+    componentMatchings: [
+      "Accordion", // also have a Collapse
+      "Alert",
+      "Auto Complete",
+      "Checkbox",
+      "File Input",
+      "Radio",
+      "Avatar",
+      "Badge", // called Badges
+      "Breadcrumb",
+      "Virtual Scroller",
+      "Tabs",
+      "Date Picker",
+      "Button", // called Button or Button Group
+      "Card",
+      "Carousel",
+      "Input Chips", //call Chips
+      "Dropdown",
+      "Modal",
+      "Badge",
+      "Progress",
+      "Listbox",
+      "Divider",
+      "Popover",
+      "Table",
+      "Rating",
+      "Scroll Top", // called Scroll back to top button
+      "Steps", // called Stepper
+      "Timeline",
+      "Toast",
+      "Tooltip",
+      "Carousel", // called Carousel, Video Carousel
+      "Input",
+      "Modal",
+      "Pagination",
+      "Popover",
+      "Tooltip",
+      "Progress",
+      "Radio",
+      "Rating",
+      "Select",
+      "Toast",
+      "Range",
+      "Steps", // called Stepper
+      "Toggle", // called Toggle Switch
+      "Tabs",
+      "Tree", // called Timeline
+      "Textarea",
+    ],
+    filterMatchings: [
+      { id: "FAccessible" },
+      { id: "FComponents" },
+      { id: "FBuiltinThemes" },
+      { id: "FStyled" },
+      { id: "FFree" },
+      { id: "FImported" },
+      { id: "FDarkMode" },
+      { id: "FVue" },
+      { id: "FNuxt" },
+      { id: "FTailwind" },
+      { id: "FOfficial" },
+      { id: "FBuiltinThemes" },
+      { id: "FForm" },
     ],
   },
 ]
