@@ -251,6 +251,8 @@ export const libraries: Array<Library> = [
       "Listbox", // https://vuetifyjs.com/en/components/lists/
       "Container", // https://vuetifyjs.com/en/components/grids/
       "Select Button", // https://vuetifyjs.com/en/components/button-groups/
+      "Speed Dial", // https://vuetifyjs.com/en/components/speed-dials/
+      "Tree", // https://vuetifyjs.com/en/components/treeview/
     ],
     filterMatchings: [
       { id: "FStyled" },
