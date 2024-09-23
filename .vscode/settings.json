@@ -1,0 +1,49 @@
+{
+  //*********************************************************************
+  // general
+  //*********************************************************************
+  "files.insertFinalNewline": true,
+  "files.exclude": {
+    "**/node_modules": true
+  },
+  //*********************************************************************
+  // editor
+  //*********************************************************************
+  "editor.rulers": [90],
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.wordWrapColumn": 90,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.detectIndentation": false,
+  "editor.tabSize": 2,
+  "editor.indentSize": "tabSize",
+  "editor.formatOnSave": true,
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  //*********************************************************************
+  // color customizations
+  //*********************************************************************
+  "workbench.colorCustomizations": {
+    "titleBar.activeBackground": "#db2777",
+    "titleBar.activeForeground": "#fff"
+  },
+  //*********************************************************************
+  // tailwind
+  //*********************************************************************
+  "css.validate": false,
+  "tailwindCSS.validate": true,
+  "tailwindCSS.emmetCompletions": true,
+  "tailwindCSS.classAttributes": ["class", "className", "ngClass", "ui"],
+  // https://ui.nuxtlabs.com/getting-started/installation#intellisense
+  "tailwindCSS.experimental.classRegex": [
+    ["ui:\\s*{([^)]*)\\s*}", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["/\\*ui\\*/\\s*{([^;]*)}", ":\\s*[\"'`]([^\"'`]*).*?[\"'`]"]
+  ],
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  //*********************************************************************
+  // typescript
+  //*********************************************************************
+  "typescript.preferences.importModuleSpecifier": "non-relative"
+}

@@ -1,17 +1,14 @@
 <template>
   <UTooltip :text="rangeFilter.help">
-    <div class="flex h-10 items-center primary-text rounded-md w-56">
-      <UIcon
-        :name="rangeFilter.icon"
-        class="h-5 w-5 ml-2 shrink-0"
-      />
-      <div class="w-full mx-2">
+    <div class="primary-text flex h-10 w-56 items-center rounded-md">
+      <UIcon :name="rangeFilter.icon" class="ml-2 h-5 w-5 shrink-0" />
+      <div class="mx-2 w-full">
         <div class="text-sm font-medium">
           {{ rangeFilter.leadingLabel }}
           {{ rangeFiltering[rangeFilter.id].qty }}
           {{ rangeFilter.trailingLabel }}
         </div>
-        <div class="h-4 flex items-center">
+        <div class="flex h-4 items-center">
           <URange
             @change="
               changeRangeFiltering(rangeFilterID, rangeFiltering[rangeFilter.id].qty)
@@ -29,10 +26,10 @@
 </template>
 
 <script setup lang="ts">
-import { rangeFilters } from "@/data/filters";
-import { RangeFilter, RangeFilterID } from "@/types/filters.types";
+import { rangeFilters } from "@/data/filters"
+import type { RangeFilter, RangeFilterID } from "@/types/filters.types"
 
-const props = defineProps<{ rangeFilterID: RangeFilterID }>();
-const rangeFilter = findBy<RangeFilter>("id", props.rangeFilterID, rangeFilters)!;
-const { rangeFiltering, changeRangeFiltering } = useFilterStore();
+const props = defineProps<{ rangeFilterID: RangeFilterID }>()
+const rangeFilter = findBy<RangeFilter>("id", props.rangeFilterID, rangeFilters)!
+const { rangeFiltering, changeRangeFiltering } = useFilterStore()
 </script>

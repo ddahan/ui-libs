@@ -1,43 +1,30 @@
 <template>
   <div>
-    <div class="flex gap-3 items-center mb-8">
+    <div class="mb-8 flex items-center gap-3">
       <img
         :src="`/img/${library.logo}`"
         :alt="library.logo"
-        class="h-10 w-10 drop-shadow-lg mt-2"
+        class="mt-2 h-10 w-10 drop-shadow-lg"
       />
-      <h2 class="text-xl md:text-2xl font-semibold decorated">
+      <h2 class="decorated text-xl font-semibold md:text-2xl">
         {{ library.name }} components
       </h2>
     </div>
 
-    <div
-      class="mb-5"
-      v-for="section in sections"
-      :key="section.name"
-    >
-      <div class="flex items-center gap-2.5 mb-3">
-        <UIcon
-          :name="section.icon"
-          class="h-5 w-5"
-        />
+    <div class="mb-5" v-for="section in sections" :key="section.name">
+      <div class="mb-3 flex items-center gap-2.5">
+        <UIcon :name="section.icon" class="h-5 w-5" />
         <h3 class="font-semibold">{{ section.name }}</h3>
       </div>
-      <div class="flex gap-0 space-y-1 flex-wrap">
-        <template
-          v-for="component in section.components"
-          :key="component.name"
-        >
+      <div class="flex flex-wrap gap-0 space-y-1">
+        <template v-for="component in section.components" :key="component.name">
           <UTooltip
             v-if="showMissing || (!showMissing && isFound(component))"
-            class="w-[150px] flex items-center gap-1.5 cursor-default"
+            class="flex w-[150px] cursor-default items-center gap-1.5"
           >
             <template #text>
               {{ component.help }}
-              <div
-                v-if="component.aliases"
-                class="mt-2 italic"
-              >
+              <div v-if="component.aliases" class="mt-2 italic">
                 Aliases: {{ component.aliases.join(", ") }}
               </div>
             </template>
@@ -73,14 +60,14 @@
 </template>
 
 <script setup lang="ts">
-import { sections } from "@/data/sections";
-import { Library } from "@/types/libraries.types";
-import { Component } from "@/types/components.types";
+import { sections } from "@/data/sections"
+import type { Library } from "@/types/libraries.types"
+import type { Component } from "@/types/components.types"
 
-const props = defineProps<{ library: Library }>();
+const props = defineProps<{ library: Library }>()
 
 const isFound = (component: Component): boolean =>
-  props.library.componentMatchings.includes(component.name);
+  props.library.componentMatchings.includes(component.name)
 
-const { showMissing, invertMissing } = useShowMissingStore();
+const { showMissing } = useShowMissingStore()
 </script>

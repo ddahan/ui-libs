@@ -1,50 +1,30 @@
 <template>
-  <div>
-    <UDropdown
-      :ui="{ width: 'w-28' }"
-      :items="items"
-      :popper="{ placement: 'bottom-start' }"
-    >
-      <UButton
-        icon="i-mdi-weather-night"
-        :square="true"
-        variant="ghost"
-      />
-    </UDropdown>
-  </div>
+  <ClientOnly>
+    <UButton
+      v-if="!colorMode.unknown"
+      square
+      variant="ghost"
+      :icon="iconMap[colorMode.preference]"
+      @click="setNextColorPreference"
+    />
+  </ClientOnly>
 </template>
 
 <script setup lang="ts">
-const colorMode = useColorMode();
+const colorMode = useColorMode()
 
-const toMode = (mode: string) => {
-  colorMode.preference = mode;
-};
+const iconMap: any = {
+  system: "i-ph-sun-dim-fill",
+  dark: "i-ph-moon",
+  light: "i-ph-sun",
+}
 
-const items = [
-  [
-    {
-      label: "Light",
-      slot: "light",
-      icon: "i-material-symbols-light-mode-outline",
-      click: () => {
-        toMode("light");
-      },
-    },
-    {
-      label: "Dark",
-      icon: "i-material-symbols-dark-mode-outline",
-      click: () => {
-        toMode("dark");
-      },
-    },
-    {
-      label: "System",
-      icon: "i-material-symbols-desktop-windows-outline",
-      click: () => {
-        toMode("system");
-      },
-    },
-  ],
-];
+const setNextColorPreference = (): void => {
+  const nextColorMap: any = {
+    dark: "light",
+    light: "system",
+    system: "dark",
+  }
+  colorMode.preference = nextColorMap[colorMode.preference]
+}
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <div class="p-4 md:p-6 overflow-auto">
+  <div class="overflow-auto p-4 md:p-6">
     <slot />
   </div>
 </template>

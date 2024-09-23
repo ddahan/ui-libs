@@ -1,95 +1,28 @@
 {
-    "name": "🎨 ui-libs",
-    "image": "node:18-bullseye",
-    "forwardPorts": [
-        3000
-    ],
-    "portsAttributes": {
-        "3000": {
-            "label": "Nuxt",
-            "onAutoForward": "notify"
-        }
-    },
-    "onCreateCommand": "npm install",
-    "features": {
-        "ghcr.io/ddahan/feature-starter/custom_bashrc:latest": {}
-    },
-    "customizations": {
-        "vscode": {
-            "extensions": [
-                "esbenp.prettier-vscode",
-                "bradlc.vscode-tailwindcss",
-                "Vue.volar",
-                "antfu.iconify",
-                "yoavbls.pretty-ts-errors",
-                "yzhang.markdown-all-in-one"
-            ],
-            "settings": {
-                //*********************************************************************
-                // general
-                //*********************************************************************
-                "files.insertFinalNewline": true,
-                "files.exclude": {
-                    "**/node_modules": true
-                },
-                //*********************************************************************
-                // editor
-                //*********************************************************************
-                "editor.rulers": [
-                    90
-                ],
-                "editor.wordWrap": "wordWrapColumn",
-                "editor.wordWrapColumn": 90,
-                "editor.defaultFormatter": "esbenp.prettier-vscode",
-                "editor.tabSize": 2,
-                "editor.formatOnSave": true,
-                "editor.quickSuggestions": {
-                    "strings": true
-                },
-                //*********************************************************************
-                // color customizations
-                //*********************************************************************
-                "workbench.colorCustomizations": {
-                    "titleBar.activeBackground": "#db2777",
-                    "titleBar.activeForeground": "#fff"
-                },
-                //*********************************************************************
-                // tailwind
-                //*********************************************************************
-                "css.validate": false,
-                "tailwindCSS.validate": true,
-                "tailwindCSS.emmetCompletions": true,
-                "tailwindCSS.classAttributes": [
-                    "class",
-                    "className",
-                    "ngClass",
-                    "ui"
-                ],
-                // https://ui.nuxtlabs.com/getting-started/installation#intellisense
-                "tailwindCSS.experimental.classRegex": [
-                    [
-                        "ui:\\s*{([^)]*)\\s*}",
-                        "[\"'`]([^\"'`]*).*?[\"'`]"
-                    ],
-                    [
-                        "/\\*ui\\*/\\s*{([^;]*)}",
-                        ":\\s*[\"'`]([^\"'`]*).*?[\"'`]"
-                    ]
-                ],
-                "files.associations": {
-                    "*.css": "tailwindcss"
-                },
-                //*********************************************************************
-                // prettier
-                //*********************************************************************
-                "prettier.printWidth": 90,
-                "prettier.singleAttributePerLine": true,
-                "prettier.quoteProps": "consistent",
-                //*********************************************************************
-                // typescript
-                //*********************************************************************
-                "typescript.preferences.importModuleSpecifier": "non-relative"
-            }
-        }
+  "name": "🎨 ui-libs",
+  "image": "node:20-bullseye",
+  "forwardPorts": [3000],
+  "portsAttributes": {
+    "3000": {
+      "label": "Nuxt",
+      "onAutoForward": "notify"
     }
+  },
+  "onCreateCommand": "npm install",
+  "features": {
+    "ghcr.io/ddahan/feature-starter/custom_bashrc:latest": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "esbenp.prettier-vscode",
+        "bradlc.vscode-tailwindcss",
+        "Vue.volar",
+        "antfu.iconify",
+        "yoavbls.pretty-ts-errors",
+        "yzhang.markdown-all-in-one"
+      ],
+      "settings": {}
+    }
+  }
 }

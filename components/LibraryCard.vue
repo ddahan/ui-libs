@@ -1,10 +1,10 @@
 <template>
   <div
     v-if="display"
-    class="rounded-lg px-3 py-2 border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-700 w-auto min-h-[180px]"
+    class="min-h-[180px] w-auto rounded-lg border border-gray-200 bg-white px-3 py-2 dark:border-gray-800 dark:bg-gray-700"
   >
-    <div class="h-full flex flex-col justify-between">
-      <div class="flex items-start justify-between px-4 py-2 gap-8">
+    <div class="flex h-full flex-col justify-between">
+      <div class="flex items-start justify-between gap-8 px-4 py-2">
         <div class="shrink-0">
           <UTooltip :text="`Go to ${library.name} website`">
             <UButton
@@ -17,42 +17,24 @@
               target="_blank"
             >
               <div class="w-full">
-                <img
-                  :src="`/img/${logo}`"
-                  :alt="logo"
-                  class="h-12 w-12 drop-shadow-lg"
-                />
+                <img :src="`/img/${logo}`" :alt="logo" class="h-12 w-12 drop-shadow-lg" />
               </div>
               <p class="font-medium tracking-wide">{{ library.name }}</p>
             </UButton>
           </UTooltip>
-          <p
-            v-if="library.subName"
-            class="-mt-1 text-xs"
-          >
-            ({{ library.subName }})
-          </p>
+          <p v-if="library.subName" class="-mt-1 text-xs">({{ library.subName }})</p>
         </div>
 
-        <div class="flex gap-2 flex-wrap place-content-end">
-          <template
-            v-for="buttonFilter in buttonFiltersToShow"
-            :key="buttonFilter.id"
-          >
-            <LibraryCardBadge
-              class="w-28"
-              :buttonFilter="buttonFilter"
-            />
+        <div class="flex flex-wrap place-content-end gap-2">
+          <template v-for="buttonFilter in buttonFiltersToShow" :key="buttonFilter.id">
+            <LibraryCardBadge class="w-28" :buttonFilter="buttonFilter" />
           </template>
         </div>
       </div>
       <!-- Card footer -->
-      <div class="flex items-center justify-between mt-4">
-        <div class="flex ml-1">
-          <UTooltip
-            v-if="repoUrl && library.nbStars"
-            text="Go to github.com page"
-          >
+      <div class="mt-4 flex items-center justify-between">
+        <div class="ml-1 flex">
+          <UTooltip v-if="repoUrl && library.nbStars" text="Go to github.com page">
             <UButton
               icon="i-mdi-star-outline"
               :label="getDisplayableNumber(library.nbStars)"
@@ -62,10 +44,7 @@
               color="gray"
             />
           </UTooltip>
-          <UTooltip
-            v-if="registryUrl && library.nbDownloads"
-            text="Go to npmjs.com page"
-          >
+          <UTooltip v-if="registryUrl && library.nbDownloads" text="Go to npmjs.com page">
             <UButton
               icon="i-material-symbols-download"
               :label="getDisplayableNumber(library.nbDownloads)"
@@ -104,39 +83,39 @@
 </template>
 
 <script setup lang="ts">
-import { buttonFilters } from "@/data/filters";
-import { Library } from "@/types/libraries.types";
-import { ButtonFilter } from "@/types/filters.types";
+import { buttonFilters } from "@/data/filters"
+import type { Library } from "@/types/libraries.types"
+import type { ButtonFilter } from "@/types/filters.types"
 
 const props = defineProps<{
-  initialLibrary: Library;
-}>();
+  initialLibrary: Library
+}>()
 
 // required to mutate a prop
-const library = ref(props.initialLibrary);
-const isComponentPanelOpen = ref(false);
-const colorMode = useColorMode();
-const nbComponents = library.value.componentMatchings.length;
+const library = ref(props.initialLibrary)
+const isComponentPanelOpen = ref(false)
+const colorMode = useColorMode()
+const nbComponents = library.value.componentMatchings.length
 
 const buttonFiltersToShow = computed((): ButtonFilter[] => {
   /* Return the button filters (ordered by indexes, to keep consistency over the different cards) than must be showed on the card */
 
-  let result: ButtonFilter[] = [];
+  let result: ButtonFilter[] = []
   for (let filterMatching of library.value.filterMatchings) {
-    const buttonFilter = <ButtonFilter>findBy("id", filterMatching.id, buttonFilters)!;
-    result.push(buttonFilter);
+    const buttonFilter = <ButtonFilter>findBy("id", filterMatching.id, buttonFilters)!
+    result.push(buttonFilter)
   }
-  return result.sort((a, b) => a.index - b.index);
-});
+  return result.sort((a, b) => a.index - b.index)
+})
 
 const display = computed((): boolean => {
   /* Return true if this card should be displayed */
-  const { touchedButtonFilterIDs, rangeFiltering } = useFilterStore();
-  const libraryFilterIDs = library.value.filterMatchings.map((obj) => obj.id);
+  const { touchedButtonFilterIDs, rangeFiltering } = useFilterStore()
+  const libraryFilterIDs = library.value.filterMatchings.map((obj) => obj.id)
 
   // Check wether all the button logic is satisfied, and debranch if not
   if (isSubset(touchedButtonFilterIDs(), libraryFilterIDs) == false) {
-    return false;
+    return false
   }
 
   // ... Now range logic must be verified too.
@@ -145,40 +124,40 @@ const display = computed((): boolean => {
     rangeFiltering.value.FNbStars.qty > 0 &&
     library.value.nbStars! < rangeFiltering.value.FNbStars.qty
   ) {
-    return false;
+    return false
   }
   if (
     rangeFiltering.value.FNbDownloads.qty > 0 &&
     library.value.nbDownloads! < rangeFiltering.value.FNbDownloads.qty * 1000
   ) {
-    return false;
+    return false
   }
   if (
     rangeFiltering.value.FNbComponents.qty > 0 &&
     nbComponents < rangeFiltering.value.FNbComponents.qty
   ) {
-    return false;
+    return false
   }
 
-  return true;
-});
+  return true
+})
 
 const logo = ((): string =>
   colorMode.value == "dark" && library.value.logoDark
     ? library.value.logoDark
-    : library.value.logo)();
+    : library.value.logo)()
 
 // Github related ------------------------------------------------------------------------
 
 const repoUrl = ((library: Library): string | undefined =>
   library.repoName && library.repoOwner
     ? `https://github.com/${library.repoOwner}/${library.repoName}`
-    : undefined)(library.value);
+    : undefined)(library.value)
 
 type GithubApiResponse = {
-  stargazers_count: number; // known and useful key
-  [key: string]: unknown; // unknown and useless keys
-};
+  stargazers_count: number // known and useful key
+  [key: string]: unknown // unknown and useless keys
+}
 
 if (repoUrl) {
   const { data: githubApiData } = useFetch<GithubApiResponse>(
@@ -187,10 +166,10 @@ if (repoUrl) {
       lazy: true,
       server: false, // This call will only be performed on the client
       onResponse({ response }) {
-        library.value.nbStars = response._data.stargazers_count;
+        library.value.nbStars = response._data.stargazers_count
       },
     }
-  );
+  )
 }
 
 // NPM related ---------------------------------------------------------------------------
@@ -198,12 +177,12 @@ if (repoUrl) {
 const registryUrl = ((library: Library): string | undefined =>
   library.package ? `https://www.npmjs.com/package/${library.package}` : undefined)(
   library.value
-);
+)
 
 type NpmApiResponse = {
-  downloads: number;
-  [key: string]: unknown;
-};
+  downloads: number
+  [key: string]: unknown
+}
 
 if (registryUrl) {
   const { data: npmApiData } = useFetch<NpmApiResponse>(
@@ -212,9 +191,9 @@ if (registryUrl) {
       lazy: true,
       server: false,
       onResponse({ response }) {
-        library.value.nbDownloads = response._data.downloads;
+        library.value.nbDownloads = response._data.downloads
       },
     }
-  );
+  )
 }
 </script>

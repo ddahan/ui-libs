@@ -1,4 +1,4 @@
-import { Library } from "@/types/libraries.types";
+import { Library } from "@/types/libraries.types"
 
 export const libraries: Array<Library> = [
   {
@@ -39,6 +39,8 @@ export const libraries: Array<Library> = [
       "Card",
       "Container",
       "Skeleton",
+      "Divider",
+      "Progress",
     ],
     filterMatchings: [
       { id: "FStyled" },
@@ -55,6 +57,7 @@ export const libraries: Array<Library> = [
       { id: "FTyped" },
       { id: "FNuxt" },
       { id: "FForm" },
+      { id: "FFigma" }, // https://www.figma.com/community/file/1288455405058138934/nuxt-ui
     ],
   },
   {
@@ -134,7 +137,9 @@ export const libraries: Array<Library> = [
       { id: "FBuiltinThemes" }, // https://primevue.org/theming/#builtinthemes
       { id: "FSemanticColors" }, // https://primevue.org/colors/
       { id: "FVue" },
+      { id: "FTyped" },
       { id: "FForm" },
+      { id: "FDarkMode" },
     ],
   },
   {
@@ -266,7 +271,55 @@ export const libraries: Array<Library> = [
     ],
   },
   {
+    name: "Radix Vue",
+    logo: "radixvue.svg",
+    url: "https://www.radix-vue.com/",
+    repoOwner: "radix-vue",
+    repoName: "radix-vue",
+    package: "radix-vue",
+    componentMatchings: [
+      "Accordion",
+      "Modal", // Alert Dialog
+      "Avatar",
+      "Checkbox",
+      // Collapsible -> Accordion
+      "Dropdown", // Combobox
+      "Context Menu",
+      // Dialog -> Modal
+      // Dropdown
+      "Tooltip", // Hover Card
+      // Label
+      // Menubar
+      // Navigation Menu
+      "Pagination",
+      "Popover",
+      "Progress",
+      "Radio",
+      "Scroll Bar",
+      "Select",
+      "Divider", // Separator
+      "Range", // Slider
+      "Toggle", // switch
+      "Tabs",
+      "Toast",
+      "Toggle Button",
+      // Toggle Group
+      // Toolbar
+    ],
+    filterMatchings: [
+      { id: "FVue" },
+      { id: "FUnstyled" },
+      { id: "FImported" },
+      { id: "FComponents" },
+      { id: "FFree" },
+      { id: "FAccessible" },
+      { id: "FTyped" },
+      { id: "FRoadmap" }, // https://github.com/orgs/radix-vue/projects/1
+    ],
+  },
+  {
     name: "Shadcn-vue",
+    subName: "on top of Radix Vue",
     logo: "shadcn.png",
     url: "https://www.shadcn-vue.com",
     repoOwner: "radix-vue",
@@ -311,68 +364,6 @@ export const libraries: Array<Library> = [
       { id: "FFigma" },
       { id: "FFree" },
       { id: "FAccessible" },
-    ],
-  },
-  {
-    name: "Naive UI",
-    logo: "naiveui.svg",
-    url: "https://www.naiveui.com/",
-    repoOwner: "tusen-ai",
-    repoName: "naive-ui",
-    package: "naive-ui",
-    componentMatchings: [
-      "Avatar",
-      "Button",
-      "Carousel",
-      "Accordion",
-      "Divider",
-      "Dropdown",
-      "Popover",
-      "Breadcrumb",
-      "Watermark",
-      "Auto Complete",
-      "Color Picker",
-      "Checkbox",
-      "Date Picker",
-      "Input Chips", // dynamic tags
-      "Input",
-      "Radio",
-      "Rating",
-      "Select",
-      "Range",
-      "Toggle",
-      "Pick List",
-      "File Input",
-      "Calendar",
-      "Table",
-      "Timeline",
-      "Tree",
-      "Scroll Spy",
-      "Scroll Top",
-      "Pagination",
-      "Steps",
-      "Tabs",
-      "Alert",
-      "Indicator",
-      "Modal",
-      "Slideover",
-      "Toast",
-      "Progress",
-      "Skeleton",
-      "Tooltip",
-      "Scroll Bar",
-    ],
-    filterMatchings: [
-      { id: "FVue" },
-      { id: "FTyped" },
-      { id: "FThemeGenerator" },
-      { id: "FImported" },
-      { id: "FStyled" },
-      { id: "FComponents" },
-      { id: "FFree" },
-      { id: "FSemanticColors" },
-      { id: "FForm" },
-      // { id: "FFigma" }, // sketch, not Figma.
     ],
   },
   {
@@ -442,6 +433,68 @@ export const libraries: Array<Library> = [
       { id: "FTailwind" },
       { id: "FAccessible" },
       { id: "FOfficial" },
+    ],
+  },
+  {
+    name: "Naive UI",
+    logo: "naiveui.svg",
+    url: "https://www.naiveui.com/",
+    repoOwner: "tusen-ai",
+    repoName: "naive-ui",
+    package: "naive-ui",
+    componentMatchings: [
+      "Avatar",
+      "Button",
+      "Carousel",
+      "Accordion",
+      "Divider",
+      "Dropdown",
+      "Popover",
+      "Breadcrumb",
+      "Watermark",
+      "Auto Complete",
+      "Color Picker",
+      "Checkbox",
+      "Date Picker",
+      "Input Chips", // dynamic tags
+      "Input",
+      "Radio",
+      "Rating",
+      "Select",
+      "Range",
+      "Toggle",
+      "Pick List",
+      "File Input",
+      "Calendar",
+      "Table",
+      "Timeline",
+      "Tree",
+      "Scroll Spy",
+      "Scroll Top",
+      "Pagination",
+      "Steps",
+      "Tabs",
+      "Alert",
+      "Indicator",
+      "Modal",
+      "Slideover",
+      "Toast",
+      "Progress",
+      "Skeleton",
+      "Tooltip",
+      "Scroll Bar",
+    ],
+    filterMatchings: [
+      { id: "FVue" },
+      { id: "FTyped" },
+      { id: "FThemeGenerator" },
+      { id: "FImported" },
+      { id: "FStyled" },
+      { id: "FComponents" },
+      { id: "FFree" },
+      { id: "FSemanticColors" },
+      { id: "FForm" },
+      // { id: "FFigma" }, // sketch, not Figma.
     ],
   },
   {
@@ -750,4 +803,4 @@ export const libraries: Array<Library> = [
       { id: "FTyped" },
     ],
   },
-];
+]

@@ -44,7 +44,7 @@ export const buttonFilters = [
     index: 6,
     label: "CSS only",
     icon: "i-ph-file-css",
-    help: "Only provide CSS classes to inject into your own Vue components. You get no logic, but the library can be use with any framework (not only Vue).",
+    help: "Only provide CSS classes to inject into your own Vue components. You get no logic, but the library can be used with any framework (not only Vue).",
     autoDisable: "FComponents",
   },
   {
@@ -154,7 +154,7 @@ export const buttonFilters = [
     icon: "i-material-symbols-dynamic-form-outline",
     help: "Provided tools or examples for integration with form management libraries (Vee-Validate, Zod, Yup, etc.)",
   },
-];
+]
 
 export const rangeFilters = [
   {
@@ -184,4 +184,4 @@ export const rangeFilters = [
     rangeMax: 100,
     rangeStep: 5,
   },
-];
+]

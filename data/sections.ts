@@ -290,4 +290,4 @@ export const sections = [
       },
     ],
   },
-];
+]

@@ -1,15 +1,18 @@
 export default defineAppConfig({
   ui: {
+    strategy: "merge",
     primary: "emerald",
     gray: "slate",
+    icons: {
+      dynamic: true,
+    },
     tooltip: {
       // removes fixed height and truncate
-      base: "[@media(pointer:coarse)]:hidden h-auto px-2 py-1 text-xs font-normal",
+      base: "h-auto overflow-visible text-overflow-clip whitespace-normal",
       popper: { placement: "top" },
     },
   },
   repoUrl: "https://github.com/ddahan/ui-libs",
-  buyMeACoffeeUrl: "https://www.buymeacoffee.com/ddahan",
   myWebsiteUrl: "https://david-dahan.com",
   myContactUrl: "https://david-dahan.com/contact",
-});
+})

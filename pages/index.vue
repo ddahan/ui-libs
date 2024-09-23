@@ -1,46 +1,54 @@
 <template>
-  <Header />
-  <UContainer class="pb-6">
-    <div class="text-center mt-6 sm:my-12">
-      <p class="text-3xl sm:text-4xl font-semibold tracking-tight">
-        Pick the right UI Library
-      </p>
-      <p class="text-lg sm:text-xl">
-        for your
-        <NuxtLink
-          to="https://vuejs.org/"
-          target="_blank"
-          class="primary-text font-semibold"
-        >
-          Vue 3
-        </NuxtLink>
-        or
-        <NuxtLink
-          to="https://nuxt.com/"
-          target="_blank"
-          class="primary-text font-semibold"
-          >Nuxt 3</NuxtLink
-        >
-        Project.
-      </p>
+  <div>
+    <div class="sticky top-0 z-20">
+      <!-- <VueSchoolBanner /> -->
+      <Header />
     </div>
-
-    <div class="mt-6 sm:mt-8 flex gap-4 flex-grow justify-center">
-      <!-- filters -->
-      <div class="w-72 -mt-2 p-3 hidden md:block shrink-0">
-        <Filters />
+    <UContainer class="pb-6">
+      <div class="mt-6 text-center sm:my-12">
+        <p class="text-3xl font-semibold tracking-tight sm:text-4xl">
+          Pick the right UI Library
+        </p>
+        <p class="text-lg sm:text-xl">
+          for your
+          <NuxtLink
+            to="https://vuejs.org/"
+            target="_blank"
+            class="primary-text font-semibold"
+          >
+            Vue 3
+          </NuxtLink>
+          or
+          <NuxtLink
+            to="https://nuxt.com/"
+            target="_blank"
+            class="primary-text font-semibold"
+          >
+            Nuxt 3
+          </NuxtLink>
+          Project.
+        </p>
       </div>
 
-      <LibraryCards />
-    </div>
-  </UContainer>
+      <div class="mt-6 flex flex-grow justify-center gap-4 sm:mt-8">
+        <!-- filters -->
+        <div class="-mt-2 hidden w-72 shrink-0 p-3 md:block">
+          <Filters />
+        </div>
+
+        <LibraryCards />
+      </div>
+    </UContainer>
+  </div>
 </template>
 
 <script setup lang="ts">
-const title = ref("UI Lib Picker");
+import VueSchoolBanner from "@/components/VueSchoolBanner.vue"
 
-const runtimeConfig = useRuntimeConfig();
-const loadPlausible = runtimeConfig.public.loadPlausible == "yes";
+const title = ref("UI Lib Picker")
+
+const runtimeConfig = useRuntimeConfig()
+const loadPlausible = runtimeConfig.public.loadPlausible == "yes"
 
 useHead({
   // dynamic title
@@ -71,10 +79,10 @@ useHead({
         ],
       }
     : {}),
-});
+})
 
 // Meta tags, OG, Twitter
-const description = "🎨 Pick the Right UI Library for your Vue 3 or Nuxt 3 Project";
+const description = "🎨 Pick the Right UI Library for your Vue 3 or Nuxt 3 Project"
 useSeoMeta({
   title: title.value,
   description: description,
@@ -86,5 +94,5 @@ useSeoMeta({
   ogImage: "https://ui-libs.vercel.app/img/social_small.png",
   ogImageWidth: "1142",
   ogImageHeight: "760",
-});
+})
 </script>

@@ -1,21 +1,19 @@
 {
-  "name": "nuxt-app",
+  "name": "ui-libs",
   "private": true,
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "nuxt dev --no-fork",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
-    "@nuxt/ui": "npm:@nuxt/ui-edge@latest",
-    "@tailwindcss/typography": "latest",
+    "@nuxt/ui": "^2.17.0",
+    "nuxt": "^3.12.3",
     "@types/node": "latest",
-    "nuxt": "3.6.x"
-  },
-  "dependencies": {
-    "@iconify/json": "latest"
+    "prettier": "latest",
+    "prettier-plugin-tailwindcss": "latest"
   }
 }
