@@ -74,14 +74,17 @@ export const libraries: Array<Library> = [
       "Checkbox",
       "Clipboard",
       "Color Picker",
+      "Collapsible",
       "Combobox",
       "Date Picker",
+      "Editable",
       "Field",
       "Fieldset",
       "Hover Card",
       "Menu",
       "Modal", // As Dialog
-      "Input", // As Number Input, Pin Input, Tags Input
+      "Input", // As Number Input and Pin Input
+      "Input Chips", // As Tags Input
       "File Input", // As File Upload
       "Pagination",
       "Popover",
@@ -92,13 +95,14 @@ export const libraries: Array<Library> = [
       "Segment Group",
       "Select",
       "Signature Pad",
-      "Slider",
+      "Range",
       "Panel Splitter", // As Splitter
       "Steps",
       "Tabs",
       "Timer",
       "Toast",
-      "Toggle", // As Toggle and Switch
+      "Toggle", // As Switch
+      "Toggle Button", // As Toggle
       "Toggle Group",
       "Tooltip",
       "Tree", // As Tree View

@@ -174,10 +174,6 @@ export const sections = [
         name: "Signature Pad" as const,
         help: "A component that allows users to draw a signature using a signature pad.",
       },
-      {
-        name: "Slider" as const,
-        help: "A control element that allows for a range of selections.",
-      },
       { name: "Checkbox" as const, help: "A checkbox field" },
       { name: "Radio" as const, help: "A radio field" },
       {
