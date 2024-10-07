@@ -61,6 +61,49 @@ export const libraries: Array<Library> = [
     ],
   },
   {
+    name: "Ark UI",
+    logo: "arkui.svg",
+    url: "https://ark-ui.com",
+    repoOwner: "chakra-ui",
+    repoName: "ark",
+    package: "@ark-ui/vue",
+    componentMatchings: [
+      "Accordion",
+      "Avatar",
+      "Carousel",
+      "Checkbox",
+      "Color Picker",
+      "Date Picker",
+      "Dropdown", // As Combobox
+      "Modal", // As Dialog
+      "Input", // As Field
+      "File Input", // As File Upload
+      "Pagination",
+      "Popover",
+      "Progress", // Circular and Linear
+      "Radio",
+      "Rating",
+      "Select",
+      "Panel Splitter",
+      "Steps",
+      "Tabs",
+      "Toast",
+      "Toggle",
+      "Tooltip",
+      "Tree",
+    ],
+    filterMatchings: [
+      { id: "FUnstyled" },
+      { id: "FImported" },
+      { id: "FComponents" },
+      { id: "FFree" },
+      { id: "FAccessible" },
+      { id: "FRoadmap" }, // https://ark-ui.canny.io
+      { id: "FTyped" },
+      { id: "FVue" },
+    ],
+  },
+  {
     name: "PrimeVue",
     logo: "primevue.svg",
     url: "https://primevue.org",
