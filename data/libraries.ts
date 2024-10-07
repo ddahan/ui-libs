@@ -72,25 +72,36 @@ export const libraries: Array<Library> = [
       "Avatar",
       "Carousel",
       "Checkbox",
+      "Clipboard",
       "Color Picker",
+      "Combobox",
       "Date Picker",
-      "Dropdown", // As Combobox
+      "Field",
+      "Fieldset",
+      "Hover Card",
+      "Menu",
       "Modal", // As Dialog
-      "Input", // As Field
+      "Input", // As Number Input, Pin Input, Tags Input
       "File Input", // As File Upload
       "Pagination",
       "Popover",
       "Progress", // Circular and Linear
-      "Radio",
-      "Rating",
+      "QR Code",
+      "Radio", // As Radio Group
+      "Rating", // As Rating Group
+      "Segment Group",
       "Select",
-      "Panel Splitter",
+      "Signature Pad",
+      "Slider",
+      "Panel Splitter", // As Splitter
       "Steps",
       "Tabs",
+      "Timer",
       "Toast",
-      "Toggle",
+      "Toggle", // As Toggle and Switch
+      "Toggle Group",
       "Tooltip",
-      "Tree",
+      "Tree", // As Tree View
     ],
     filterMatchings: [
       { id: "FUnstyled" },
