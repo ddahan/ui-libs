@@ -71,8 +71,7 @@ useHead({
     ? {
         script: [
           {
-            "src": "/stats/js/script.js",
-            "data-api": "/stats/api/event",
+            "src": "https://pl2.v1v2.io/js/script.js",
             "data-domain": "ui-libs.vercel.app",
             "defer": true,
           },
