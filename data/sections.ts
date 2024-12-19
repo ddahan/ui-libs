@@ -67,6 +67,10 @@ export const sections = [
       },
       { name: "Panel Splitter" as const, help: "Used to separate and resize panels" },
       {
+        name: "QR Code" as const,
+        help: "A component that generates a QR code based on the provided data.",
+      },
+      {
         name: "Keyboard Key" as const,
         help: "A keyboard key in a text block, typically to display a shortcut to a user",
       },
@@ -137,6 +141,10 @@ export const sections = [
       {
         name: "Swap" as const,
         help: "Allows to toggle the visibility of two elements",
+      },
+      {
+        name: "Signature Pad" as const,
+        help: "A component that allows users to draw a signature using a signature pad.",
       },
       { name: "Checkbox" as const, help: "A checkbox field" },
       { name: "Radio" as const, help: "A radio field" },

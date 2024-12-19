@@ -717,6 +717,53 @@ export const libraries: Array<Library> = [
     ],
   },
   {
+    name: "Ark UI",
+    logo: "arkui.svg",
+    url: "https://ark-ui.com",
+    repoOwner: "chakra-ui",
+    repoName: "ark",
+    package: "@ark-ui/vue",
+    componentMatchings: [
+      "Accordion",
+      "Avatar",
+      "Carousel",
+      "Checkbox",
+      "Color Picker",
+      "Date Picker",
+      "Modal", // As Dialog
+      "Input", // As Number Input and Pin Input
+      "Input Chips", // As Tags Input
+      "File Input", // As File Upload
+      "Pagination",
+      "Popover",
+      "Progress", // Circular and Linear
+      "QR Code",
+      "Radio", // As Radio Group
+      "Rating", // As Rating Group
+      "Select",
+      "Signature Pad",
+      "Range",
+      "Panel Splitter", // As Splitter
+      "Steps",
+      "Tabs",
+      "Toast",
+      "Toggle", // As Switch
+      "Toggle Button", // As Toggle
+      "Tooltip",
+      "Tree", // As Tree View
+    ],
+    filterMatchings: [
+      { id: "FUnstyled" },
+      { id: "FImported" },
+      { id: "FComponents" },
+      { id: "FFree" },
+      { id: "FAccessible" },
+      { id: "FRoadmap" }, // https://ark-ui.canny.io
+      { id: "FTyped" },
+      { id: "FVue" },
+    ],
+  },
+  {
     name: "Vuestic UI",
     logo: "vuestic-ui.png",
     url: "https://ui.vuestic.dev",
