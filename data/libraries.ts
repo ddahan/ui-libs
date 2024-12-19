@@ -487,6 +487,7 @@ export const libraries: Array<Library> = [
       { id: "FFree" },
       { id: "FSemanticColors" },
       { id: "FForm" },
+      { id: "FDarkMode" },
       // { id: "FFigma" }, // sketch, not Figma.
     ],
   },
