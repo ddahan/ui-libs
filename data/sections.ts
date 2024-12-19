@@ -44,14 +44,6 @@ export const sections = [
         help: "Show one line of conversation and its data, like author image, name, time.",
       },
       {
-        name: "Clipboard" as const,
-        help: "A component to copy text to the clipboard",
-      },
-      {
-        name: "Collapsible" as const,
-        help: "An interactive component that can be expanded or collapsed.",
-      },
-      {
         name: "Divider" as const,
         aliases: ["Separator"],
         help: "Visual element which separates content vertically or horizontally.",
@@ -100,10 +92,6 @@ export const sections = [
         name: "Timeline" as const,
         help: "A visual representation used to display a sequence of events or processes in chronological order.",
       },
-      {
-        name: "Timer" as const,
-        help: "Used to record the time elapsed from zero or since a specified target time.",
-      },
     ],
   },
   {
@@ -117,22 +105,6 @@ export const sections = [
       {
         name: "Color Picker" as const,
         help: "An input component to select a color",
-      },
-      {
-        name: "Combobox" as const,
-        help: "A single input field that combines the functionality of a select and input",
-      },
-      {
-        name: "Editable" as const,
-        help: "A component that allows users to edit text in place.",
-      },
-      {
-        name: "Field" as const,
-        help: "Provides a flexible container for form inputs, labels, and helper text.",
-      },
-      {
-        name: "Fieldset" as const,
-        help: "A set of form controls optionally grouped under a common name.",
       },
       {
         name: "Input Chips" as const,
@@ -181,10 +153,6 @@ export const sections = [
         aliases: ["Switch", "Input Switch"],
         help: "A toggle field",
       },
-      {
-        name: "Toggle Group" as const,
-        help: "A set of two-state buttons that can be toggled on or off.",
-      },
       { name: "Range" as const, aliases: ["Slider"], help: "A range field" },
       {
         name: "Rating" as const,
@@ -231,10 +199,6 @@ export const sections = [
         help: "Display an item after a certain scroll position. It's usually used to navigates to the top of the page",
       },
       {
-        name: "Segment Group" as const,
-        help: "Organizes and navigates between sections in a view.",
-      },
-      {
         name: "Steps" as const,
         help: "Used to show a list of steps in a process",
       },
@@ -261,10 +225,6 @@ export const sections = [
         name: "Slideover" as const,
         aliases: ["Slide-out panel", "Sliding Overlay", "Offcanvas", "Drawer", "Sheet"],
         help: "Extra content or navigation options to slide over the main content of a page, from one side of the screen",
-      },
-      {
-        name: "Hover Card" as const,
-        help: "A card that appears when a user hovers over an element.",
       },
       {
         name: "Popover" as const,
@@ -326,10 +286,6 @@ export const sections = [
         name: "Tree" as const,
         aliases: ["Organization Chart"],
         help: "A component to visualize and interact with hierarchical data",
-      },
-      {
-        name: "Menu" as const,
-        help: "A list of options that appears when a user interacts with a button.",
       },
       {
         name: "Pick List" as const,
