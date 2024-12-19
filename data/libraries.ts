@@ -554,7 +554,7 @@ export const libraries: Array<Library> = [
     logo: "flowbite-vue.svg",
     url: "https://flowbite-vue.com",
     repoOwner: "themesberg",
-    repoName: "flowbite-vue",
+    repoName: "flowbite", // rather than flowbite-vue to have relevant start number
     package: "flowbite-vue",
     componentMatchings: [
       "Accordion",
