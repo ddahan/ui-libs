@@ -107,6 +107,7 @@ export const libraries: Array<Library> = [
       "Slideover",
       "Tooltip",
       "File Input",
+      "OTP Input",
       "Breadcrumb",
       "Context Menu",
       "Dock",
