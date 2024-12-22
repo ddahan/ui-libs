@@ -2,7 +2,7 @@ import { Library } from "@/types/libraries.types"
 
 export const libraries: Array<Library> = [
   {
-    name: "Nuxt UI",
+    name: "Nuxt UI v2",
     logo: "nuxt.svg",
     url: "https://ui.nuxt.com",
     repoOwner: "nuxtlabs",
