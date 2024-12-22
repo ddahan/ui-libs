@@ -265,9 +265,9 @@ export const libraries: Array<Library> = [
     ],
   },
   {
-    name: "Radix Vue",
+    name: "Reka UI",
     logo: "radixvue.svg",
-    url: "https://www.radix-vue.com/",
+    url: "https://reka-ui.com/",
     repoOwner: "radix-vue",
     repoName: "radix-vue",
     package: "radix-vue",
