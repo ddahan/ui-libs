@@ -845,4 +845,36 @@ export const libraries: Array<Library> = [
       { id: "FTyped" },
     ],
   },
+  {
+    name: "RevoGrid",
+    logo: "revo-grid.png",
+    url: "https://rv-grid.com",
+    repoOwner: "revolist",
+    repoName: "revogrid",
+    package: "@revolist/vue3-datagrid",
+    componentMatchings: [
+      "Dropdown", // called 'Selection'
+      "Virtual Scroller",
+      "Input", // cell input/editing
+      "Progress", // Progress cell chart component
+      "Rating", // cell rating type
+      "Tree", // called TreeView
+      "Table", // called DataTable or Table or DataGrid
+      "Pagination",
+      "Keyboard Key",
+      "Select",
+      "Range",
+      "Vertical Navigation"
+    ],
+    filterMatchings: [
+      { id: "FAccessible" },
+      { id: "FComponents" },
+      { id: "FStyled" },
+      { id: "FFree" },
+      { id: "FSemanticColors" },
+      { id: "FDarkMode" },
+      { id: "FVue" },
+      { id: "FTyped" },
+    ],
+  },
 ]
