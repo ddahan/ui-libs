@@ -268,9 +268,9 @@ export const libraries: Array<Library> = [
     name: "Reka UI",
     logo: "radixvue.svg",
     url: "https://reka-ui.com/",
-    repoOwner: "radix-vue",
-    repoName: "radix-vue",
-    package: "radix-vue",
+    repoOwner: "reka-ui",
+    repoName: "reka-ui",
+    package: "reka-ui",
     componentMatchings: [
       "Accordion",
       "Modal", // Alert Dialog
