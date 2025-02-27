@@ -268,9 +268,9 @@ export const libraries: Array<Library> = [
     name: "Reka UI",
     logo: "radixvue.svg",
     url: "https://reka-ui.com/",
-    repoOwner: "radix-vue",
-    repoName: "radix-vue",
-    package: "radix-vue",
+    repoOwner: "unovue",
+    repoName: "reka-ui",
+    package: "reka-ui",
     componentMatchings: [
       "Accordion",
       "Modal", // Alert Dialog
@@ -313,10 +313,10 @@ export const libraries: Array<Library> = [
   },
   {
     name: "Shadcn-vue",
-    subName: "on top of Radix Vue",
+    subName: "on top of Reka-ui",
     logo: "shadcn.png",
     url: "https://www.shadcn-vue.com",
-    repoOwner: "radix-vue",
+    repoOwner: "unovue",
     repoName: "shadcn-vue",
     package: "shadcn-vue",
     componentMatchings: [
