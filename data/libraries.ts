@@ -384,7 +384,7 @@ export const libraries: Array<Library> = [
     ],
   },
   {
-    name: "Tailwind UI",
+    name: "Tailwind Plus",
     onTopOf: "Headless UI",
     logo: "tailwind.svg",
     url: "https://tailwindui.com",
