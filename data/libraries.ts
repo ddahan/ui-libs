@@ -3,6 +3,7 @@ import { Library } from "@/types/libraries.types"
 export const libraries: Array<Library> = [
   {
     name: "Nuxt UI",
+    onTopOf: "Reka UI",
     logo: "nuxt.svg",
     url: "https://ui.nuxt.com",
     repoOwner: "nuxtlabs",
@@ -309,7 +310,7 @@ export const libraries: Array<Library> = [
   },
   {
     name: "Shadcn-vue",
-    subName: "on top of Reka-ui",
+    onTopOf: "Reka UI",
     logo: "shadcn.png",
     url: "https://www.shadcn-vue.com",
     repoOwner: "unovue",
@@ -348,7 +349,6 @@ export const libraries: Array<Library> = [
       { id: "FPasted" },
       { id: "FTailwind" },
       { id: "FComponents" },
-
       { id: "FThemeGenerator" },
       { id: "FDarkMode" },
       { id: "FFigma" },
@@ -385,7 +385,7 @@ export const libraries: Array<Library> = [
   },
   {
     name: "Tailwind UI",
-    subName: "on top of Headless UI",
+    onTopOf: "Headless UI",
     logo: "tailwind.svg",
     url: "https://tailwindui.com",
     componentMatchings: [
@@ -637,7 +637,6 @@ export const libraries: Array<Library> = [
     ],
     filterMatchings: [
       { id: "FStyled" },
-
       { id: "FTyped" },
       { id: "FDarkMode" },
       { id: "FRoadmap" }, // https://github.com/orgs/element-plus/projects/1
@@ -702,7 +701,6 @@ export const libraries: Array<Library> = [
       { id: "FStyled" },
       { id: "FImported" },
       { id: "FComponents" },
-
       { id: "FFree" },
       { id: "FFigma" },
       { id: "FSemanticColors" },

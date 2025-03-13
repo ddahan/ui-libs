@@ -22,7 +22,10 @@
               <p class="font-medium tracking-wide">{{ library.name }}</p>
             </UButton>
           </UTooltip>
-          <p v-if="library.subName" class="-mt-1 text-xs">({{ library.subName }})</p>
+          <div v-if="library.onTopOf" class="-mt-0.5 flex items-center gap-x-1 text-xs">
+            <UIcon name="i-ph-stack-simple"></UIcon>
+            <div>built on {{ library.onTopOf }}</div>
+          </div>
         </div>
 
         <div class="flex flex-wrap place-content-end gap-2">
