@@ -15,7 +15,7 @@ export const libraries: Array<Library> = [
       "Avatar",
       "Badge",
       "Button",
-      // "Date Picker" // Available only as un example using dependency
+      "Date Picker",
       "Dropdown",
       "Keyboard Key",
       "Input",
@@ -42,6 +42,12 @@ export const libraries: Array<Library> = [
       "Skeleton",
       "Divider",
       "Progress",
+      "Carousel",
+      "Color Picker",
+      "OTP Input",
+      "Steps",
+      "Tree",
+      "Breadcrumb",
     ],
     filterMatchings: [
       { id: "FStyled" },
@@ -472,6 +478,7 @@ export const libraries: Array<Library> = [
       "Skeleton",
       "Tooltip",
       "Scroll Bar",
+      "QR Code",
     ],
     filterMatchings: [
       { id: "FTyped" },

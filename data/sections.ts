@@ -276,7 +276,7 @@ export const sections = [
       },
       {
         name: "Calendar" as const,
-        help: "Data displayed in a calendar format",
+        help: "Data displayed in a calendar format (weekly or monthly view)",
       },
       {
         name: "Order List" as const,
