@@ -2,7 +2,7 @@ import { Library } from "@/types/libraries.types"
 
 export const libraries: Array<Library> = [
   {
-    name: "Nuxt UI v2",
+    name: "Nuxt UI",
     logo: "nuxt.svg",
     url: "https://ui.nuxt.com",
     repoOwner: "nuxtlabs",
@@ -55,7 +55,6 @@ export const libraries: Array<Library> = [
       { id: "FRoadmap" },
       { id: "FRTLSupport" },
       { id: "FTyped" },
-      { id: "FNuxt" },
       { id: "FForm" },
       { id: "FFigma" }, // https://www.figma.com/community/file/1288455405058138934/nuxt-ui
     ],
@@ -137,7 +136,6 @@ export const libraries: Array<Library> = [
       { id: "FThemeGenerator" }, // https://designer.primevue.org/
       { id: "FBuiltinThemes" }, // https://primevue.org/theming/#builtinthemes
       { id: "FSemanticColors" }, // https://primevue.org/colors/
-      { id: "FVue" },
       { id: "FTyped" },
       { id: "FForm" },
       { id: "FDarkMode" },
@@ -190,7 +188,6 @@ export const libraries: Array<Library> = [
       "Virtual Scroller",
     ],
     filterMatchings: [
-      { id: "FVue" },
       { id: "FRTLSupport" }, // https://quasar.dev/options/rtl-support/
       { id: "FThemeGenerator" }, // https://quasar.dev/style/theme-builder
       { id: "FDarkMode" }, // https://quasar.dev/style/dark-mode
@@ -253,7 +250,7 @@ export const libraries: Array<Library> = [
       { id: "FImported" },
       { id: "FComponents" },
       { id: "FAccessible" }, // https://vuetifyjs.com/en/features/accessibility/
-      { id: "FVue" },
+
       { id: "FRoadmap" }, // https://vuetifyjs.com/en/introduction/roadmap/
       { id: "FFree" },
       { id: "FFigma" }, // https://store.vuetifyjs.com/products/vuetify-ui-kit-figma
@@ -301,7 +298,6 @@ export const libraries: Array<Library> = [
       // Toolbar
     ],
     filterMatchings: [
-      { id: "FVue" },
       { id: "FUnstyled" },
       { id: "FImported" },
       { id: "FComponents" },
@@ -352,7 +348,7 @@ export const libraries: Array<Library> = [
       { id: "FPasted" },
       { id: "FTailwind" },
       { id: "FComponents" },
-      { id: "FVue" },
+
       { id: "FThemeGenerator" },
       { id: "FDarkMode" },
       { id: "FFigma" },
@@ -385,7 +381,6 @@ export const libraries: Array<Library> = [
       { id: "FAccessible" },
       { id: "FFree" },
       { id: "FOfficial" },
-      { id: "FVue" },
     ],
   },
   {
@@ -479,7 +474,6 @@ export const libraries: Array<Library> = [
       "Scroll Bar",
     ],
     filterMatchings: [
-      { id: "FVue" },
       { id: "FTyped" },
       { id: "FThemeGenerator" },
       { id: "FImported" },
@@ -591,7 +585,6 @@ export const libraries: Array<Library> = [
       { id: "FTailwind" },
       { id: "FFree" },
       { id: "FFigma" },
-      { id: "FVue" },
     ],
   },
   {
@@ -644,7 +637,7 @@ export const libraries: Array<Library> = [
     ],
     filterMatchings: [
       { id: "FStyled" },
-      { id: "FVue" },
+
       { id: "FTyped" },
       { id: "FDarkMode" },
       { id: "FRoadmap" }, // https://github.com/orgs/element-plus/projects/1
@@ -709,7 +702,7 @@ export const libraries: Array<Library> = [
       { id: "FStyled" },
       { id: "FImported" },
       { id: "FComponents" },
-      { id: "FVue" },
+
       { id: "FFree" },
       { id: "FFigma" },
       { id: "FSemanticColors" },
@@ -760,7 +753,6 @@ export const libraries: Array<Library> = [
       { id: "FAccessible" },
       { id: "FRoadmap" }, // https://ark-ui.canny.io
       { id: "FTyped" },
-      { id: "FVue" },
     ],
   },
   {
@@ -840,7 +832,7 @@ export const libraries: Array<Library> = [
       { id: "FImported" },
       { id: "FRoadmap" }, // Open dev discussion in Discord + Roadmap in docs
       { id: "FDarkMode" },
-      { id: "FVue" },
+
       { id: "FForm" },
       { id: "FTyped" },
     ],

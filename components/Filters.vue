@@ -23,11 +23,6 @@
           <FilterButton buttonFilterID="FCSS" />
         </div>
 
-        <div class="grid grid-cols-2 gap-1">
-          <FilterButton buttonFilterID="FVue" />
-          <FilterButton buttonFilterID="FNuxt" />
-        </div>
-
         <FilterButton buttonFilterID="FTailwind" />
         <FilterButton buttonFilterID="FFree" />
       </div>
