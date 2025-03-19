@@ -1,6 +1,12 @@
 import { ButtonFilterMatching } from "@/types/filters.types"
 import { ComponentName } from "@/types/components.types"
 
+export type Promo = {
+  text: string
+  icon?: string
+  url: string
+}
+
 export type Library = {
   name: string
   onTopOf?: string // name of the library the tool is based on
@@ -14,4 +20,5 @@ export type Library = {
   componentMatchings: ComponentName[]
   nbStars?: number // filled later
   nbDownloads?: number // filled later
+  promo?: Promo
 }

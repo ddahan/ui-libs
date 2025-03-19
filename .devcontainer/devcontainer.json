@@ -1,7 +1,9 @@
 {
   "name": "🎨 ui-libs",
   "image": "node:20-bullseye",
-  "forwardPorts": [3000],
+  "forwardPorts": [
+    3000
+  ],
   "portsAttributes": {
     "3000": {
       "label": "Nuxt",

@@ -5,10 +5,15 @@ export const libraries: Array<Library> = [
     name: "Nuxt UI",
     onTopOf: "Reka UI",
     logo: "nuxt.svg",
-    url: "https://ui.nuxt.com",
+    url: "https://ui.nuxt.com?aff=7GP4Wq",
     repoOwner: "nuxtlabs",
     repoName: "ui",
     package: "@nuxt/ui",
+    promo: {
+      text: "Build even faster with Nuxt UI Pro",
+      url: "https://ui.nuxt.com/pro?aff=7GP4Wq",
+      icon: "ph:rocket-launch-bold",
+    },
     componentMatchings: [
       "Accordion",
       "Alert",
