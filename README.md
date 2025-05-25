@@ -45,8 +45,8 @@ Here are some reasons that automatically discard the library to be listed:
 
 Here are some (potentially subjective) reasons that could discard the library to be listed:
 
-- It is not popular enough and doesn't bring anything new or cool to the table (specific component or feature, very high quality, ...)
-- Majority of discussions (PR, issues) are in Chinese.
+- It is not popular enough and doesn't bring anything new or useful to the table (specific component or feature, very high quality, ...)
+- Majority of discussions (PR, issues) are not in English.
 
 With all that being said, I'm open to discussion and new libraries evaluation, so feel free to open a PR.
 
@@ -62,12 +62,8 @@ With all that being said, I'm open to discussion and new libraries evaluation, s
 
 ## About me
 
-I'm David, 35, living in Paris, and <b>available for hire</b>.
+I'm David, 36, living in Paris, and <b>available for hire</b>.
 Visit [my website](https://david-dahan.com) to know more about me, or [contact me](https://david-dahan.com/contact).
-
-### Want to support?
-
-If you want to show your support, you can [buy me a coffee](https://www.buymeacoffee.com/ddahan), it will be very appreciated.
 
 ### Disclaimer
 

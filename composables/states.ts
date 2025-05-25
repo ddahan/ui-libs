@@ -17,8 +17,6 @@ let initialButtonFiltering: { [K in ButtonFilterID]: { selected: boolean } } = {
   FBuiltinThemes: { selected: false },
   FThemeGenerator: { selected: false },
   FSemanticColors: { selected: false },
-  FVue: { selected: false },
-  FNuxt: { selected: false },
   FForm: { selected: false },
 }
 

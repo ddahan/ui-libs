@@ -3,18 +3,24 @@ import { Library } from "@/types/libraries.types"
 export const libraries: Array<Library> = [
   {
     name: "Nuxt UI",
+    onTopOf: "Reka UI",
     logo: "nuxt.svg",
-    url: "https://ui.nuxt.com",
+    url: "https://ui.nuxt.com?aff=7GP4Wq",
     repoOwner: "nuxtlabs",
     repoName: "ui",
     package: "@nuxt/ui",
+    promo: {
+      text: "Build even faster with Nuxt UI Pro",
+      url: "https://ui.nuxt.com/pro?aff=7GP4Wq",
+      icon: "ph:rocket-launch-bold",
+    },
     componentMatchings: [
       "Accordion",
       "Alert",
       "Avatar",
       "Badge",
       "Button",
-      // "Date Picker" // Available only as un example using dependency
+      "Date Picker",
       "Dropdown",
       "Keyboard Key",
       "Input",
@@ -41,6 +47,12 @@ export const libraries: Array<Library> = [
       "Skeleton",
       "Divider",
       "Progress",
+      "Carousel",
+      "Color Picker",
+      "OTP Input",
+      "Steps",
+      "Tree",
+      "Breadcrumb",
     ],
     filterMatchings: [
       { id: "FStyled" },
@@ -55,7 +67,6 @@ export const libraries: Array<Library> = [
       { id: "FRoadmap" },
       { id: "FRTLSupport" },
       { id: "FTyped" },
-      { id: "FNuxt" },
       { id: "FForm" },
       { id: "FFigma" }, // https://www.figma.com/community/file/1288455405058138934/nuxt-ui
     ],
@@ -107,6 +118,7 @@ export const libraries: Array<Library> = [
       "Slideover",
       "Tooltip",
       "File Input",
+      "OTP Input",
       "Breadcrumb",
       "Context Menu",
       "Dock",
@@ -136,7 +148,6 @@ export const libraries: Array<Library> = [
       { id: "FThemeGenerator" }, // https://designer.primevue.org/
       { id: "FBuiltinThemes" }, // https://primevue.org/theming/#builtinthemes
       { id: "FSemanticColors" }, // https://primevue.org/colors/
-      { id: "FVue" },
       { id: "FTyped" },
       { id: "FForm" },
       { id: "FDarkMode" },
@@ -189,7 +200,6 @@ export const libraries: Array<Library> = [
       "Virtual Scroller",
     ],
     filterMatchings: [
-      { id: "FVue" },
       { id: "FRTLSupport" }, // https://quasar.dev/options/rtl-support/
       { id: "FThemeGenerator" }, // https://quasar.dev/style/theme-builder
       { id: "FDarkMode" }, // https://quasar.dev/style/dark-mode
@@ -259,7 +269,7 @@ export const libraries: Array<Library> = [
       { id: "FImported" },
       { id: "FComponents" },
       { id: "FAccessible" }, // https://vuetifyjs.com/en/features/accessibility/
-      { id: "FVue" },
+
       { id: "FRoadmap" }, // https://vuetifyjs.com/en/introduction/roadmap/
       { id: "FFree" },
       { id: "FFigma" }, // https://store.vuetifyjs.com/products/vuetify-ui-kit-figma
@@ -273,12 +283,12 @@ export const libraries: Array<Library> = [
     ],
   },
   {
-    name: "Radix Vue",
+    name: "Reka UI",
     logo: "radixvue.svg",
-    url: "https://www.radix-vue.com/",
-    repoOwner: "radix-vue",
-    repoName: "radix-vue",
-    package: "radix-vue",
+    url: "https://reka-ui.com/",
+    repoOwner: "unovue",
+    repoName: "reka-ui",
+    package: "reka-ui",
     componentMatchings: [
       "Accordion",
       "Modal", // Alert Dialog
@@ -309,7 +319,6 @@ export const libraries: Array<Library> = [
       // Toolbar
     ],
     filterMatchings: [
-      { id: "FVue" },
       { id: "FUnstyled" },
       { id: "FImported" },
       { id: "FComponents" },
@@ -321,10 +330,10 @@ export const libraries: Array<Library> = [
   },
   {
     name: "Shadcn-vue",
-    subName: "on top of Radix Vue",
+    onTopOf: "Reka UI",
     logo: "shadcn.png",
     url: "https://www.shadcn-vue.com",
-    repoOwner: "radix-vue",
+    repoOwner: "unovue",
     repoName: "shadcn-vue",
     package: "shadcn-vue",
     componentMatchings: [
@@ -360,7 +369,6 @@ export const libraries: Array<Library> = [
       { id: "FPasted" },
       { id: "FTailwind" },
       { id: "FComponents" },
-      { id: "FVue" },
       { id: "FThemeGenerator" },
       { id: "FDarkMode" },
       { id: "FFigma" },
@@ -393,12 +401,11 @@ export const libraries: Array<Library> = [
       { id: "FAccessible" },
       { id: "FFree" },
       { id: "FOfficial" },
-      { id: "FVue" },
     ],
   },
   {
-    name: "Tailwind UI",
-    subName: "on top of Headless UI",
+    name: "Tailwind Plus",
+    onTopOf: "Headless UI",
     logo: "tailwind.svg",
     url: "https://tailwindui.com",
     componentMatchings: [
@@ -485,9 +492,9 @@ export const libraries: Array<Library> = [
       "Skeleton",
       "Tooltip",
       "Scroll Bar",
+      "QR Code",
     ],
     filterMatchings: [
-      { id: "FVue" },
       { id: "FTyped" },
       { id: "FThemeGenerator" },
       { id: "FImported" },
@@ -496,6 +503,7 @@ export const libraries: Array<Library> = [
       { id: "FFree" },
       { id: "FSemanticColors" },
       { id: "FForm" },
+      { id: "FDarkMode" },
       // { id: "FFigma" }, // sketch, not Figma.
     ],
   },
@@ -514,11 +522,14 @@ export const libraries: Array<Library> = [
       "Bottom Tabs",
       "Breadcrumb",
       "Button",
+      "Calendar",
       "Card",
       "Carousel",
       "Chat Bubble",
       "Checkbox",
       "Divider",
+      "Dock",
+      "Dropdown",
       "File Input",
       "Indicator",
       "Input",
@@ -539,9 +550,13 @@ export const libraries: Array<Library> = [
       "Tabs",
       "Table",
       "Textarea",
+      "Timeline",
+      "Toast",
       "Toggle",
+      "Toggle Button",
       "Tooltip",
       "Popover",
+      "Skeleton",
     ],
     filterMatchings: [
       { id: "FStyled" },
@@ -561,7 +576,7 @@ export const libraries: Array<Library> = [
     logo: "flowbite-vue.svg",
     url: "https://flowbite-vue.com",
     repoOwner: "themesberg",
-    repoName: "flowbite-vue",
+    repoName: "flowbite", // rather than flowbite-vue to have relevant start number
     package: "flowbite-vue",
     componentMatchings: [
       "Accordion",
@@ -598,7 +613,6 @@ export const libraries: Array<Library> = [
       { id: "FTailwind" },
       { id: "FFree" },
       { id: "FFigma" },
-      { id: "FVue" },
     ],
   },
   {
@@ -651,7 +665,6 @@ export const libraries: Array<Library> = [
     ],
     filterMatchings: [
       { id: "FStyled" },
-      { id: "FVue" },
       { id: "FTyped" },
       { id: "FDarkMode" },
       { id: "FRoadmap" }, // https://github.com/orgs/element-plus/projects/1
@@ -716,11 +729,56 @@ export const libraries: Array<Library> = [
       { id: "FStyled" },
       { id: "FImported" },
       { id: "FComponents" },
-      { id: "FVue" },
       { id: "FFree" },
       { id: "FFigma" },
       { id: "FSemanticColors" },
       { id: "FForm" },
+    ],
+  },
+  {
+    name: "Ark UI",
+    logo: "arkui.svg",
+    url: "https://ark-ui.com",
+    repoOwner: "chakra-ui",
+    repoName: "ark",
+    package: "@ark-ui/vue",
+    componentMatchings: [
+      "Accordion",
+      "Avatar",
+      "Carousel",
+      "Checkbox",
+      "Color Picker",
+      "Date Picker",
+      "Modal", // As Dialog
+      "Input", // As Number Input and Pin Input
+      "Input Chips", // As Tags Input
+      "File Input", // As File Upload
+      "Pagination",
+      "Popover",
+      "Progress", // Circular and Linear
+      "QR Code",
+      "Radio", // As Radio Group
+      "Rating", // As Rating Group
+      "Select",
+      "Signature Pad",
+      "Range",
+      "Panel Splitter", // As Splitter
+      "Steps",
+      "Tabs",
+      "Toast",
+      "Toggle", // As Switch
+      "Toggle Button", // As Toggle
+      "Tooltip",
+      "Tree", // As Tree View
+    ],
+    filterMatchings: [
+      { id: "FUnstyled" },
+      { id: "FImported" },
+      { id: "FComponents" },
+      { id: "FFree" },
+      { id: "FAccessible" },
+      { id: "FRoadmap" }, // https://ark-ui.canny.io
+      { id: "FTyped" },
     ],
   },
   {
@@ -800,7 +858,7 @@ export const libraries: Array<Library> = [
       { id: "FImported" },
       { id: "FRoadmap" }, // Open dev discussion in Discord + Roadmap in docs
       { id: "FDarkMode" },
-      { id: "FVue" },
+
       { id: "FForm" },
       { id: "FTyped" },
     ],

@@ -4,7 +4,7 @@ export const buttonFilters = [
     index: 1,
     label: "Styled",
     icon: "i-tabler-palette",
-    help: "Styled components come with opinated style. You usually customize them by overriding these styles.",
+    help: "Styled components come with opinionated style. You usually customize them by overriding these styles.",
     autoDisable: "FUnstyled",
   },
   {
@@ -36,7 +36,7 @@ export const buttonFilters = [
     index: 5,
     label: "Components",
     icon: "i-icon-park-outline-components",
-    help: "Provide Vue components handling both logic and stying (or logic only if unstyled), but it is coupled to the Vue framework.",
+    help: "Provide Vue components handling both logic and styling (or logic only if unstyled), but it is coupled to the Vue framework.",
     autoDisable: "FCSS",
   },
   {
@@ -47,22 +47,23 @@ export const buttonFilters = [
     help: "Only provide CSS classes to inject into your own Vue components. You get no logic, but the library can be used with any framework (not only Vue).",
     autoDisable: "FComponents",
   },
-  {
-    id: "FVue" as const,
-    index: 7,
-    label: "Vue/Nuxt",
-    icon: "i-mdi-vuejs",
-    help: "Made for Vue framework, can be used with Nuxt too.",
-    autoDisable: "FNuxt",
-  },
-  {
-    id: "FNuxt" as const,
-    index: 8,
-    label: "Nuxt only",
-    icon: "i-simple-icons-nuxtdotjs",
-    help: "Dedicated to Nuxt framework, can't be used with Vue.",
-    autoDisable: "FVue",
-  },
+  // Old filters when Nuxt UI was the single incomaptible lib with Vue itself.
+  // {
+  //   id: "FVue" as const,
+  //   index: 7,
+  //   label: "Vue/Nuxt",
+  //   icon: "i-mdi-vuejs",
+  //   help: "Made for Vue framework, can be used with Nuxt too.",
+  //   autoDisable: "FNuxt",
+  // },
+  // {
+  //   id: "FNuxt" as const,
+  //   index: 8,
+  //   label: "Nuxt only",
+  //   icon: "i-simple-icons-nuxtdotjs",
+  //   help: "Dedicated to Nuxt framework, can't be used with Vue.",
+  //   autoDisable: "FVue",
+  // },
   {
     id: "FTailwind" as const,
     index: 9,
@@ -96,14 +97,14 @@ export const buttonFilters = [
     index: 13,
     label: "Theme Generator",
     icon: "i-fluent-wand-24-regular",
-    help: "Provide a tool to help developpers generate new themes in an easy way.",
+    help: "Provide a tool to help developers generate new themes in an easy way.",
   },
   {
     id: "FDarkMode" as const,
     index: 14,
     label: "Dark Mode",
     icon: "i-mdi-weather-night",
-    help: "Components are designed tu support both a light and dark version.",
+    help: "Components are designed to support both a light and dark version.",
   },
   {
     id: "FSemanticColors" as const,
@@ -117,7 +118,7 @@ export const buttonFilters = [
     index: 16,
     label: "Figma files",
     icon: "i-ph-figma-logo",
-    help: "Figma is the leading design tool. Figma files contain the same components that the UI Library, sothat designers can create designs without coding skills.",
+    help: "Figma is the leading design tool. Figma files contain the same components that the UI Library, so that designers can create designs without coding skills.",
   },
   {
     id: "FOfficial" as const,
@@ -145,7 +146,7 @@ export const buttonFilters = [
     index: 20,
     label: "Fully Typed",
     icon: "i-tabler-brand-typescript",
-    help: "Provided components are all typed to help developpers with auto-completion and potential errors.",
+    help: "Provided components are all typed to help developers with auto-completion and potential errors.",
   },
   {
     id: "FForm" as const,

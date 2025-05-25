@@ -1,10 +1,12 @@
 <template>
   <div
     v-if="display"
-    class="min-h-[180px] w-auto rounded-lg border border-gray-200 bg-white px-3 py-2 dark:border-gray-800 dark:bg-gray-700"
+    class="min-h-[180px] w-auto rounded-lg border border-gray-200 bg-white dark:border-gray-800 dark:bg-gray-700"
   >
     <div class="flex h-full flex-col justify-between">
-      <div class="flex items-start justify-between gap-8 px-4 py-2">
+      <LibraryCardPromo v-if="library.promo" :promo="library.promo" />
+
+      <div class="flex items-start justify-between gap-8 px-6 py-4">
         <div class="shrink-0">
           <UTooltip :text="`Go to ${library.name} website`">
             <UButton
@@ -22,7 +24,10 @@
               <p class="font-medium tracking-wide">{{ library.name }}</p>
             </UButton>
           </UTooltip>
-          <p v-if="library.subName" class="-mt-1 text-xs">({{ library.subName }})</p>
+          <div v-if="library.onTopOf" class="-mt-0.5 flex items-center gap-x-1 text-xs">
+            <UIcon name="i-ph-stack-simple"></UIcon>
+            <div>built on {{ library.onTopOf }}</div>
+          </div>
         </div>
 
         <div class="flex flex-wrap place-content-end gap-2">
@@ -31,6 +36,7 @@
           </template>
         </div>
       </div>
+
       <!-- Card footer -->
       <div class="mt-4 flex items-center justify-between">
         <div class="ml-1 flex">
