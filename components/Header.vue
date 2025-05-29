@@ -2,7 +2,7 @@
   <div class="shadow-sm shadow-gray-200 backdrop-blur-md dark:shadow-gray-600">
     <div class="flex items-center justify-between px-4 py-2 md:px-8">
       <div class="hidden h-12 items-center gap-2 md:flex">
-        <UIcon class="primary-text h-8 w-8" name="i-ic-outline-palette" />
+        <img class="size-8" src="/public/favicon/newlogo.svg" />
         <h1 class="text-xl font-bold">UI Lib Picker</h1>
       </div>
       <div class="md:invisible">

@@ -62,7 +62,7 @@ useHead({
     {
       rel: "icon",
       type: "image/svg+xml",
-      href: "/favicon/palette.svg",
+      href: "/favicon/newlogo.svg",
     },
   ],
 
