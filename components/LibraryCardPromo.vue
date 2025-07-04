@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      class="bg-primary flex h-7 cursor-pointer items-center justify-between rounded-t-md px-2 text-sm font-bold text-white"
+      class="bg-primary flex h-7 cursor-pointer items-center justify-between rounded-t-md px-2 text-sm font-bold text-white dark:text-black"
       @click="openPromoUrl"
     >
       <div></div>
