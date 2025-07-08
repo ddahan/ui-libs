@@ -43,8 +43,6 @@
 </template>
 
 <script setup lang="ts">
-import VueSchoolBanner from "@/components/VueSchoolBanner.vue"
-
 const title = ref("UI Lib Picker")
 
 const runtimeConfig = useRuntimeConfig()
@@ -63,6 +61,13 @@ useHead({
       rel: "icon",
       type: "image/svg+xml",
       href: "/favicon/newlogo.svg",
+    },
+  ],
+
+  script: [
+    {
+      src: "https://vueschool.io/banner.js?affiliate=UILIB&type=top",
+      async: true,
     },
   ],
 
