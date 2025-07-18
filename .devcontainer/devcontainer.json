@@ -1,6 +1,6 @@
 {
   "name": "🎨 ui-libs",
-  "image": "node:20-bullseye",
+  "image": "node:22-bookworm",
   "forwardPorts": [
     3000
   ],

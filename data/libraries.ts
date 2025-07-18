@@ -1,4 +1,4 @@
-import { Library } from "@/types/libraries.types"
+import { type Library } from "@/types/libraries.types"
 
 export const libraries: Array<Library> = [
   {

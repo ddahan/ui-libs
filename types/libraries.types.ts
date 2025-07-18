@@ -1,5 +1,5 @@
-import { ButtonFilterMatching } from "@/types/filters.types"
-import { ComponentName } from "@/types/components.types"
+import { type ButtonFilterMatching } from "@/types/filters.types"
+import { type ComponentName } from "@/types/components.types"
 
 export type Promo = {
   text: string
