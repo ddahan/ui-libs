@@ -64,13 +64,6 @@ useHead({
     },
   ],
 
-  script: [
-    {
-      src: "https://vueschool.io/banner.js?affiliate=UILIB&type=top",
-      async: true,
-    },
-  ],
-
   // plausible
   ...(loadPlausible
     ? {
