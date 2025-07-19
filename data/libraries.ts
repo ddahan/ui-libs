@@ -48,6 +48,8 @@ export const libraries: Array<Library> = [
       "Steps",
       "Tree",
       "Breadcrumb",
+      "Timeline",
+      "Input Chips",
     ],
     filterMatchings: [
       { id: "FStyled" },
