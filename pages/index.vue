@@ -24,7 +24,7 @@
             target="_blank"
             class="primary-text font-semibold"
           >
-            Nuxt 3
+            Nuxt 3/4
           </NuxtLink>
           Project.
         </p>
@@ -79,7 +79,7 @@ useHead({
 })
 
 // Meta tags, OG, Twitter
-const description = "🎨 Pick the Right UI Library for your Vue 3 or Nuxt 3 Project"
+const description = "🎨 Pick the Right UI Library for your Vue 3 or Nuxt 3/4 Project"
 useSeoMeta({
   title: title.value,
   description: description,
