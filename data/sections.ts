@@ -14,6 +14,10 @@ export const sections = [
       },
       { name: "Avatar" as const, help: "Rounded image of a resource" },
       {
+        name: "Avatar Group" as const,
+        help: "Group of user avatars",
+      },
+      {
         name: "Badge" as const,
         aliases: ["Chip", "Tag"],
         help: "Short text indicator to represent a status",
@@ -21,6 +25,10 @@ export const sections = [
       {
         name: "Button" as const,
         help: "Interactive element that users can click or tap to perform an action",
+      },
+      {
+        name: "Button Group" as const,
+        help: "Group of related buttons",
       },
       {
         name: "Select Button" as const,
@@ -31,6 +39,10 @@ export const sections = [
         help: "A button used to select a boolean value.",
       },
       {
+        name: "Banner" as const,
+        help: "Promotional or informational banner",
+      },
+      {
         name: "Breadcrumb" as const,
         help: "Indicate the current page's location within a navigational hierarchy",
       },
@@ -38,6 +50,10 @@ export const sections = [
         name: "Carousel" as const,
         aliases: ["Slideshow", "Galleria"],
         help: "A slideshow component for cycling through elements, typically images or slides of text",
+      },
+      {
+        name: "Marquee" as const,
+        help: "A component that displays a continuous scrolling text or image",
       },
       {
         name: "Chat Bubble" as const,
@@ -91,6 +107,18 @@ export const sections = [
       {
         name: "Timeline" as const,
         help: "A visual representation used to display a sequence of events or processes in chronological order.",
+      },
+      {
+        name: "Collapsible" as const,
+        help: "Content that can be expanded or collapsed",
+      },
+      {
+        name: "Link" as const,
+        help: "Navigation link element with hover and active states",
+      },
+      {
+        name: "Icon" as const,
+        help: "Display icons from various icon libraries",
       },
     ],
   },
@@ -163,6 +191,18 @@ export const sections = [
         aliases: ["File Upload"],
         help: "An input field for uploading files",
       },
+      {
+        name: "Input Number" as const,
+        help: "Numeric input with increment/decrement controls",
+      },
+      {
+        name: "Form" as const,
+        help: "Form container with validation and submission handling",
+      },
+      {
+        name: "Form Field" as const,
+        help: "Individual form field with label and validation",
+      },
     ],
   },
   {
@@ -210,6 +250,14 @@ export const sections = [
         name: "Vertical Navigation" as const,
         help: "Navigation menu with items vertically stacked",
       },
+      {
+        name: "Navigation Menu" as const,
+        help: "Flexible navigation component with sub-menus",
+      },
+      {
+        name: "Table of Contents" as const,
+        help: "A list of sections and their corresponding headings that can be used to navigate a document",
+      }
     ],
   },
   {
@@ -263,6 +311,19 @@ export const sections = [
         name: "Skeleton" as const,
         aliases: ["Placeholder"],
         help: "A placeholder typically used while content is loading",
+      },
+      {
+        name: "Header" as const,
+        help: "Website header with navigation",
+      },
+      {
+        name: "Footer" as const,
+        help: "Website footer with links and information",
+      },
+      {
+        name: "Drawer" as const,
+        aliases: ["Sidebar"],
+        help: "Slide-out panel for additional content or controls",
       },
     ],
   },
